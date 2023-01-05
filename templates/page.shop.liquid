@@ -221,10 +221,11 @@
       <div id="products-all" class="w-dyn-list">
         <div role="list" class="shop-collection-list w-dyn-items">
           <div role="listitem" class="collection-item-shop w-dyn-item">
-            {% for collection in collection.products %}
-<div class="product-card shop-card">
+            {% paginate collection.products by 20 %}
+  {% for product in collection.products %}
+    <div class="product-card shop-card">
               <a href="#" class="link-block-4 w-inline-block">
-                <div class="product-image shopcard-img"><img loading="lazy" src="{{ collection.featured_image }}" alt="" class="product-img"></div>
+                <div class="product-image shopcard-img"><img loading="lazy" src="{{ product.featured_image }}" alt="" class="product-img"></div>
               </a>
               <div class="product-details shopcard-details">
                 <div class="w-dyn-list">
@@ -261,7 +262,11 @@
                 </div>
               </div>
             </div>
-{% endfor %}
+  {% endfor %}
+
+  {{ paginate | default_pagination }}
+{% endpaginate %}
+
             
           </div>
         </div>
