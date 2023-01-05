@@ -230,8 +230,7 @@
             <script> console.log({{product | json}}) </script>
     <div class="product-card shop-card">
               <a href="#" class="link-block-4 w-inline-block">
-                <div class="product-image shopcard-img"><img loading="lazy" srcset="{{ product.featured_image }}"
-          src="{{ product.featured_image | image_url: width: 750 }}" alt="" class="product-img"></div>
+                <div class="product-image shopcard-img"><img loading="lazy" src="{{ product.featured_image | image_url: width: 750 }}" alt="" class="product-img"></div>
               </a>
               <div class="product-details shopcard-details">
                 <div class="w-dyn-list">
