@@ -224,7 +224,9 @@
 
 
 
-
+{% if collection.all_products_count == 0 %}}
+            {{ "hi" }}
+            {% else %}}
     {%- for product in collection.products -%}
       <script>console.log({{ product | json }})</script>
           <li
@@ -243,7 +245,7 @@
             %} -->
           </li>
         {%- endfor -%}
-
+{% endif %}}
 
             
 
