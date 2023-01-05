@@ -1,0 +1,18 @@
+<div class="custom-div">
+  <p>{{ section.settings.some_text }}</p>
+</div>
+
+{% schema %}
+{
+  "name": "ParaSection",
+  "class": "custom-div",
+  "settings": [
+    {
+      "type": "text",
+      "id": "some_text",
+      "default": "This is text",
+      "label": "Add Text"
+    }
+  ]
+}
+{% endschema %}
