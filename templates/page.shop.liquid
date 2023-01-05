@@ -224,7 +224,7 @@
 
 
 
-{% if collection.all_products_count == 0 %}}
+{% if collection.all_products_count == 0 %}
     <script>console.log("No products")</script>
     {% else %}}
     {%- for product in collection.products -%}
@@ -236,7 +236,7 @@
             {{ product.title }}
           </li>
         {%- endfor -%}
-{% endif %}}
+{% endif %}
 
             
 
