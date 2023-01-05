@@ -1,7 +1,20 @@
+<div class="section">
+  <p>{{ section.settings.text_id }}</p>
+</div>
+
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "section",
+    "class" : "section",
+    "settings": [
+      {
+        "type" : "text",
+        "id" : "text_id",
+        "default" : "hi",
+        "label" : "Add Text"
+      }
+    ]
   }
 {% endschema %}
 
