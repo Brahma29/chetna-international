@@ -227,7 +227,7 @@
             
 
   {%- for product in collections -%}
-            <script> console.log({{product | json}}) </script>
+            <script> console.log({{product.collections | json}}) </script>
     {%- for eachProduct in product -%}}
   
             <script> console.log({{eachProduct | json}}) </script>
