@@ -175,7 +175,7 @@ pointer-events:none;}
             <div class="product-name underline">
               <h1 class="heading name text-left">{{ product.title }}</h1>
               <div class="text-wrapper justify-start items-bottom">
-                <div class="product-price height-less">{{ product.price | t }}</div>
+                <div class="product-price height-less">{{ product.price | money_with_currency }}</div>
                 <div class="product-original-price">{{ 'tn32c962a6' | t }}</div>
               </div>
               <p class="product-description">{{ 't6f191dee' | t }}</p>
