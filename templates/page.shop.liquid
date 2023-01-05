@@ -221,8 +221,9 @@
       <div id="products-all" class="w-dyn-list">
         <div role="list" class="shop-collection-list w-dyn-items">
           <div role="listitem" class="collection-item-shop w-dyn-item">
+            {{ collection.products[0].title }}
   {% for product in collection.products %}
-    <script>console.log({{product}})</script>
+    <script>console.log("hello")</script>
     <div class="product-card shop-card">
               <a href="#" class="link-block-4 w-inline-block">
                 <div class="product-image shopcard-img"><img loading="lazy" src="{{ product.featured_image }}" alt="" class="product-img"></div>
