@@ -221,7 +221,7 @@
       <div id="products-all" class="w-dyn-list">
         <div role="list" class="shop-collection-list w-dyn-items">
           <div role="listitem" class="collection-item-shop w-dyn-item">
-     <script>console.log({{ all_products }})</script>
+     <script>console.log({{ collection | json }})</script>
   {% for collection in collection.products %}
     <div class="product-card shop-card">
               <a href="#" class="link-block-4 w-inline-block">
