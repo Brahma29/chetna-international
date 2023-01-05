@@ -221,6 +221,40 @@
       <div id="products-all" class="w-dyn-list">
         <div role="list" class="shop-collection-list w-dyn-items">
           <div role="listitem" class="collection-item-shop w-dyn-item">
+
+
+
+
+    {%- for product in collection.products -%}
+          <li
+            id="Slide"
+            class="grid__item"
+          >
+            {{ product.title }}
+<!--             {% render 'card-product',
+              card_product: product,
+              media_aspect_ratio: section.settings.image_ratio,
+              show_secondary_image: section.settings.show_secondary_image,
+              show_vendor: section.settings.show_vendor,
+              show_rating: section.settings.show_rating,
+              show_quick_add: section.settings.enable_quick_add,
+              section_id: section.id
+            %} -->
+          </li>
+        {%- else -%}
+          {%- for i in (1..4) -%}
+            <li class="grid__item">
+              {% render 'card-product', show_vendor: section.settings.show_vendor %}
+            </li>
+          {%- endfor -%}
+        {%- endfor -%}
+
+
+            
+
+            
+
+            
   {%- for product in collection.frontpage.products -%}
     <div class="product-card shop-card">
               <a href="#" class="link-block-4 w-inline-block">
