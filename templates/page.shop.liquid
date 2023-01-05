@@ -226,7 +226,7 @@
 
 {% if collection.all_products_count == 0 %}
     <script>console.log("No products")</script>
-    {% else %}}
+    {% else %}
     {%- for product in collection.products -%}
       <script>console.log({{ product | json }})</script>
           <li
