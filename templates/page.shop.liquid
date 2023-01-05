@@ -221,9 +221,16 @@
       <div id="products-all" class="w-dyn-list">
         <div role="list" class="shop-collection-list w-dyn-items">
           <div role="listitem" class="collection-item-shop w-dyn-item">
-            <div class="product-card shop-card">
+
+            
+
+            
+
+            <script> console.log({{collection.products_count}}) </script>
+  {%- for product in collection.products_count -%}
+    <div class="product-card shop-card">
               <a href="#" class="link-block-4 w-inline-block">
-                <div class="product-image shopcard-img"><img loading="lazy" src="" alt="" class="product-img"></div>
+                <div class="product-image shopcard-img"><img loading="lazy" src="{{ product.featured_image }}" alt="" class="product-img"></div>
               </a>
               <div class="product-details shopcard-details">
                 <div class="w-dyn-list">
@@ -234,7 +241,7 @@
                   </div>
                 </div>
                 <a href="#" class="link-block-3 w-inline-block">
-                  <h2 class="product-name-slider"></h2>
+                  <h2 class="product-name-slider"> {{ product.title }} </h2>
                 </a>
                 <div class="text-wrapper justify-start">
                   <div class="text-wrapper">
@@ -260,6 +267,10 @@
                 </div>
               </div>
             </div>
+  {%- endfor -%}
+
+
+            
           </div>
         </div>
         <div class="w-dyn-empty">
