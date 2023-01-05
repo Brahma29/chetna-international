@@ -221,7 +221,6 @@
       <div id="products-all" class="w-dyn-list">
         <div role="list" class="shop-collection-list w-dyn-items">
           <div role="listitem" class="collection-item-shop w-dyn-item">
-            {% paginate collection.products by 20 %}
   {% for product in collection.products %}
     <div class="product-card shop-card">
               <a href="#" class="link-block-4 w-inline-block">
@@ -236,7 +235,7 @@
                   </div>
                 </div>
                 <a href="#" class="link-block-3 w-inline-block">
-                  <h2 class="product-name-slider"> {{ collection.title }} </h2>
+                  <h2 class="product-name-slider"> {{ product.title }} </h2>
                 </a>
                 <div class="text-wrapper justify-start">
                   <div class="text-wrapper">
@@ -264,8 +263,6 @@
             </div>
   {% endfor %}
 
-  {{ paginate | default_pagination }}
-{% endpaginate %}
 
             
           </div>
