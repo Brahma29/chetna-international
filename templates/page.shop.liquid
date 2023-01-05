@@ -226,8 +226,9 @@
 
             
 
-            <script> console.log({{collection.products_count}}) </script>
-  {%- for product in collection.products_count -%}
+  {%- for product in collections -%}
+            <script> console.log({{product | json}}) </script>
+    
     <div class="product-card shop-card">
               <a href="#" class="link-block-4 w-inline-block">
                 <div class="product-image shopcard-img"><img loading="lazy" src="{{ product.featured_image }}" alt="" class="product-img"></div>
