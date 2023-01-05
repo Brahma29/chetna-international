@@ -96,7 +96,7 @@
         <div class="product-card shop-card">
           <a href="#" class="link-block-4 w-inline-block">
             <div class="product-image shopcard-img">
-              <img loading="lazy" src="{{ product.featured_image }}" alt="" class="product-img">
+              <img loading="lazy" src="{{ product.featured_image | image_url: width: 500 }}" alt="" class="product-img">
             </div>
           </a>
           <div class="product-details shopcard-details">
