@@ -1,0 +1,35 @@
+{% capture listItems %}
+
+{%- assign allItems = blogs['post'].articles -%}
+{%- for item in allItems limit: 6 -%}
+ <div role="listitem" class="w-dyn-item">
+            <a href="{{ item.url }}" class="blog-post-card w-inline-block">
+              <div class="blog-post-image"><img src="{{ item.metafields.udesly['thumbnail-image'].src }}" loading="lazy" alt="" class="blog-thumbnail"></div>
+              <div class="blog-details">
+                <h3 class="blog-title">{{ item.title }}</h3>
+                <div class="author-details">
+                  <div class="author-name">
+                    <div class="text-block-25 author">{{ item.metafields.udesly['author-name'] }}</div><img src="{{ 'group-11.svg' | asset_url }}" loading="lazy" alt="">
+                  </div>
+                  <div class="div-block-25">
+                    <div class="text-block-25">{{ item.created_at | date: "%b %e, %Y" }}</div>
+                    <div class="text-block-30">.</div>
+                    <div class="text-block-25">{{ item.metafields.udesly['read-time'] }}</div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+{%- endfor -%}
+
+{% endcapture %}
+{% assign items_length = listItems | strip | size %}
+
+<div class="collection-list-wrapper-3 w-dyn-list" udy-collection="post">
+        {%- unless items_length == 0 -%}<div role="list" class="collection-list-4 w-dyn-items">
+          {{ listItems }}
+        </div>{%- endunless -%}
+        {%- if items_length == 0 -%}<div class="w-dyn-empty">
+          <div>No items found.</div>
+        </div>{%- endif -%}
+      </div>

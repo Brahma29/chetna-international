@@ -1,5 +1,5 @@
 {%- assign headerSnippetPath = "header-index" -%}{%- assign wfPage = "63b460d12385d1e1f97dd602" -%}{%- assign bodyClasses = "body" -%}
-  <div style="display:flex" class="cursor-wrapper">
+  <div class="cursor-wrapper">
     <div id="cursor" data-w-id="e957a63e-89db-9dd7-51b6-36ff416351a5" class="cursor-2">
       <div data-w-id="e957a63e-89db-9dd7-51b6-36ff416351a6" class="text-wrapper items-center">
         <div class="text-block-4">{{ 't20a154' | t }}</div><img src="{{ 'icons8-forward-50-1_1icons8-forward-50-1.png' | asset_url }}" loading="lazy" alt="" class="image-6">
@@ -12,153 +12,9 @@ pointer-events:none;}
 </style>
     </div>
   </div>
-  <div data-w-id="072811d8-d5e8-b62b-6caf-161b4fedf659" class="preloader">
-    <div data-poster-url="https://uploads-ssl.webflow.com/634fff4b200197692b3efce0/6386d881101fa30bff1e11e4_ButtonLoaderNew-poster-00001.jpg" data-video-urls="videos/ButtonLoaderNew-transcode.mp4,videos/ButtonLoaderNew-transcode.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" class="loaderanimation w-background-video w-background-video-atom"><video id="072811d8-d5e8-b62b-6caf-161b4fedf65a-video" autoplay="" loop="" style="background-image:url(&quot;https://uploads-ssl.webflow.com/634fff4b200197692b3efce0/6386d881101fa30bff1e11e4_ButtonLoaderNew-poster-00001.jpg&quot;)" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
-        <source src="{{ 'buttonloadernew-transcode.mp4' | asset_url }}" data-wf-ignore="true">
-        <source src="{{ 'buttonloadernew-transcode.webm' | asset_url }}" data-wf-ignore="true">
-      </video></div>
-  </div>
+  {%- render 'page-loader' -%}
   <div data-w-id="0061e29d-1441-0c99-0a6c-4a01bfc02387" class="hero-section wf-section">
-    <div id="navbar" class="nav-container">
-      <a href="{{ routes.root_url }}" aria-current="page" class="brand w-inline-block w--current">
-        <div class="lottie-animation-3" data-w-id="5ef5fb41-5f13-6f70-f986-5afa9665d8cd" data-animation-type="lottie" data-src="{{ 'chetnalighterbg-01.json' | asset_url }}" data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg" data-default-duration="1.9686352217844805" data-duration="4"></div>
-        <div class="logo"><span class="coco-text">{{ 't783de8a7' | t }}<br></span>{{ 'tn554e6192' | t }}<br></div>
-      </a>
-      <div class="nav-menu">
-        <div class="flex">
-          <a href="{{ pages["shop"].url }}" class="shop-link-bg w-inline-block">
-            <div id="ShopLink" class="shop">{{ 't274f16' | t }}</div>
-            <div id="shop-btn-border" class="div-block-38"></div>
-          </a>
-          <a href="{{ pages["shop"].url }}" class="shopactivedot w-inline-block"></a>
-        </div>
-        <div class="flex">
-          <a href="{{ pages["about"].url }}" class="menu-item w-inline-block">
-            <div>{{ 't3c2336d' | t }}</div>
-          </a>
-          <a href="{{ pages["about"].url }}" class="active-dot w-inline-block"></a>
-        </div>
-        <div class="flex">
-          <a href="{{ pages["materials"].url }}" class="menu-item w-inline-block">
-            <div>{{ 'tn5ff49ff4' | t }}</div>
-          </a>
-          <a href="{{ pages["materials"].url }}" class="active-dot w-inline-block"></a>
-        </div>
-        <div data-hover="false" data-delay="0" class="dropdown hide w-dropdown">
-          <div data-w-id="5faf21bf-ff95-dc0d-1814-13ba8a45c800" class="menu-item dropdown w-dropdown-toggle">
-            <div>{{ 't13ede05' | t }}</div>
-            <div class="icon-2 w-icon-dropdown-toggle"></div>
-          </div>
-          <nav class="dropdown-list w-dropdown-list">
-            <a href="#" class="droplink w-dropdown-link">{{ 'tn1baefe39' | t }}</a>
-            <a href="#" class="droplink w-dropdown-link">{{ 't7c121960' | t }}</a>
-            <a href="#" class="droplink w-dropdown-link">{{ 't56bf8c3b' | t }}</a>
-            <a href="#" class="droplink w-dropdown-link">{{ 't20d03d' | t }}</a>
-            <a href="#" class="droplink w-dropdown-link">{{ 'tn3a4f9735' | t }}</a>
-            <a href="#" class="droplink w-dropdown-link">{{ 'tn7fe2d65b' | t }}</a>
-          </nav>
-        </div>
-        <div data-w-id="dffda831-15d8-dafd-7e52-e8064fccac94" class="dropdown">
-          <a id="Resource-Link" data-w-id="e8f609a8-e828-8371-cf89-37cc8f6b6663" href="{{ pages["resources"].url }}" class="menu-item dropdown w-inline-block">
-            <div>{{ 't13ede05' | t }}</div>
-            <div class="icon-2 w-icon-dropdown-toggle"></div>
-          </a>
-          <div class="dropdown-list">
-            <a href="{{ pages["sustainability"].url }}" class="droplink w-inline-block">
-              <div>{{ 'tn1baefe39' | t }}</div>
-            </a>
-            <a href="{{ pages["our-brands"].url }}" class="droplink w-inline-block">
-              <div>{{ 't7c121960' | t }}</div>
-            </a>
-            <a href="{{ pages["compliance"].url }}" class="droplink w-inline-block">
-              <div>{{ 't56bf8c3b' | t }}</div>
-            </a>
-            <a href="{{ pages["faqs"].url }}" class="droplink w-inline-block">
-              <div>{{ 't20d03d' | t }}</div>
-            </a>
-            <a href="{{ pages["blogs"].url }}" class="droplink w-inline-block">
-              <div>{{ 't3d4d4f1' | t }}</div>
-            </a>
-            <a href="{{ pages["downloads"].url }}" class="droplink w-inline-block">
-              <div>{{ 'tn3a4f9735' | t }}</div>
-            </a>
-            <a href="{{ pages["terms-and-conditions"].url }}" class="droplink w-inline-block">
-              <div>{{ 'tn7fe2d65b' | t }}</div>
-            </a>
-          </div>
-        </div>
-        <div class="flex hide">
-          <a href="{{ pages["resources"].url }}" class="menu-item w-inline-block">
-            <div>{{ 't13ede05' | t }}</div>
-          </a>
-          <a href="{{ pages["resources"].url }}" class="active-dot w-inline-block"></a>
-        </div>
-        <div data-node-type="commerce-cart-wrapper" data-open-product="" data-wf-cart-type="modal" data-wf-cart-query="" data-wf-page-link-href-prefix="" class="w-commerce-commercecartwrapper">
-          <a href="#" data-node-type="commerce-cart-open-link" aria-haspopup="dialog" aria-label="Open cart" role="button" class="w-commerce-commercecartopenlink btn btn-bg-coco cart-btn hide w-inline-block"><svg class="w-commerce-commercecartopenlinkicon" width="17px" height="17px" viewBox="0 0 17 17">
-              <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                <path d="M2.60592789,2 L0,2 L0,0 L4.39407211,0 L4.84288393,4 L16,4 L16,9.93844589 L3.76940945,12.3694378 L2.60592789,2 Z M15.5,17 C14.6715729,17 14,16.3284271 14,15.5 C14,14.6715729 14.6715729,14 15.5,14 C16.3284271,14 17,14.6715729 17,15.5 C17,16.3284271 16.3284271,17 15.5,17 Z M5.5,17 C4.67157288,17 4,16.3284271 4,15.5 C4,14.6715729 4.67157288,14 5.5,14 C6.32842712,14 7,14.6715729 7,15.5 C7,16.3284271 6.32842712,17 5.5,17 Z" fill="currentColor" fill-rule="nonzero"></path>
-              </g>
-            </svg>
-            <div class="w-inline-block">{{ 't1fef40' | t }}</div>
-            <div class="w-commerce-commercecartopenlinkcount cart-quantity">{{ 't30' | t }}</div>
-          </a>
-          <div data-node-type="commerce-cart-container-wrapper" style="display:none" class="w-commerce-commercecartcontainerwrapper w-commerce-commercecartcontainerwrapper--cartType-modal cart-wrapper">
-            <div role="dialog" data-node-type="commerce-cart-container" class="w-commerce-commercecartcontainer cart-container">
-              <div class="w-commerce-commercecartheader cart-header">
-                <h4 class="w-commerce-commercecartheading heading-9">{{ 't1fef40' | t }}</h4>
-                <a href="#" data-node-type="commerce-cart-close-link" role="button" aria-label="Close cart" class="w-commerce-commercecartcloselink close-button w-inline-block"><img src="{{ 'path-327.svg' | asset_url }}" loading="lazy" alt=""></a>
-              </div>
-              <div class="w-commerce-commercecartformwrapper">
-                <form data-node-type="commerce-cart-form" style="display:none" class="w-commerce-commercecartform">
-                  <div class="w-commerce-commercecartfooter cart-footer">
-                    <div aria-atomic="true" aria-live="polite" class="w-commerce-commercecartlineitem cart-line-item">
-                      <div class="div-block-6">
-                        <div class="text-block-13">{{ 'tn77079b6c' | t }}</div>
-                      </div>
-                      <div class="div-block-5">
-                        <div class="col cart">
-                          <div class="div-block-7">
-                            <div class="text-block-14">{{ 'tn76f396dc' | t }}</div>
-                            <div class="w-commerce-commercecartordervalue text-block-15"></div>
-                          </div>
-                          <div class="div-block-8">
-                            <div class="text-block-16">{{ 't4d3eb24' | t }}</div>
-                            <div class="w-commerce-commercecartordervalue text-block-17"></div>
-                          </div>
-                        </div>
-                        <div class="col cart">
-                          <div>
-                            <a href="/checkout" value="Place Order" data-node-type="cart-checkout-button" class="w-commerce-commercecartcheckoutbutton btn btn-bg-coco cart" data-loading-text="Hang Tight...">{{ 'ta750ab5' | t }}</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="div-block-9">
-                    <div class="div-block-6">
-                      <div class="text-block-13">{{ 'tn685f8ab2' | t }}</div>
-                    </div>
-                    <script type="text/x-wf-template" id="wf-template-5b596057-aeee-c8b3-29d3-9001975d39d3"><div data-node-type="cart-item" class="cart-item w-commerce-commercecartitem" template-part-bind="5b596057-aeee-c8b3-29d3-9001975d39d4"><img data-node-type="cart-item-image" class="image-19 w-commerce-commercecartitemimage" template-part-bind="5b596057-aeee-c8b3-29d3-9001975d39d5" src="<%= it.image %>"><a data-node-type="link" class="link-block-10" template-part-bind="1691a2ae-6dd9-ed36-b7ad-3753fe3431fa" href="<%= it.url%>"><div data-node-type="cart-item-info" class="div-block-13 w-commerce-commercecartiteminfo" template-part-bind="5b596057-aeee-c8b3-29d3-9001975d39d6"><div data-node-type="cart-product-name" class="text-block-20 w-commerce-commercecartproductname" template-part-bind="5b596057-aeee-c8b3-29d3-9001975d39d7"><%= it.title %></div><ul class="option-list-3 w-commerce-commercecartoptionlist" template-part-bind="5b596057-aeee-c8b3-29d3-9001975d39d9"><% Object.entries(it.properties).forEach( data =>  { %><li data-node-type="cart-option-list-item"><span data-node-type="cart-option-list-item-label" template-part-bind="5b596057-aeee-c8b3-29d3-9001975d39db"><%= data[0] %></span><span>: </span><span data-node-type="cart-option-list-item-value" template-part-bind="5b596057-aeee-c8b3-29d3-9001975d39de"><%= data[1] %></span></li><% }) %></ul></div></a><input class="w-commerce-commercecartquantity quantity cart" name="<%= it.id %>" type="number" min="0" min="1" value="<%= it.quantity %>" data-node-type="cart-quantity"><div class="div-block-12"><div class="text-block-19" template-part-bind="5b596057-aeee-c8b3-29d3-9001975d39d8"><%= it.price %></div><a data-node-type="cart-remove-link" class="remove-button" href="#" role="button" aria-label="Remove item from cart" template-part-bind="5b596057-aeee-c8b3-29d3-9001975d39df" data-product-id="<%= it.id %>"><div class="text-block-21">Remove</div></a></div><div class="div-block-14"><div class="div-block-11"><ul data-node-type="list" class="list-2"><li data-node-type="list-item"><div class="text-block-18">Delivery in 2 days , Sun | Free</div></li></ul></div></div></div></script>
-                    <div class="w-commerce-commercecartlist cart-list" data-wf-collection="database.commerceOrder.userItems" data-wf-template-id="wf-template-5b596057-aeee-c8b3-29d3-9001975d39d3"></div>
-                  </div>
-                </form>
-                <div class="w-commerce-commercecartemptystate">
-                  <div aria-live="polite" aria-label="This cart is empty">{{ 't3d503d2b' | t }}</div>
-                </div>
-                <div aria-live="assertive" style="display:none" data-node-type="commerce-cart-error" class="w-commerce-commercecarterrorstate">
-                  <div class="w-cart-error-msg" data-w-cart-quantity-error="Product is not available in this quantity." data-w-cart-general-error="Something went wrong when adding this item to the cart." data-w-cart-checkout-error="Checkout is disabled on this site." data-w-cart-cart_order_min-error="The order minimum was not met. Add more items to your cart to continue." data-w-cart-subscription_error-error="Before you purchase, please use your email invite to verify your address so we can send order updates.">{{ 'tn1c765d0d' | t }}</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <a id="contact-btn" href="{{ pages["contact-us"].url }}" class="button w-button">{{ 't7f2746de' | t }}</a>
-      </div>
-      <div id="menu-icon" data-w-id="ace890ed-dd39-4876-a1ea-c43959dc2bd7" class="meun-icon">
-        <div class="icon-bar _1"></div>
-        <div class="icon-bar _2"></div>
-      </div>
-    </div>
+    {%- section 'navbar' -%}
     <div class="hero-text"><img src="{{ 'hero-button.svg' | asset_url }}" loading="lazy" style="-webkit-transform:translate3d(0, 40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" data-w-id="71be5e8b-5813-7a8d-2034-e8d59947a632" alt="">
       <div class="flex-2 gap-0 mb-0 _w-100">
         <div class="text-hide">
@@ -189,7 +45,7 @@ pointer-events:none;}
       <h1 class="heading hide">{{ 'tn1939893e' | t }}</h1>
       <a style="-webkit-transform:translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 150px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" href="{{ pages["shop"].url }}" class="btn btn-bg-crayola explore-btn w-button">{{ 'tn233c798d' | t }}</a>
     </div>
-    <div data-w-id="c84d38bb-c27b-63f2-1d31-d59a02995252" style="-webkit-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="hero-image"><img src="{{ 'hero-image.png' | asset_url }}" loading="lazy" sizes="(max-width: 479px) 85vw, (max-width: 767px) 87vw, (max-width: 991px) 89vw, (max-width: 1919px) 91vw, 1376px" srcset="{{ 'hero-image-p-500.png' | asset_url }} 500w, {{ 'hero-image-p-800.png' | asset_url }} 800w, {{ 'hero-image-p-1080.png' | asset_url }} 1080w, {{ 'hero-image-p-1600.png' | asset_url }} 1600w, {{ 'hero-image-p-2000.png' | asset_url }} 2000w, {{ 'hero-image.png' | asset_url }} 2492w" alt="" class="image-10"></div>
+    <div data-w-id="c84d38bb-c27b-63f2-1d31-d59a02995252" style="-webkit-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="hero-image"><img src="{{ 'hero-image.png' | asset_url }}" loading="lazy" sizes="(max-width: 479px) 85vw, (max-width: 767px) 87vw, (max-width: 991px) 89vw, (max-width: 1919px) 91vw, 1376.0069580078125px" srcset="{{ 'hero-image-p-500.png' | asset_url }} 500w, {{ 'hero-image-p-800.png' | asset_url }} 800w, {{ 'hero-image-p-1080.png' | asset_url }} 1080w, {{ 'hero-image-p-1600.png' | asset_url }} 1600w, {{ 'hero-image-p-2000.png' | asset_url }} 2000w, {{ 'hero-image.png' | asset_url }} 2492w" alt="" class="image-10"></div>
   </div>
   <div data-w-id="7163af3e-52c6-1dcd-f3b7-32d72ae462bf" class="section para-section bg-transparent mx-0 px-2 wf-section">
     <div class="div-block-29">
@@ -204,21 +60,21 @@ pointer-events:none;}
     <h1 style="-webkit-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="heading">{{ 't74b613c1' | t }}</h1>
     <div data-w-id="1e18aaeb-8835-e243-c803-49d62b69738d" style="-webkit-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="cards gap-2 pl-4 pr-2 pl-0">
       <div data-w-id="e69ddf96-79e5-a916-fe08-cda9408f51fd" class="card _w-64">
-        <div class="card-img"><img src="{{ '8ba6a6365ca7ba59d8e53cb38d49af9e2x.png' | asset_url }}" loading="lazy" sizes="(max-width: 767px) 256px, (max-width: 991px) 28vw, (max-width: 1919px) 29vw, 440.3125px" srcset="{{ '8ba6a6365ca7ba59d8e53cb38d49af9e2x-p-500.png' | asset_url }} 500w, {{ '8ba6a6365ca7ba59d8e53cb38d49af9e2x.png' | asset_url }} 794w" alt="" class="advantage-card-image"></div>
+        <div class="card-img"><img src="{{ '8ba6a6365ca7ba59d8e53cb38d49af9e2x.png' | asset_url }}" loading="lazy" sizes="(max-width: 767px) 255.98959350585938px, (max-width: 991px) 28vw, (max-width: 1919px) 29vw, 440.3125305175781px" srcset="{{ '8ba6a6365ca7ba59d8e53cb38d49af9e2x-p-500.png' | asset_url }} 500w, {{ '8ba6a6365ca7ba59d8e53cb38d49af9e2x.png' | asset_url }} 794w" alt="" class="advantage-card-image"></div>
         <div class="card-text">
           <h1 class="card-heading advantage-card-heading">{{ 't69519b09' | t }}<br>{{ 'tn445b4040' | t }}</h1>
           <a href="#Team-Section" class="btn card-btn w-button">{{ 'tn2761ed1d' | t }}</a>
         </div>
       </div>
       <div data-w-id="87adc2db-cc72-d762-42e3-48039248285a" class="card _w-64">
-        <div class="card-img"><img src="{{ '3d3551d01af09a75e6ad1b4b516249772x.png' | asset_url }}" loading="lazy" sizes="(max-width: 767px) 256px, (max-width: 991px) 28vw, (max-width: 1919px) 29vw, 440.3125px" srcset="{{ '3d3551d01af09a75e6ad1b4b516249772x-p-500.png' | asset_url }} 500w, {{ '3d3551d01af09a75e6ad1b4b516249772x.png' | asset_url }} 794w" alt="" class="advantage-card-image"></div>
+        <div class="card-img"><img src="{{ '3d3551d01af09a75e6ad1b4b516249772x.png' | asset_url }}" loading="lazy" sizes="(max-width: 767px) 255.98959350585938px, (max-width: 991px) 28vw, (max-width: 1919px) 29vw, 440.3125305175781px" srcset="{{ '3d3551d01af09a75e6ad1b4b516249772x-p-500.png' | asset_url }} 500w, {{ '3d3551d01af09a75e6ad1b4b516249772x.png' | asset_url }} 794w" alt="" class="advantage-card-image"></div>
         <div class="card-text">
           <h1 class="card-heading advantage-card-heading">{{ 'tn6b0258d6' | t }}<br>{{ 'te62bf81' | t }}</h1>
           <a href="#Process" class="btn card-btn w-button">{{ 'tn52aefc2f' | t }}</a>
         </div>
       </div>
       <div data-w-id="72baf8ab-0c21-5bb8-5702-d776d9ca385d" class="card _w-64">
-        <div class="card-img"><img src="{{ '1b19b97ee38eb905720a1e1a504e1ecf2x.png' | asset_url }}" loading="lazy" sizes="(max-width: 767px) 256px, (max-width: 991px) 28vw, (max-width: 1919px) 29vw, 440.3125px" srcset="{{ '1b19b97ee38eb905720a1e1a504e1ecf2x-p-500.png' | asset_url }} 500w, {{ '1b19b97ee38eb905720a1e1a504e1ecf2x.png' | asset_url }} 794w" alt="" class="advantage-card-image"></div>
+        <div class="card-img"><img src="{{ '1b19b97ee38eb905720a1e1a504e1ecf2x.png' | asset_url }}" loading="lazy" sizes="(max-width: 767px) 255.98959350585938px, (max-width: 991px) 28vw, (max-width: 1919px) 29vw, 440.3125305175781px" srcset="{{ '1b19b97ee38eb905720a1e1a504e1ecf2x-p-500.png' | asset_url }} 500w, {{ '1b19b97ee38eb905720a1e1a504e1ecf2x.png' | asset_url }} 794w" alt="" class="advantage-card-image"></div>
         <div class="card-text">
           <h1 class="card-heading advantage-card-heading">{{ 'tn6a2f6a70' | t }}</h1>
           <a href="{{ pages["shop"].url }}" class="btn card-btn w-button">{{ 't3a243c5f' | t }}</a>
@@ -239,7 +95,7 @@ pointer-events:none;}
         <div id="w-node-a820e544-df7b-ab87-d625-df02304e1a16-f97dd602" data-w-id="a820e544-df7b-ab87-d625-df02304e1a16" style="-webkit-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="style-card"><img src="{{ 'group-422x.png' | asset_url }}" loading="lazy" sizes="100vw" srcset="{{ 'group-422x-p-500.png' | asset_url }} 500w, {{ 'group-422x-p-800.png' | asset_url }} 800w, {{ 'group-422x.png' | asset_url }} 804w" alt="" class="style-card-img">
           <div class="style-card-text">
             <div class="style-card-heading">{{ 't78a664b0' | t }}</div>
-            <a href="{{ pages["coroza-buttons"].url }}" class="btn style-card-btn w-button">{{ 'tcfbdf89' | t }}</a>
+            <a href="#" class="btn style-card-btn w-button">{{ 'tcfbdf89' | t }}</a>
           </div>
         </div>
         <div id="w-node-_9c92b307-c48e-df4d-3a0c-48a9670b4068-f97dd602" data-w-id="9c92b307-c48e-df4d-3a0c-48a9670b4068" style="-webkit-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="style-card"><img src="{{ 'group-412x.png' | asset_url }}" loading="lazy" sizes="100vw" srcset="{{ 'group-412x-p-500.png' | asset_url }} 500w, {{ 'group-412x-p-800.png' | asset_url }} 800w, {{ 'group-412x.png' | asset_url }} 804w" alt="" class="style-card-img">
@@ -267,20 +123,48 @@ pointer-events:none;}
           </div>
         </div>
       </div>
-      <div class="w-dyn-list">
-        <div role="list" class="style-grid w-dyn-items">
-          <div role="listitem" class="w-dyn-item">
-            <div data-w-id="eca3f7a8-b79d-6ed5-1e11-9cea9227f7d9" style="-webkit-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="style-card"><img loading="lazy" src="" alt="" class="style-card-img">
-              <div class="style-card-text">
-                <div class="style-card-heading"></div>
-                <a href="#" class="btn style-card-btn w-button">{{ 'tcfbdf89' | t }}</a>
-              </div>
-              <div class="style-card-overlay"></div>
-            </div>
+      <div class="style-grid">
+        <div data-w-id="e57d70e1-f210-1432-6166-792a165acf18" style="-webkit-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="style-card"><img loading="lazy" src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" alt="" class="style-card-img">
+          <div class="style-card-text">
+            <div class="style-card-heading">{{ 't7635fb4f' | t }}</div>
+            <a href="#" class="btn style-card-btn w-button">{{ 'tcfbdf89' | t }}</a>
           </div>
+          <div class="style-card-overlay"></div>
         </div>
-        <div class="w-dyn-empty">
-          <div>{{ 't3d503d2b' | t }}</div>
+        <div data-w-id="bc253be3-7b8e-9168-ce3f-644a614d9f50" style="-webkit-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="style-card"><img loading="lazy" src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" alt="" class="style-card-img">
+          <div class="style-card-text">
+            <div class="style-card-heading">{{ 't7635fb4f' | t }}</div>
+            <a href="#" class="btn style-card-btn w-button">{{ 'tcfbdf89' | t }}</a>
+          </div>
+          <div class="style-card-overlay"></div>
+        </div>
+        <div data-w-id="7ad569de-5849-a8c1-aa25-163ac72c4a6d" style="-webkit-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="style-card"><img loading="lazy" src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" alt="" class="style-card-img">
+          <div class="style-card-text">
+            <div class="style-card-heading">{{ 't7635fb4f' | t }}</div>
+            <a href="#" class="btn style-card-btn w-button">{{ 'tcfbdf89' | t }}</a>
+          </div>
+          <div class="style-card-overlay"></div>
+        </div>
+        <div data-w-id="cddbc82c-42f5-8b7f-833e-44bddb47763c" style="-webkit-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="style-card"><img loading="lazy" src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" alt="" class="style-card-img">
+          <div class="style-card-text">
+            <div class="style-card-heading">{{ 't7635fb4f' | t }}</div>
+            <a href="#" class="btn style-card-btn w-button">{{ 'tcfbdf89' | t }}</a>
+          </div>
+          <div class="style-card-overlay"></div>
+        </div>
+        <div data-w-id="8ff481d6-cda1-0279-c8c9-a83489629b28" style="-webkit-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="style-card"><img loading="lazy" src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" alt="" class="style-card-img">
+          <div class="style-card-text">
+            <div class="style-card-heading">{{ 't7635fb4f' | t }}</div>
+            <a href="#" class="btn style-card-btn w-button">{{ 'tcfbdf89' | t }}</a>
+          </div>
+          <div class="style-card-overlay"></div>
+        </div>
+        <div data-w-id="b2339a67-911e-92ae-5954-55c73d6f9f8a" style="-webkit-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="style-card"><img loading="lazy" src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" alt="" class="style-card-img">
+          <div class="style-card-text">
+            <div class="style-card-heading">{{ 't7635fb4f' | t }}</div>
+            <a href="#" class="btn style-card-btn w-button">{{ 'tcfbdf89' | t }}</a>
+          </div>
+          <div class="style-card-overlay"></div>
         </div>
       </div>
     </div>
@@ -289,7 +173,7 @@ pointer-events:none;}
     <h1 style="-webkit-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="heading">{{ 'tn38e13bb' | t }}</h1>
     <div data-w-id="c53ba389-6b28-bad1-6b9e-8d00f56a437c" class="cards gap-2 pl-4 pr-2">
       <div data-w-id="2cbbf073-b593-206a-1871-c0cc18cfa029" style="-webkit-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="team-card">
-        <div class="team-card-img"><img src="{{ 'group-472x.png' | asset_url }}" loading="lazy" sizes="(max-width: 479px) 224px, (max-width: 767px) 256px, (max-width: 991px) 29vw, (max-width: 1439px) 23vw, (max-width: 1919px) 19vw, 297.609375px" srcset="{{ 'group-472x-p-500.png' | asset_url }} 500w, {{ 'group-472x.png' | asset_url }} 654w" alt="" class="image-3"></div>
+        <div class="team-card-img"><img src="{{ 'group-472x.png' | asset_url }}" loading="lazy" sizes="(max-width: 479px) 223.99307250976562px, (max-width: 767px) 255.98959350585938px, (max-width: 991px) 223.99307250976562px, (max-width: 1439px) 23vw, (max-width: 1919px) 19vw, 297.6215515136719px" srcset="{{ 'group-472x-p-500.png' | asset_url }} 500w, {{ 'group-472x.png' | asset_url }} 654w" alt="" class="image-3"></div>
         <div class="team-card-text">
           <h3 class="team-member-name">{{ 't34d62760' | t }}</h3>
           <p class="team-member-msg">{{ 't372f1ac0' | t }}</p>
@@ -327,50 +211,95 @@ pointer-events:none;}
       </a>
     </div>
     <div id="Product-Slider" data-w-id="de7a1f53-1871-e5c7-4bcf-529e2002d748" class="cards">
-      <div class="collection-list-wrapper-2 w-dyn-list">
-        <div role="list" class="cards no-wrap pr-2 w-dyn-items">
-          <div role="listitem" class="collection-item-6 w-dyn-item">
-            <div class="product-card">
-              <a href="#" class="w-inline-block">
-                <div class="product-image h-36"><img loading="lazy" src="" alt="" class="product-img"></div>
-              </a>
-              <div class="product-details">
-                <div class="product-category"></div>
-                <a href="#" class="link-block-2 w-inline-block">
-                  <h2 class="product-name-slider"></h2>
-                </a>
-                <div class="text-wrapper justify-start">
-                  <div class="text-wrapper">
-                    <div class="product-price hide">{{ 't20b9' | t }}</div>
-                    <div class="product-price"></div>
-                  </div>
-                  <div class="text-wrapper">
-                    <div class="product-original-price hide">{{ 't20b9' | t }}</div>
-                    <div class="product-original-price"></div>
-                  </div>
-                </div>
-                <a href="#" data-w-id="4fc16c33-7014-77d5-825f-6cb2c6044315" class="btn bg-cart-btn cursor-auto hide w-button">{{ 't71bb21fc' | t }}</a>
-                <div>
-                  {%- form "product", item, data-node-type: "commerce-add-to-cart-form", class: "w-commerce-commerceaddtocartform" -%}<label for="quantity-37281beb835658194e034a80e252bc6d" class="field-label-2">{{ 'tn48bd3755' | t }}</label><input type="number" pattern="^[0-9]+$" inputmode="numeric" id="quantity-37281beb835658194e034a80e252bc6d" name="quantity" min="1" class="w-commerce-commerceaddtocartquantityinput quantity-2" value="1"><input type="submit" data-w-id="54db8a79-f188-1d1d-696e-156e030f1048" data-node-type="commerce-add-to-cart-button" data-loading-text="Adding to cart..." value="Add to Bag" aria-busy="false" aria-haspopup="dialog" class="w-commerce-commerceaddtocartbutton btn bg-cart-btn cursor-auto">
-                    <a data-node-type="commerce-buy-now-button" data-default-text="Buy now" data-subscription-text="Subscribe now" aria-busy="false" aria-haspopup="false" class="w-commerce-commercebuynowbutton buy-now-button" href="/checkout">{{ 't71bb9a1c' | t }}</a>
-                  {%- render "product-variants-data" product: item -%}{%- endform -%}
-                  <div tabindex="0" style="display:none" class="w-commerce-commerceaddtocartoutofstock">
-                    <div>{{ 't7aaa2dac' | t }}</div>
-                  </div>
-                  <div aria-live="assertive" data-node-type="commerce-add-to-cart-error" style="display:none" class="w-commerce-commerceaddtocarterror">
-                    <div data-node-type="commerce-add-to-cart-error" data-w-add-to-cart-quantity-error="Product is not available in this quantity." data-w-add-to-cart-general-error="Something went wrong when adding this item to the cart." data-w-add-to-cart-mixed-cart-error="You can’t purchase another product with a subscription." data-w-add-to-cart-buy-now-error="Something went wrong when trying to purchase this item." data-w-add-to-cart-checkout-disabled-error="Checkout is disabled on this site." data-w-add-to-cart-select-all-options-error="Please select an option in each set.">{{ 'tn1c765d0d' | t }}</div>
-                  </div>
-                </div>
-              </div>
+      <div class="product-card">
+        <a href="#" class="w-inline-block">
+          <div class="product-image h-36"><img loading="lazy" src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" alt="" class="product-img"></div>
+        </a>
+        <div class="product-details">
+          <div class="product-category">{{ 't7635fb4f' | t }}</div>
+          <a href="#" class="link-block-2 w-inline-block">
+            <h2 class="product-name-slider">{{ 'tn6d5fea1e' | t }}</h2>
+          </a>
+          <div class="text-wrapper justify-start">
+            <div class="text-wrapper">
+              <div class="product-price hide">{{ 't20b9' | t }}</div>
+              <div data-commerce-type="variation-price" class="product-price">{{ 't7635fb4f' | t }}</div>
+            </div>
+            <div class="text-wrapper">
+              <div class="product-original-price hide">{{ 't20b9' | t }}</div>
+              <div class="product-original-price">{{ 't7635fb4f' | t }}</div>
             </div>
           </div>
+          <a href="#" data-w-id="9de6f756-7fbb-b3d8-f65f-f5aee395ab15" class="btn bg-cart-btn cursor-auto w-button">{{ 't71bb21fc' | t }}</a>
         </div>
-        <div class="w-dyn-empty">
-          <div>{{ 't3d503d2b' | t }}</div>
+      </div>
+      <div class="product-card">
+        <a href="#" class="w-inline-block">
+          <div class="product-image h-36"><img loading="lazy" src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" alt="" class="product-img"></div>
+        </a>
+        <div class="product-details">
+          <div class="product-category">{{ 't7635fb4f' | t }}</div>
+          <a href="#" class="link-block-2 w-inline-block">
+            <h2 class="product-name-slider">{{ 'tn6d5fea1e' | t }}</h2>
+          </a>
+          <div class="text-wrapper justify-start">
+            <div class="text-wrapper">
+              <div class="product-price hide">{{ 't20b9' | t }}</div>
+              <div data-commerce-type="variation-price" class="product-price">{{ 't7635fb4f' | t }}</div>
+            </div>
+            <div class="text-wrapper">
+              <div class="product-original-price hide">{{ 't20b9' | t }}</div>
+              <div class="product-original-price">{{ 't7635fb4f' | t }}</div>
+            </div>
+          </div>
+          <a href="#" data-w-id="d275375e-d168-175d-ece7-9468708298c7" class="btn bg-cart-btn cursor-auto w-button">{{ 't71bb21fc' | t }}</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <a href="#" class="w-inline-block">
+          <div class="product-image h-36"><img loading="lazy" src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" alt="" class="product-img"></div>
+        </a>
+        <div class="product-details">
+          <div class="product-category">{{ 't7635fb4f' | t }}</div>
+          <a href="#" class="link-block-2 w-inline-block">
+            <h2 class="product-name-slider">{{ 'tn6d5fea1e' | t }}</h2>
+          </a>
+          <div class="text-wrapper justify-start">
+            <div class="text-wrapper">
+              <div class="product-price hide">{{ 't20b9' | t }}</div>
+              <div data-commerce-type="variation-price" class="product-price">{{ 't7635fb4f' | t }}</div>
+            </div>
+            <div class="text-wrapper">
+              <div class="product-original-price hide">{{ 't20b9' | t }}</div>
+              <div class="product-original-price">{{ 't7635fb4f' | t }}</div>
+            </div>
+          </div>
+          <a href="#" data-w-id="5973d2fb-14c0-da5c-23d0-d2b817325963" class="btn bg-cart-btn cursor-auto w-button">{{ 't71bb21fc' | t }}</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <a href="#" class="w-inline-block">
+          <div class="product-image h-36"><img loading="lazy" src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" alt="" class="product-img"></div>
+        </a>
+        <div class="product-details">
+          <div class="product-category">{{ 't7635fb4f' | t }}</div>
+          <a href="#" class="link-block-2 w-inline-block">
+            <h2 class="product-name-slider">{{ 'tn6d5fea1e' | t }}</h2>
+          </a>
+          <div class="text-wrapper justify-start">
+            <div class="text-wrapper">
+              <div class="product-price hide">{{ 't20b9' | t }}</div>
+              <div data-commerce-type="variation-price" class="product-price">{{ 't7635fb4f' | t }}</div>
+            </div>
+            <div class="text-wrapper">
+              <div class="product-original-price hide">{{ 't20b9' | t }}</div>
+              <div class="product-original-price">{{ 't7635fb4f' | t }}</div>
+            </div>
+          </div>
+          <a href="#" data-w-id="64bdeb64-4740-1d3b-ee0b-3596b0a00a7c" class="btn bg-cart-btn cursor-auto w-button">{{ 't71bb21fc' | t }}</a>
         </div>
       </div>
     </div>
-    <div class="product-card-wrapper"></div>
   </div>
   <div id="Process" class="slider-section wf-section">
     <div data-delay="4000" data-animation="slide" class="slider hide w-slider" data-autoplay="false" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true">
@@ -564,125 +493,16 @@ pointer-events:none;}
       </a>
     </div>
     <div data-w-id="a0a598f2-6242-2a34-0bf5-7f5ed65b6dfc" class="mt-5">
-      <div class="w-dyn-list">
-        <div id="Insta-Slider" role="list" class="cards mt-5 pr-2 w-dyn-items">
-          <div role="listitem" class="collection-item w-dyn-item">
-            <div class="insta-image"><img loading="eager" src="" alt=""></div>
-          </div>
-        </div>
-        <div class="w-dyn-empty">
-          <div>{{ 't3d503d2b' | t }}</div>
-        </div>
-      </div>
-      <div class="insta-image hide"><img src="{{ '41439bbf3265f3bbd320ec9fe9a7ee6c2x.png' | asset_url }}" loading="eager" sizes="100vw" srcset="{{ '41439bbf3265f3bbd320ec9fe9a7ee6c2x-p-500.png' | asset_url }} 500w, {{ '41439bbf3265f3bbd320ec9fe9a7ee6c2x.png' | asset_url }} 658w" alt=""></div>
-      <div class="insta-image mt-2 hide"><img src="{{ '21cc2a08450148da305b6f77e018d14a2x.png' | asset_url }}" loading="eager" alt=""></div>
-      <div class="insta-image hide"><img src="{{ 'caa1e2af237e8c294e19101328306f952x.png' | asset_url }}" loading="eager" alt=""></div>
-      <div class="insta-image mt-2 hide"><img src="{{ '23925b9857697583c63566f343e5b1cc-12x.png' | asset_url }}" loading="eager" alt=""></div>
-    </div>
-  </div>
-  <div class="section bg-form rounded py-3 wf-section">
-    <div class="text-wrapper">
-      <h3 class="heading-3 newsletter-heading">{{ 'tn4e8468bf' | t }}</h3>
-    </div>
-    <div class="text-wrapper">
-      <div class="form-block w-form">
-        {%- form "customer",  class: "form flex-col" -%}<input type="hidden" name="contact[tags]" value="newsletter"><input type="email" class="btn form-field w-input" maxlength="256" name="contact[email]" data-name="Email" placeholder="johndoe@mail.com" id="subsEmail" required="">
-          <div class="btn btn-bg-coco flex form-btn">
-            <div>{{ 'tn69de02d6' | t }}</div><input type="submit" value="Submit" data-wait="Please wait..." id="subscribeBtn" class="submit-button w-button"><img loading="lazy" src="{{ 'icons8-right-arrow-32_1icons8-right-arrow-32.png' | asset_url }}" alt="" class="btn-arrow">
-          </div>
-        {%- assign form_success = form.posted_successfully? -%}{%- assign form_errors = form.errors -%}{%- render "form-general-script", form_success: form_success, form_errors: form_errors -%}{%- endform -%}
-        <div class="success-message-2 w-form-done  {% if form_success %}form-posted-successfully{% endif %}">
-          <div>{{ 't5a0ea5a1' | t }}</div>
-        </div>
-        {%- unless form_success -%}<div class="w-form-fail  {% if form.errors %}form-has-errors{% endif %}">
-          <div>{%- render "form-errors", form_errors: form_errors -%}</div>
-        </div>{%- endunless -%}
+      <div id="Insta-Slider" class="cards">
+        <div class="insta-image"><img src="{{ '41439bbf3265f3bbd320ec9fe9a7ee6c2x.png' | asset_url }}" loading="eager" sizes="(max-width: 479px) 167.98611450195312px, (max-width: 767px) 255.98959350585938px, (max-width: 991px) 33vw, (max-width: 1439px) 320px, 383.9930725097656px" srcset="{{ '41439bbf3265f3bbd320ec9fe9a7ee6c2x-p-500.png' | asset_url }} 500w, {{ '41439bbf3265f3bbd320ec9fe9a7ee6c2x.png' | asset_url }} 658w" alt=""></div>
+        <div class="insta-image mt-2"><img src="{{ '41439bbf3265f3bbd320ec9fe9a7ee6c2x.png' | asset_url }}" loading="eager" sizes="(max-width: 479px) 167.98611450195312px, (max-width: 767px) 255.98959350585938px, (max-width: 991px) 33vw, (max-width: 1439px) 320px, 383.9930725097656px" srcset="{{ '41439bbf3265f3bbd320ec9fe9a7ee6c2x-p-500.png' | asset_url }} 500w, {{ '41439bbf3265f3bbd320ec9fe9a7ee6c2x.png' | asset_url }} 658w" alt=""></div>
+        <div class="insta-image"><img src="{{ '41439bbf3265f3bbd320ec9fe9a7ee6c2x.png' | asset_url }}" loading="eager" sizes="(max-width: 479px) 167.98611450195312px, (max-width: 767px) 255.98959350585938px, (max-width: 991px) 33vw, (max-width: 1439px) 320px, 383.9930725097656px" srcset="{{ '41439bbf3265f3bbd320ec9fe9a7ee6c2x-p-500.png' | asset_url }} 500w, {{ '41439bbf3265f3bbd320ec9fe9a7ee6c2x.png' | asset_url }} 658w" alt=""></div>
+        <div class="insta-image mt-2"><img src="{{ '41439bbf3265f3bbd320ec9fe9a7ee6c2x.png' | asset_url }}" loading="eager" sizes="(max-width: 479px) 167.98611450195312px, (max-width: 767px) 255.98959350585938px, (max-width: 991px) 33vw, (max-width: 1439px) 320px, 383.9930725097656px" srcset="{{ '41439bbf3265f3bbd320ec9fe9a7ee6c2x-p-500.png' | asset_url }} 500w, {{ '41439bbf3265f3bbd320ec9fe9a7ee6c2x.png' | asset_url }} 658w" alt=""></div>
       </div>
     </div>
   </div>
-  <div class="section bg-transparent py-8 wf-section">
-    <div class="footer-wrapper">
-      <div class="col flex _w-30 flex-start">
-        <div class="col">
-          <h3 class="footer-heading">{{ 't13ede05' | t }}</h3>
-          <a href="{{ pages["sustainability"].url }}" class="footer-link w-inline-block">
-            <div class="text-block-3">{{ 'tn1baefe39' | t }}</div>
-          </a>
-          <a href="{{ pages["our-brands"].url }}" class="footer-link w-inline-block">
-            <div>{{ 't7c121960' | t }}</div>
-          </a>
-          <a href="{{ pages["compliance"].url }}" class="footer-link w-inline-block">
-            <div>{{ 't56bf8c3b' | t }}</div>
-          </a>
-          <a href="{{ pages["faqs"].url }}" class="footer-link w-inline-block">
-            <div>{{ 't20d03d' | t }}</div>
-          </a>
-          <a href="{{ pages["downloads"].url }}" class="footer-link w-inline-block">
-            <div>{{ 'tn3a4f9735' | t }}</div>
-          </a>
-          <a href="{{ pages["terms-and-conditions"].url }}" class="footer-link w-inline-block">
-            <div>{{ 'tn7fe2d65b' | t }}</div>
-          </a>
-        </div>
-        <div class="col">
-          <h3 class="footer-heading">{{ 't3c2336d' | t }}</h3>
-          <a href="{{ pages["about"].url }}" class="footer-link w-inline-block">
-            <div>{{ 't645f0031' | t }}</div>
-          </a>
-          <a href="{{ pages["materials"].url }}" class="footer-link w-inline-block">
-            <div>{{ 'tn5ff49ff4' | t }}</div>
-          </a>
-        </div>
-      </div>
-      <div class="col _w-30">
-        <h3 class="footer-heading">{{ 'tn64104400' | t }}</h3>
-        <div class="text-wrapper flex-col items-left">
-          <div class="footer-link footer-text">{{ 't30acf044' | t }}</div>
-          <a href="#" class="link-block w-inline-block">
-            <div class="text-block-2">{{ 't3b65c638' | t }}</div>
-          </a>
-        </div>
-        <div class="text-wrapper flex-col items-left">
-          <div class="footer-link footer-text">{{ 't2f1bd1e2' | t }}</div>
-          <a href="tel:+916746118727" class="link-block phone-number w-inline-block">
-            <div>{{ 'tn1e512ba4' | t }}</div>
-          </a>
-        </div>
-      </div>
-      <div class="col items-center _w-30 flex-start">
-        <a href="{{ routes.root_url }}" aria-current="page" class="link-block-7 w-inline-block w--current">
-          <div class="footer-logo" data-w-id="b1f044c8-101e-6fb4-7d48-81566922f239" data-animation-type="lottie" data-src="{{ 'chetnalighterbg-01.json' | asset_url }}" data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg" data-default-duration="1.9686352217844805" data-duration="4"></div>
-        </a>
-      </div>
-    </div>
-    <div data-w-id="88cd0def-00e0-bb06-e161-fa21791436b3" class="footer">
-      <div class="col items-center">
-        <div class="copyright-text">{{ 't7f2f918e' | t }}</div>
-      </div>
-      <div class="col flex items-center">
-        <div class="social-icon">
-          <a href="#" class="w-inline-block"><img src="{{ 'group-329.svg' | asset_url }}" loading="lazy" alt=""></a>
-        </div>
-        <div class="social-icon">
-          <a href="#" class="w-inline-block"><img src="{{ 'group-202x_1group-202x.png' | asset_url }}" loading="lazy" alt=""></a>
-        </div>
-        <div class="social-icon">
-          <a href="https://www.facebook.com/HornButtonManufacturer/" target="_blank" class="w-inline-block"><img src="{{ 'group-212x_1group-212x.png' | asset_url }}" loading="lazy" alt=""></a>
-        </div>
-        <div class="social-icon">
-          <a href="https://www.instagram.com/chetnainternational/?hl=en" class="w-inline-block"><img src="{{ 'group-222x_1group-222x.png' | asset_url }}" loading="lazy" alt=""></a>
-        </div>
-      </div>
-      <div class="col flex items-center">
-        <a href="{{ pages["privacy-policy"].url }}" class="copyright-link w-inline-block">
-          <div class="copyright-text">{{ 'tn3fbde6f6' | t }}</div>
-        </a>
-        <a href="{{ pages["terms-and-conditions"].url }}" class="copyright-link w-inline-block">
-          <div class="copyright-text">{{ 'tn910fa3b' | t }}</div>
-        </a>
-      </div>
-    </div>
-  </div>
+  {%- render 'newsletter' -%}
+  {%- section 'footer' -%}
   <div class="div-block-42">
     <div data-node-type="commerce-cart-wrapper" data-open-product="" data-wf-cart-type="modal" data-wf-cart-query="" data-wf-page-link-href-prefix="" class="w-commerce-commercecartwrapper">
       <a href="#" data-node-type="commerce-cart-open-link" aria-haspopup="dialog" aria-label="Open cart" role="button" class="w-commerce-commercecartopenlink btn btn-bg-coco cart-btn w-inline-block"><svg class="w-commerce-commercecartopenlinkicon" width="17px" height="17px" viewBox="0 0 17 17">
@@ -691,7 +511,7 @@ pointer-events:none;}
           </g>
         </svg>
         <div class="text-block-39 w-inline-block">{{ 't1fef40' | t }}</div>
-        <div class="w-commerce-commercecartopenlinkcount cart-quantity">{{ 't30' | t }}</div>
+        <div class="w-commerce-commercecartopenlinkcount cart-quantity">{{ cart.item_count }}</div>
       </a>
       <div data-node-type="commerce-cart-container-wrapper" style="display:none" class="w-commerce-commercecartcontainerwrapper w-commerce-commercecartcontainerwrapper--cartType-modal cart-wrapper">
         <div role="dialog" data-node-type="commerce-cart-container" class="w-commerce-commercecartcontainer cart-container">
@@ -710,11 +530,11 @@ pointer-events:none;}
                     <div class="col cart">
                       <div class="div-block-7">
                         <div class="text-block-14">{{ 'tn76f396dc' | t }}</div>
-                        <div class="w-commerce-commercecartordervalue text-block-15"></div>
+                        <div class="w-commerce-commercecartordervalue text-block-15">{{ cart.items_subtotal_price | money }}</div>
                       </div>
                       <div class="div-block-8">
                         <div class="text-block-16">{{ 't4d3eb24' | t }}</div>
-                        <div class="w-commerce-commercecartordervalue text-block-17"></div>
+                        <div class="w-commerce-commercecartordervalue text-block-17">{{ cart.items_subtotal_price | money }}</div>
                       </div>
                     </div>
                     <div class="col cart">

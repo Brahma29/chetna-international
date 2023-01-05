@@ -1,0 +1,37 @@
+{% capture listItems %}
+{% for item in collections[settings.collection_products_template].products limit: settings.collection_products_template_limit %}
+<div role="listitem" class="collection-item-6 w-dyn-item">
+              <div class="product-card">
+                <a href="{{ item.url | within: collection }}" class="w-inline-block">
+                  <div class="product-image h-36"><img loading="lazy" src="{{ item.featured_image | img_url: 'master' }}" alt="{{ item.featured_image.alt }}" class="product-img" data-commerce-type="variation-image" srcset="{{ item.featured_image | img_url: '1920x' }} 1920w,{{ item.featured_image | img_url: '1600x' }} 1600w,{{ item.featured_image | img_url: '1366x' }} 1366w,{{ item.featured_image | img_url: '1024x' }} 1024w,{{ item.featured_image | img_url: '768x' }} 768w,{{ item.featured_image | img_url: '640x' }} 640w"></div>
+                </a>
+                <div class="product-details">
+                  <div class="product-category">{{ item.metafields.udesly['category-name'] }}</div>
+                  <a href="{{ item.url | within: collection }}" class="link-block-5 w-inline-block">
+                    <h2 class="product-name-slider">{{ item.title }}</h2>
+                  </a>
+                  <div class="text-wrapper justify-start">
+                    <div class="text-wrapper">
+                      <div class="product-price hide">₹</div>
+                      <div data-commerce-type="variation-price" class="product-price">{{ item.price | money }}</div>
+                    </div>
+                    <div class="text-wrapper">
+                      <div class="product-original-price hide">₹</div>
+                      <div class="product-original-price" data-commerce-type="variation-compare_at_price">{{ item.selected_or_first_available_variant.compare_at_price | money }}</div>
+                    </div>
+                  </div>
+                  <a href="{{ item.url | within: collection }}" data-w-id="cbbff648-c24f-4fbc-d769-21e2c17c11f7" class="btn bg-cart-btn cursor-auto w-button">Add to bag</a>
+                </div>
+              </div>
+            </div>
+{%- endfor -%}
+{% endcapture %}
+{% assign items_length = listItems | strip | size %}
+<div class="collection-list-wrapper-2 w-dyn-list" udy-collection="product">
+          {%- unless items_length == 0 -%}<div role="list" class="cards no-wrap pr-2 w-dyn-items">
+            {{ listItems }}
+          </div>{%- endunless -%}
+          {%- if items_length == 0 -%}<div class="w-dyn-empty">
+            <div>No items found.</div>
+          </div>{%- endif -%}
+        </div>

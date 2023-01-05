@@ -46,9 +46,9 @@
     "settings": [
       {
         "type": "color",
-        "id": "color_203c2ae",
-        "label": "Color 203c2ae",
-        "default": "#000"
+        "id": "color_20748b16",
+        "label": "Color 20748b16",
+        "default": "#3898ec"
       },
       {
         "type": "color",
@@ -58,9 +58,15 @@
       },
       {
         "type": "color",
-        "id": "color_2069428",
-        "label": "Color 2069428",
-        "default": "#666"
+        "id": "color_n665b9284",
+        "label": "Color n665b9284",
+        "default": "rgba(0, 0, 0, 0.8)"
+      },
+      {
+        "type": "color",
+        "id": "color_n65194d1d",
+        "label": "Color n65194d1d",
+        "default": "rgba(0, 0, 0, 0.25)"
       },
       {
         "type": "color",
@@ -88,33 +94,27 @@
       },
       {
         "type": "color",
-        "id": "color_20748b16",
-        "label": "Color 20748b16",
-        "default": "#3898ec"
-      },
-      {
-        "type": "color",
         "id": "color_n4bc568a",
         "label": "Color n4bc568a",
         "default": "#ffdede"
       },
       {
         "type": "color",
-        "id": "color_n665b9284",
-        "label": "Color n665b9284",
-        "default": "rgba(0, 0, 0, 0.8)"
-      },
-      {
-        "type": "color",
-        "id": "color_n65194d1d",
-        "label": "Color n65194d1d",
-        "default": "rgba(0, 0, 0, 0.25)"
-      },
-      {
-        "type": "color",
         "id": "color_n58536e15",
         "label": "Color n58536e15",
         "default": "#f5f5f5"
+      },
+      {
+        "type": "color",
+        "id": "color_203c2ae",
+        "label": "Color 203c2ae",
+        "default": "#000"
+      },
+      {
+        "type": "color",
+        "id": "color_2069428",
+        "label": "Color 2069428",
+        "default": "#666"
       },
       {
         "type": "color",
@@ -523,6 +523,25 @@
         "id": "color_n28c93225",
         "label": "Color n28c93225",
         "default": "#b7a5a5"
+      }
+    ]
+  },
+  {
+    "name": "Products Collection Settings",
+    "settings": [
+      {
+        "type": "collection",
+        "id": "collection_products_template",
+        "label": "Collection Products Template"
+      },
+      {
+        "type": "range",
+        "id": "collection_products_template_limit",
+        "label": "Collection Products Template limit",
+        "min": 1,
+        "max": 50,
+        "step": 1,
+        "default": 3
       }
     ]
   }

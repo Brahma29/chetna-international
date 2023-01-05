@@ -1,0 +1,30 @@
+{% capture listItems %}
+
+{%- assign allItems = collections -%}
+{%- for item in allItems -%}{% assign condition_0 = false %}                  
+                {% if item.metafields.udesly['visibile'] == "true" %}
+                    {% assign condition_0 = true %}
+                {% endif %}{% if condition_0 %}
+ <div role="listitem" class="collection-item-4 w-dyn-item">
+            <a data-w-id="091debff-81b7-4b58-41b0-9c13a999e540" href="#" class="btn border-btn tabs-btn w-button">{{ item.title }}</a>
+            {%- if item.metafields.udesly['visibile'] == "true" -%}<div data-w-id="cbee6e46-2cdf-fcee-f9ee-b53238237da1" class="info-container">
+              <div class="info-icon"><img src="{{ 'noun-info-1829451.svg' | asset_url }}" loading="lazy" alt=""></div>
+              <div class="info">
+                <div class="text-block-32">{{ item.metafields.udesly['info-para'] }}</div>
+              </div>
+            </div>{%- endif -%}
+          </div>
+{% endif %}
+{%- endfor -%}
+
+{% endcapture %}
+{% assign items_length = listItems | strip | size %}
+
+<div class="tabs-menu w-dyn-list" udy-collection="collection">
+        {%- unless items_length == 0 -%}<div role="list" class="tabs-menu-options w-dyn-items">
+          {{ listItems }}
+        </div>{%- endunless -%}
+        {%- if items_length == 0 -%}<div class="w-dyn-empty">
+          <div>No items found.</div>
+        </div>{%- endif -%}
+      </div>

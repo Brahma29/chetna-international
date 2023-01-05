@@ -1,0 +1,27 @@
+{% capture listItems %}
+                        {% for item in blogs['post'].articles %}
+                        <div role="listitem" class="w-dyn-item">
+            <a href="{{ item.url }}" class="blog-post-card w-inline-block">
+              <div class="blog-post-image"><img src="{{ item.metafields.udesly['thumbnail-image'].src }}" loading="lazy" alt="" class="blog-thumbnail"></div>
+              <div class="blog-details">
+                <h3 class="blog-title">{{ item.title }}</h3>
+                <div class="author-details">
+                  <div class="author-name">
+                    <div class="text-block-25 author">{{ item.metafields.udesly['author-name'] }}</div><img src="{{ 'group-11.svg' | asset_url }}" loading="lazy" alt="">
+                  </div>
+                  <div class="text-block-25">{{ item.created_at | date: "%b %e, %Y" }}</div>
+                </div>
+              </div>
+            </a>
+          </div>
+                        {% endfor %}
+                        {% endcapture %}
+{% assign items_length = listItems | strip | size %}
+    <div class="collection-list-wrapper-3 blog-page w-dyn-list" udy-collection="post">
+        {%- unless items_length == 0 -%}<div id="blog-slider" data-w-id="54c2d2ef-6a65-8f7b-0963-295d8f714553" role="list" class="cards no-wrap pl-0 w-dyn-items">
+          {{ listItems }}
+        </div>{%- endunless -%}
+        {%- if items_length == 0 -%}<div class="w-dyn-empty">
+          <div>No items found.</div>
+        </div>{%- endif -%}
+      </div>
