@@ -222,28 +222,12 @@
         <div role="list" class="shop-collection-list w-dyn-items">
           <div role="listitem" class="collection-item-shop w-dyn-item">
 
-
-
-{% if collection.all_products_count == 0 %}
-    <script>console.log("No products")</script>
-    {% else %}
-    {%- for product in collection.products -%}
-      <script>console.log({{ product | json }})</script>
-          <li
-            id="Slide"
-            class="grid__item"
-          >
-            {{ product.title }}
-          </li>
-        {%- endfor -%}
-{% endif %}
-
             
 
             
 
-            
-  {%- for product in collection.frontpage.products -%}
+            <script> console.log({{collection.products_count}}) </script>
+  {%- for product in collection.products_count -%}
     <div class="product-card shop-card">
               <a href="#" class="link-block-4 w-inline-block">
                 <div class="product-image shopcard-img"><img loading="lazy" src="{{ product.featured_image }}" alt="" class="product-img"></div>
