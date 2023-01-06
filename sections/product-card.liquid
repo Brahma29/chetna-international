@@ -1,28 +1,50 @@
+{%- if card_product and card_product != empty -%}
+  <a href="#" class="w-inline-block">
+    <div class="product-image h-36">
+      {%- if card_product.featured_media == null -%}
+        <img
+          loading="lazy"
+          src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg"
+          alt=""
+          class="product-img"
+        >
+      {%- else -%}
+        <img
+          loading="lazy"
+          src="{{ card_product.featured_media | img_url: 'master' }}"
+          alt="{{ section.settings.product_img_image.alt | escape }}"
+          class="product-img"
+        >
+      {%- endif -%}
+    </div>
+  </a>
+  <div class="product-details">
+    <div class="product-category">{{ section.settings.product_category }}</div>
+    <a href="{{card_product.url}}" class="link-block-2 w-inline-block">
+      <h2 class="product-name-slider">{{ card_product.title }}</h2>
+    </a>
+    <div class="text-wrapper justify-start">
+      <div class="text-wrapper">
+        <div data-commerce-type="variation-price" class="product-price">{{ card_product.price }}</div>
+      </div>
+      <div class="text-wrapper">
+        <div class="product-original-price">{{ card_product.compare_at_price }}</div>
+      </div>
+    </div>
+    <a
+      href="{% if section.settings.btn_link %}{{ section.settings.btn_link }}{% else %}#{% endif %}"
+      data-w-id="dc63c2fe-77cb-de01-c6a1-30a116b15f60"
+      class="btn bg-cart-btn cursor-auto w-button"
+    >
+      {{- section.settings.btn_text -}}
+    </a>
+  </div>
+{%- endif -%}
+<script>
+  var currentSection = document.currentScript.closest('.shopify-section');
+  currentSection.setAttribute('class', 'product-card');
+</script>
 
-        <a href="#" class="w-inline-block">
-          <div class="product-image h-36">{%- if section.settings.product_img_image == nil -%}<img loading="lazy" src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" alt="" class="product-img">{%- else -%}<img loading="lazy" src="{{ section.settings.product_img_image.src | img_url: 'master' }}" alt="{{ section.settings.product_img_image.alt | escape }}" class="product-img">{%- endif -%}</div>
-        </a>
-        <div class="product-details">
-          <div class="product-category">{{ section.settings.product_category }}</div>
-          <a href="#" class="link-block-2 w-inline-block">
-            <h2 class="product-name-slider">{{ section.settings.product_name }}</h2>
-          </a>
-          <div class="text-wrapper justify-start">
-            <div class="text-wrapper">
-              <div class="product-price hide">{{ 't20b9' | t }}</div>
-              <div data-commerce-type="variation-price" class="product-price">{{ section.settings.product_price }}</div>
-            </div>
-            <div class="text-wrapper">
-              <div class="product-original-price hide">{{ 't20b9' | t }}</div>
-              <div class="product-original-price">{{ section.settings.product_compare_at_price }}</div>
-            </div>
-          </div>
-          <a href="{% if section.settings.btn_link %}{{ section.settings.btn_link }}{% else %}#{% endif %}" data-w-id="dc63c2fe-77cb-de01-c6a1-30a116b15f60" class="btn bg-cart-btn cursor-auto w-button">{{ section.settings.btn_text }}</a>
-        </div>
-      
-
-<script>var currentSection = document.currentScript.closest('.shopify-section');currentSection.setAttribute("class","product-card");</script>
-        
 {% schema %}
 {
   "name": "Product Card",
@@ -32,20 +54,20 @@
     {
       "type": "text",
       "id": "btn_text",
-      "label": "btn - Text",
+      "label": "btn-Text",
       "default": "Buy Now"
     },
     {
-      "type": "richtext",
+      "type": "text",
       "id": "product_compare_at_price",
       "label": "Product Compare At Price",
-      "default": "<p>Text Area</p>"
+      "default": "299"
     },
     {
-      "type": "richtext",
+      "type": "text",
       "id": "product_price",
       "label": "Product Price",
-      "default": "<p>Text Area</p>"
+      "default": "199"
     },
     {
       "type": "text",
@@ -54,19 +76,19 @@
       "default": "Heading"
     },
     {
-      "type": "richtext",
+      "type": "text",
       "id": "product_category",
       "label": "Product Category",
-      "default": "<p>Text Area</p>"
+      "default": "Text Area"
     },
     {
       "type": "image_picker",
       "id": "product_img_image",
-      "label": "product-img - Image"
+      "label": "Product Image"
     },
     {
       "id": "btn_link",
-      "label": "btn - Link",
+      "label": "btn-Link",
       "type": "url"
     }
   ]
