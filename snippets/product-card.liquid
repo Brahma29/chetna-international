@@ -11,7 +11,7 @@
       {%- else -%}
         <img
           loading="lazy"
-          src="{{ card_product.featured_media | img_url: 'master' }}"
+          src="{{ card_product.featured_media | img_url }}"
           alt="{{ section.settings.product_img_image.alt | escape }}"
           class="product-img"
         >
