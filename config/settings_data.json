@@ -12,11 +12,11 @@
           "droplink_link_4": "",
           "droplink_link_3": "",
           "droplink_link_2": "",
-          "text_block_text": "<p>Text Area<\/p>",
+          "text_block_text": "<p>Resources<\/p>",
           "menu_item_link_3": "",
-          "nav_link_3": "<p>Text Area<\/p>",
+          "nav_link_3": "<p>Materials<\/p>",
           "menu_item_link_2": "",
-          "text_block_text_2": "<p>Text Area<\/p>",
+          "text_block_text_2": "<p>About<\/p>",
           "menu_item_link": "",
           "shop_text": "<p>Shop<\/p>",
           "shop_link_bg_link": "",
@@ -30,8 +30,9 @@
         "settings": {
           "btn_text": "KNOW MORE",
           "btn_link": "",
-          "para_text": "Updated section",
-          "lottie_animation_visibility": true
+          "para_text": "Chetna International was established in 1984 by Mr. Rajeev Sikka as an Indian Handicraft’s company. Under their careful supervision and dynamic leadership style, our organisation has continued to rise to great heights by adopting the right practises and investing in the future.",
+          "lottie_animation_visibility": true,
+          "para_visibility": true
         }
       },
       "product-card": {
@@ -51,10 +52,48 @@
         "settings": {
           "text_block_text_5": "<p>Text Area<\/p>",
           "text_block_2_text": "<p>Text Area<\/p>",
+          "link_block_link": "",
+          "footer_link_link_8": "",
+          "footer_link_link_7": "",
           "text_block_text_4": "<p>Text Area<\/p>",
+          "footer_link_link_6": "",
+          "footer_link_link_5": "",
           "text_block_text_3": "<p>Text Area<\/p>",
+          "footer_link_link_4": "",
           "text_block_text_2": "<p>Text Area<\/p>",
-          "text_block_text": "<p>Text Area<\/p>"
+          "footer_link_link_3": "",
+          "text_block_text": "<p>Text Area<\/p>",
+          "footer_link_link_2": "",
+          "footer_link_link": "",
+          "link_block_link_2": ""
+        }
+      },
+      "advantage-section": {
+        "type": "advantage-section",
+        "settings": {
+          "btn_text_3": "Buy catalog",
+          "btn_link_3": "",
+          "card_heading_text_3": "Proudly made in India",
+          "btn_text_2": "Learn more",
+          "btn_link_2": "",
+          "card_heading_text_2": "Quality made",
+          "btn_text": "See how",
+          "btn_link": "",
+          "card_heading_text": "Family owned",
+          "card_visibility": true,
+          "heading_text": "The Chetna Advantage"
+        }
+      },
+      "collection-card": {
+        "type": "collection-card",
+        "settings": {
+          "button_url": "",
+          "style_card_heading_text": "<p>Text Area<\/p>"
+        }
+      },
+      "insta-card": {
+        "type": "insta-card",
+        "settings": {
         }
       }
     },
