@@ -95,6 +95,30 @@
         "type": "insta-card",
         "settings": {
         }
+      },
+      "navbar-white-variant": {
+        "type": "navbar-white-variant",
+        "settings": {
+          "button_text": "Contact Us",
+          "droplink_link_7": "shopify:\/\/pages\/terms-of-services",
+          "droplink_link": "shopify:\/\/pages\/downloads",
+          "droplink_link_6": "shopify:\/\/pages\/blogs",
+          "droplink_link_5": "shopify:\/\/pages\/faqs",
+          "droplink_link_4": "shopify:\/\/pages\/compliance",
+          "droplink_link_3": "shopify:\/\/pages\/our-brands",
+          "droplink_link_2": "shopify:\/\/pages\/sustainability",
+          "text_block_text": "Resources",
+          "menu_item_link_3": "shopify:\/\/pages\/resources",
+          "nav_link_3": "Materials",
+          "menu_item_link_2": "shopify:\/\/pages\/materials",
+          "text_block_text_2": "About",
+          "menu_item_link": "shopify:\/\/pages\/about",
+          "shop_text": "Shop",
+          "shop_link_bg_link": "shopify:\/\/pages\/shop",
+          "lottie_animation_3_visibility": true,
+          "logo": "",
+          "button_link": "shopify:\/\/pages\/contact"
+        }
       }
     },
     "content_for_index": [
