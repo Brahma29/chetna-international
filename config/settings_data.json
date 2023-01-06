@@ -30,7 +30,7 @@
         "settings": {
           "btn_text": "KNOW MORE",
           "btn_link": "",
-          "para_text": "<p>THis is new section I have created<\/p>",
+          "para_text": "Updated section",
           "lottie_animation_visibility": true
         }
       },
