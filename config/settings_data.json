@@ -1,0 +1,65 @@
+{
+  "current": {
+    "sections": {
+      "navbar": {
+        "type": "navbar",
+        "settings": {
+          "button_text": "Contact Us",
+          "droplink_link_7": "",
+          "droplink_link": "",
+          "droplink_link_6": "",
+          "droplink_link_5": "",
+          "droplink_link_4": "",
+          "droplink_link_3": "",
+          "droplink_link_2": "",
+          "text_block_text": "<p>Text Area<\/p>",
+          "menu_item_link_3": "",
+          "nav_link_3": "<p>Text Area<\/p>",
+          "menu_item_link_2": "",
+          "text_block_text_2": "<p>Text Area<\/p>",
+          "menu_item_link": "",
+          "shop_text": "<p>Shop<\/p>",
+          "shop_link_bg_link": "",
+          "lottie_animation_3_visibility": true,
+          "logo": "",
+          "button_link": ""
+        }
+      },
+      "para-section": {
+        "type": "para-section",
+        "settings": {
+          "btn_text": "KNOW MORE",
+          "btn_link": "",
+          "para_text": "<p>THis is new section I have created<\/p>",
+          "lottie_animation_visibility": true
+        }
+      },
+      "product-card": {
+        "type": "product-card",
+        "settings": {
+          "btn_text": "Buy Now",
+          "product_compare_at_price": "<p>Text Area<\/p>",
+          "product_price": "<p>Text Area<\/p>",
+          "product_name": "Heading",
+          "product_category": "<p>Text Area<\/p>",
+          "product_img_image": "shopify:\/\/shop_images\/Group_477.png",
+          "btn_link": ""
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {
+          "text_block_text_5": "<p>Text Area<\/p>",
+          "text_block_2_text": "<p>Text Area<\/p>",
+          "text_block_text_4": "<p>Text Area<\/p>",
+          "text_block_text_3": "<p>Text Area<\/p>",
+          "text_block_text_2": "<p>Text Area<\/p>",
+          "text_block_text": "<p>Text Area<\/p>"
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
+  }
+}
