@@ -1,0 +1,35 @@
+{%- if section.settings.style_card_img_image == nil -%}<img loading="lazy" src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" alt="" class="style-card-img">{%- else -%}<img loading="lazy" src="{{ section.settings.style_card_img_image.src | img_url: 'master' }}" alt="{{ section.settings.style_card_img_image.alt | escape }}" class="style-card-img">{%- endif -%}
+          <div class="style-card-text">
+            <div class="style-card-heading">{{ section.settings.style_card_heading_text }}</div>
+            <a href="{% if section.settings.button_url %}{{ section.settings.button_url }}{% else %}#{% endif %}" class="btn style-card-btn w-button">{{ 'tcfbdf89' | t }}</a>
+          </div>
+          <div class="style-card-overlay"></div>
+        
+
+<script>var currentSection = document.currentScript.closest('.shopify-section');currentSection.setAttribute("data-w-id","67598789-817c-b598-f6b0-d79b5a290b3e");currentSection.setAttribute("class","style-card");</script>
+        
+{% schema %}
+{
+  "name": "Collection Card",
+  "tag": "div",
+  "class": "style-card",
+  "settings": [
+    {
+      "id": "button_url",
+      "label": "Button Url",
+      "type": "url"
+    },
+    {
+      "type": "image_picker",
+      "id": "style_card_img_image",
+      "label": "style-card-img - Image"
+    },
+    {
+      "type": "richtext",
+      "id": "style_card_heading_text",
+      "label": "style-card-heading - Text",
+      "default": "<p>Text Area</p>"
+    }
+  ]
+}
+{% endschema %}

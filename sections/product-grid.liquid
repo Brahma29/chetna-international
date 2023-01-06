@@ -1,0 +1,23 @@
+<div class="shop-collection-list">
+  {%- for product in collections.all.products -%}
+    <div class="product-card shop-card">
+      <a href="#" class="link-block-4 w-inline-block">
+        <div class="product-image shopcard-img">
+          <img loading="lazy" src="{{ product.featured_image | image_url: width: 500 }}" alt="" class="product-img">
+        </div>
+      </a>
+      <div class="product-details shopcard-details">
+        <div class="product-category">{{ 't7635fb4f' | t }}</div>
+        <a href="#" class="link-block-3 w-inline-block">
+          <h2 class="product-name-slider">{{ product.title }}</h2>
+        </a>
+        <div class="text-wrapper justify-start">
+          <div class="text-wrapper">
+            <div class="product-original-price">{{ product.price | money_with_currency }}</div>
+          </div>
+        </div>
+        <a href="#" class="btn bg-cart-btn cursor-auto w-button">{{ 't71bb21fc' | t }}</a>
+      </div>
+    </div>
+  {%- endfor -%}
+</div>
