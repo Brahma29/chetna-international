@@ -21,10 +21,9 @@
 </a>
 <div class="nav-menu">
   {% for link in linklists['main-menu'].links %}
-    <p>{{ link.title }}</p>
     <div class="flex">
       <a
-        href="{% if section.settings.shop_link_bg_link %}{{ section.settings.shop_link_bg_link }}{% else %}{{ pages["shop"].url }}{% endif %}"
+        href="{{link.url}}"
         class="shop-link-bg w-inline-block"
       >
         <div id="ShopLink" class="shop">{{ section.settings.shop_text }}</div>
