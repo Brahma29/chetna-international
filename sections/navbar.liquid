@@ -20,97 +20,95 @@
   {%- endif -%}
 </a>
 <div class="nav-menu">
-  {% for link in linklists['main-menu'].links %}
-    <div class="flex">
+  <div class="flex">
+    <a
+      href="{{linklists.main-menu['shop'].url}}"
+      class="shop-link-bg w-inline-block"
+    >
+      <div id="ShopLink" class="shop">{{ section.settings.shop_text }}</div>
+      <div id="shop-btn-border" class="div-block-38"></div>
+    </a>
+    <a href="{{ pages["shop"].url }}" class="shopactivedot w-inline-block"></a>
+  </div>
+  <div class="flex">
+    <a
+      href="{% if section.settings.menu_item_link %}{{ section.settings.menu_item_link }}{% else %}{{ pages["about"].url }}{% endif %}"
+      class="menu-item w-inline-block"
+    >
+      <div>{{ section.settings.text_block_text_2 }}</div>
+    </a>
+    <a href="{{ pages["about"].url }}" class="active-dot w-inline-block"></a>
+  </div>
+  <div class="flex">
+    <a
+      href="{% if section.settings.menu_item_link_2 %}{{ section.settings.menu_item_link_2 }}{% else %}{{ pages["materials"].url }}{% endif %}"
+      class="menu-item w-inline-block"
+    >
+      <div>{{ section.settings.nav_link_3 }}</div>
+    </a>
+    <a href="{{ pages["materials"].url }}" class="active-dot w-inline-block"></a>
+  </div>
+  <div data-w-id="dffda831-15d8-dafd-7e52-e8064fccac94" class="dropdown">
+    <a
+      id="Resource-Link"
+      data-w-id="e8f609a8-e828-8371-cf89-37cc8f6b6663"
+      href="{% if section.settings.menu_item_link_3 %}{{ section.settings.menu_item_link_3 }}{% else %}{{ pages["resources"].url }}{% endif %}"
+      class="menu-item dropdown w-inline-block"
+    >
+      <div>{{ section.settings.text_block_text }}</div>
+      <div class="icon-2 w-icon-dropdown-toggle"></div>
+    </a>
+    <div class="dropdown-list">
       <a
-        href="{{link.url}}"
-        class="shop-link-bg w-inline-block"
+        href="{% if section.settings.droplink_link_2 %}{{ section.settings.droplink_link_2 }}{% else %}{{ pages["sustainability"].url }}{% endif %}"
+        class="droplink w-inline-block"
       >
-        <div id="ShopLink" class="shop">{{ section.settings.shop_text }}</div>
-        <div id="shop-btn-border" class="div-block-38"></div>
+        <div>{{ 'tn1baefe39' | t }}</div>
       </a>
-      <a href="{{ pages["shop"].url }}" class="shopactivedot w-inline-block"></a>
-    </div>
-    <div class="flex">
       <a
-        href="{% if section.settings.menu_item_link %}{{ section.settings.menu_item_link }}{% else %}{{ pages["about"].url }}{% endif %}"
-        class="menu-item w-inline-block"
+        href="{% if section.settings.droplink_link_3 %}{{ section.settings.droplink_link_3 }}{% else %}{{ pages["our-brands"].url }}{% endif %}"
+        class="droplink w-inline-block"
       >
-        <div>{{ section.settings.text_block_text_2 }}</div>
+        <div>{{ 't7c121960' | t }}</div>
       </a>
-      <a href="{{ pages["about"].url }}" class="active-dot w-inline-block"></a>
-    </div>
-    <div class="flex">
       <a
-        href="{% if section.settings.menu_item_link_2 %}{{ section.settings.menu_item_link_2 }}{% else %}{{ pages["materials"].url }}{% endif %}"
-        class="menu-item w-inline-block"
+        href="{% if section.settings.droplink_link_4 %}{{ section.settings.droplink_link_4 }}{% else %}{{ pages["compliance"].url }}{% endif %}"
+        class="droplink w-inline-block"
       >
-        <div>{{ section.settings.nav_link_3 }}</div>
+        <div>{{ 't56bf8c3b' | t }}</div>
       </a>
-      <a href="{{ pages["materials"].url }}" class="active-dot w-inline-block"></a>
-    </div>
-    <div data-w-id="dffda831-15d8-dafd-7e52-e8064fccac94" class="dropdown">
       <a
-        id="Resource-Link"
-        data-w-id="e8f609a8-e828-8371-cf89-37cc8f6b6663"
-        href="{% if section.settings.menu_item_link_3 %}{{ section.settings.menu_item_link_3 }}{% else %}{{ pages["resources"].url }}{% endif %}"
-        class="menu-item dropdown w-inline-block"
+        href="{% if section.settings.droplink_link_5 %}{{ section.settings.droplink_link_5 }}{% else %}{{ pages["faqs"].url }}{% endif %}"
+        class="droplink w-inline-block"
       >
-        <div>{{ section.settings.text_block_text }}</div>
-        <div class="icon-2 w-icon-dropdown-toggle"></div>
+        <div>{{ 't20d03d' | t }}</div>
       </a>
-      <div class="dropdown-list">
-        <a
-          href="{% if section.settings.droplink_link_2 %}{{ section.settings.droplink_link_2 }}{% else %}{{ pages["sustainability"].url }}{% endif %}"
-          class="droplink w-inline-block"
-        >
-          <div>{{ 'tn1baefe39' | t }}</div>
-        </a>
-        <a
-          href="{% if section.settings.droplink_link_3 %}{{ section.settings.droplink_link_3 }}{% else %}{{ pages["our-brands"].url }}{% endif %}"
-          class="droplink w-inline-block"
-        >
-          <div>{{ 't7c121960' | t }}</div>
-        </a>
-        <a
-          href="{% if section.settings.droplink_link_4 %}{{ section.settings.droplink_link_4 }}{% else %}{{ pages["compliance"].url }}{% endif %}"
-          class="droplink w-inline-block"
-        >
-          <div>{{ 't56bf8c3b' | t }}</div>
-        </a>
-        <a
-          href="{% if section.settings.droplink_link_5 %}{{ section.settings.droplink_link_5 }}{% else %}{{ pages["faqs"].url }}{% endif %}"
-          class="droplink w-inline-block"
-        >
-          <div>{{ 't20d03d' | t }}</div>
-        </a>
-        <a
-          href="{% if section.settings.droplink_link_6 %}{{ section.settings.droplink_link_6 }}{% else %}{{ pages["blogs"].url }}{% endif %}"
-          class="droplink w-inline-block"
-        >
-          <div>{{ 't3d4d4f1' | t }}</div>
-        </a>
-        <a
-          href="{% if section.settings.droplink_link %}{{ section.settings.droplink_link }}{% else %}{{ pages["downloads"].url }}{% endif %}"
-          class="droplink w-inline-block"
-        >
-          <div>{{ 'tn3a4f9735' | t }}</div>
-        </a>
-        <a
-          href="{% if section.settings.droplink_link_7 %}{{ section.settings.droplink_link_7 }}{% else %}{{ pages["terms-and-conditions"].url }}{% endif %}"
-          class="droplink w-inline-block"
-        >
-          <div>{{ 'tn7fe2d65b' | t }}</div>
-        </a>
-      </div>
-    </div>
-    <div class="flex hide">
-      <a href="{{ pages["resources"].url }}" class="menu-item w-inline-block">
-        <div>{{ 't13ede05' | t }}</div>
+      <a
+        href="{% if section.settings.droplink_link_6 %}{{ section.settings.droplink_link_6 }}{% else %}{{ pages["blogs"].url }}{% endif %}"
+        class="droplink w-inline-block"
+      >
+        <div>{{ 't3d4d4f1' | t }}</div>
       </a>
-      <a href="{{ pages["resources"].url }}" class="active-dot w-inline-block"></a>
+      <a
+        href="{% if section.settings.droplink_link %}{{ section.settings.droplink_link }}{% else %}{{ pages["downloads"].url }}{% endif %}"
+        class="droplink w-inline-block"
+      >
+        <div>{{ 'tn3a4f9735' | t }}</div>
+      </a>
+      <a
+        href="{% if section.settings.droplink_link_7 %}{{ section.settings.droplink_link_7 }}{% else %}{{ pages["terms-and-conditions"].url }}{% endif %}"
+        class="droplink w-inline-block"
+      >
+        <div>{{ 'tn7fe2d65b' | t }}</div>
+      </a>
     </div>
-  {% endfor %}
+  </div>
+  <div class="flex hide">
+    <a href="{{ pages["resources"].url }}" class="menu-item w-inline-block">
+      <div>{{ 't13ede05' | t }}</div>
+    </a>
+    <a href="{{ pages["resources"].url }}" class="active-dot w-inline-block"></a>
+  </div>
   <div
     data-node-type="commerce-cart-wrapper"
     data-open-product=""
