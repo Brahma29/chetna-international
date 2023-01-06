@@ -1,15 +1,36 @@
+<div class="div-block-29">
+  {%- if section.settings.lottie_animation_visibility -%}
+    <div
+      data-is-ix2-target="1"
+      class="lottie-animation"
+      data-w-id="514a7b7f-909f-7de8-31ca-aa2107f65389"
+      data-animation-type="lottie"
+      data-src="{{ 'button.json' | asset_url }}"
+      data-loop="0"
+      data-direction="1"
+      data-autoplay="0"
+      data-renderer="svg"
+      data-default-duration="4.004003840917587"
+      data-duration="0"
+    ></div>
+  {%- endif -%}
+  <div class="div-block-28">
+    <p class="para">{{ section.settings.para_text }}</p>
+    <a
+      href="{% if section.settings.btn_link %}{{ section.settings.btn_link }}{% else %}{{ pages["about"].url }}{% endif %}"
+      class="btn btn-bg-coco w-button"
+    >
+      {{- section.settings.btn_text -}}
+    </a>
+  </div>
+</div>
 
-    <div class="div-block-29">
-      {%- if section.settings.lottie_animation_visibility -%}<div data-is-ix2-target="1" class="lottie-animation" data-w-id="514a7b7f-909f-7de8-31ca-aa2107f65389" data-animation-type="lottie" data-src="{{ 'button.json' | asset_url }}" data-loop="0" data-direction="1" data-autoplay="0" data-renderer="svg" data-default-duration="4.004003840917587" data-duration="0"></div>{%- endif -%}
-      <div class="div-block-28">
-        <p class="para">{{ section.settings.para_text }}</p>
-        <a href="{% if section.settings.btn_link %}{{ section.settings.btn_link }}{% else %}{{ pages["about"].url }}{% endif %}" class="btn btn-bg-coco w-button">{{ section.settings.btn_text }}</a>
-      </div>
-    </div>
-  
+<script>
+  var currentSection = document.currentScript.closest('.shopify-section');
+  currentSection.setAttribute('data-w-id', '514a7b7f-909f-7de8-31ca-aa2107f65387');
+  currentSection.setAttribute('class', 'section para-section bg-transparent mx-0 px-2 wf-section');
+</script>
 
-<script>var currentSection = document.currentScript.closest('.shopify-section');currentSection.setAttribute("data-w-id","514a7b7f-909f-7de8-31ca-aa2107f65387");currentSection.setAttribute("class","section para-section bg-transparent mx-0 px-2 wf-section");</script>
-        
 {% schema %}
 {
   "name": "Para Section",
@@ -28,10 +49,10 @@
       "type": "url"
     },
     {
-      "type": "richtext",
+      "type": "text",
       "id": "para_text",
-      "label": "Para - Text",
-      "default": "<p>Text Area</p>"
+      "label": "Para-Text",
+      "default": "Text Area"
     },
     {
       "type": "checkbox",
