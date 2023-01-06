@@ -15,7 +15,9 @@
     ></div>
   {%- endif -%}
   <div class="div-block-28">
-    <p class="para">{{ section.settings.para_text }}</p>
+    {%- if section.settings.para_visibility -%}
+      <p class="para">{{ section.settings.para_text }}</p>
+    {%- endif -%}
     <a
       href="{% if section.settings.btn_link %}{{ section.settings.btn_link }}{% else %}{{ pages["about"].url }}{% endif %}"
       class="btn btn-bg-coco w-button"
@@ -52,12 +54,18 @@
       "type": "text",
       "id": "para_text",
       "label": "Para-Text",
-      "default": "Text Area"
+      "default": "Chetna International was established in 1984 by Mr. Rajeev Sikka as an Indian Handicraft’s company. Under their careful supervision and dynamic leadership style, our organisation has continued to rise to great heights by adopting the right practises and investing in the future."
     },
     {
       "type": "checkbox",
       "id": "lottie_animation_visibility",
       "label": "Lottie Animation - Visibility",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "para_visibility",
+      "label": "Para - Visibility",
       "default": true
     }
   ]

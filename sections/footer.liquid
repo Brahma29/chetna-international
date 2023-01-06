@@ -3,31 +3,31 @@
       <div class="col flex _w-30 flex-start">
         <div class="col">
           <h3 class="footer-heading">{{ 't13ede05' | t }}</h3>
-          <a href="{{ pages["sustainability"].url }}" class="footer-link w-inline-block">
+          <a href="{% if section.settings.footer_link_link %}{{ section.settings.footer_link_link }}{% else %}{{ pages["sustainability"].url }}{% endif %}" class="footer-link w-inline-block">
             <div class="text-block-3">{{ 'tn1baefe39' | t }}</div>
           </a>
-          <a href="{{ pages["our-brands"].url }}" class="footer-link w-inline-block">
+          <a href="{% if section.settings.footer_link_link_2 %}{{ section.settings.footer_link_link_2 }}{% else %}{{ pages["our-brands"].url }}{% endif %}" class="footer-link w-inline-block">
             <div>{{ section.settings.text_block_text }}</div>
           </a>
-          <a href="{{ pages["compliance"].url }}" class="footer-link w-inline-block">
+          <a href="{% if section.settings.footer_link_link_3 %}{{ section.settings.footer_link_link_3 }}{% else %}{{ pages["compliance"].url }}{% endif %}" class="footer-link w-inline-block">
             <div>{{ section.settings.text_block_text_2 }}</div>
           </a>
-          <a href="{{ pages["faqs"].url }}" class="footer-link w-inline-block">
+          <a href="{% if section.settings.footer_link_link_4 %}{{ section.settings.footer_link_link_4 }}{% else %}{{ pages["faqs"].url }}{% endif %}" class="footer-link w-inline-block">
             <div>{{ section.settings.text_block_text_3 }}</div>
           </a>
-          <a href="{{ pages["downloads"].url }}" class="footer-link w-inline-block">
+          <a href="{% if section.settings.footer_link_link_5 %}{{ section.settings.footer_link_link_5 }}{% else %}{{ pages["downloads"].url }}{% endif %}" class="footer-link w-inline-block">
             <div>{{ 'tn3a4f9735' | t }}</div>
           </a>
-          <a href="{{ pages["terms-and-conditions"].url }}" class="footer-link w-inline-block">
+          <a href="{% if section.settings.footer_link_link_6 %}{{ section.settings.footer_link_link_6 }}{% else %}{{ pages["terms-and-conditions"].url }}{% endif %}" class="footer-link w-inline-block">
             <div>{{ section.settings.text_block_text_4 }}</div>
           </a>
         </div>
         <div class="col">
           <h3 class="footer-heading">{{ 't3c2336d' | t }}</h3>
-          <a href="{{ pages["about"].url }}" class="footer-link w-inline-block">
+          <a href="{% if section.settings.footer_link_link_7 %}{{ section.settings.footer_link_link_7 }}{% else %}{{ pages["about"].url }}{% endif %}" class="footer-link w-inline-block">
             <div>{{ 't645f0031' | t }}</div>
           </a>
-          <a href="{{ pages["materials"].url }}" class="footer-link w-inline-block">
+          <a href="{% if section.settings.footer_link_link_8 %}{{ section.settings.footer_link_link_8 }}{% else %}{{ pages["materials"].url }}{% endif %}" class="footer-link w-inline-block">
             <div>{{ 'tn5ff49ff4' | t }}</div>
           </a>
         </div>
@@ -36,13 +36,13 @@
         <h3 class="footer-heading">{{ 'tn64104400' | t }}</h3>
         <div class="text-wrapper flex-col items-left">
           <div class="footer-link footer-text">{{ 't30acf044' | t }}</div>
-          <a href="#" class="link-block w-inline-block">
+          <a href="{% if section.settings.link_block_link %}{{ section.settings.link_block_link }}{% else %}mailto:info@chetnainternational.com{% endif %}" class="link-block w-inline-block">
             <div class="text-block-2">{{ section.settings.text_block_2_text }}</div>
           </a>
         </div>
         <div class="text-wrapper flex-col items-left">
           <div class="footer-link footer-text">{{ 't2f1bd1e2' | t }}</div>
-          <a href="tel:+916746118727" class="link-block phone-number w-inline-block">
+          <a href="{% if section.settings.link_block_link_2 %}{{ section.settings.link_block_link_2 }}{% else %}tel:+919711991413{% endif %}" class="link-block phone-number w-inline-block">
             <div>{{ section.settings.text_block_text_5 }}</div>
           </a>
         </div>
@@ -103,10 +103,35 @@
       "default": "<p>Text Area</p>"
     },
     {
+      "id": "link_block_link",
+      "label": "Link Block - Link",
+      "type": "url"
+    },
+    {
+      "id": "footer_link_link_8",
+      "label": "footer-link - Link 8",
+      "type": "url"
+    },
+    {
+      "id": "footer_link_link_7",
+      "label": "footer-link - Link 7",
+      "type": "url"
+    },
+    {
       "type": "richtext",
       "id": "text_block_text_4",
       "label": "Text Block - Text 4",
       "default": "<p>Text Area</p>"
+    },
+    {
+      "id": "footer_link_link_6",
+      "label": "footer-link - Link 6",
+      "type": "url"
+    },
+    {
+      "id": "footer_link_link_5",
+      "label": "footer-link - Link 5",
+      "type": "url"
     },
     {
       "type": "richtext",
@@ -115,16 +140,41 @@
       "default": "<p>Text Area</p>"
     },
     {
+      "id": "footer_link_link_4",
+      "label": "footer-link - Link 4",
+      "type": "url"
+    },
+    {
       "type": "richtext",
       "id": "text_block_text_2",
       "label": "Text Block - Text 2",
       "default": "<p>Text Area</p>"
     },
     {
+      "id": "footer_link_link_3",
+      "label": "footer-link - Link 3",
+      "type": "url"
+    },
+    {
       "type": "richtext",
       "id": "text_block_text",
       "label": "Text Block - Text",
       "default": "<p>Text Area</p>"
+    },
+    {
+      "id": "footer_link_link_2",
+      "label": "footer-link - Link 2",
+      "type": "url"
+    },
+    {
+      "id": "footer_link_link",
+      "label": "footer-link - Link",
+      "type": "url"
+    },
+    {
+      "id": "link_block_link_2",
+      "label": "Link Block - Link 2",
+      "type": "url"
     }
   ]
 }
