@@ -20,12 +20,12 @@ pointer-events:none;}
       <div class="product-container">
         <div class="product">
           <div class="product-gallery">
-            <div class="image-container"><img src="{{ product.metafields.udesly['thumbnail-1'].src }}" loading="lazy" alt="" class="image-16 _1"><img src="{{ product.metafields.udesly['thumbnail-2'].src }}" loading="lazy" alt="" class="image-16 _2"><img src="{{ product.metafields.udesly['thumbnail-3'].src }}" loading="lazy" alt="" class="image-16 _3"><img src="{{ product.metafields.udesly['thumbnail-4'].src }}" loading="lazy" alt="" class="image-16 _4"></div>
+            <div class="image-container"><img src="{{ product.images[0] | image_url }}" loading="lazy" alt="" class="image-16 _1"><img src="{{ product.images[1] | image_url }}" loading="lazy" alt="" class="image-16 _2"><img src="{{ product.images[2] | image_url }}" loading="lazy" alt="" class="image-16 _3"><img src="{{ product.images[3] | image_url }}" loading="lazy" alt="" class="image-16 _4"></div>
             <div class="thumbnails">
-              <a data-w-id="3191cb5b-75ba-36e8-d2d3-f5e4ea9098f4" href="#" class="thumbnail _1 w-inline-block"><img src="{{ product.metafields.udesly['thumbnail-1'].src }}" loading="lazy" alt="" class="thumbnail-image"></a>
-              <a data-w-id="7813836e-60de-2d0d-e2e6-358d303e1275" href="#" class="thumbnail _2 w-inline-block"><img src="{{ product.metafields.udesly['thumbnail-2'].src }}" loading="lazy" alt="" class="thumbnail-image"></a>
-              <a data-w-id="d0237639-4689-1c24-19fe-86eae5e2e588" href="#" class="thumbnail _3 w-inline-block"><img src="{{ product.metafields.udesly['thumbnail-3'].src }}" loading="lazy" alt="" class="thumbnail-image"></a>
-              {%- if product.metafields.udesly['thumbnail-4'] -%}<a data-w-id="a2c8c338-243d-6335-3e1a-7406688a40ca" href="#" class="thumbnail _4 w-inline-block"><img src="{{ product.metafields.udesly['thumbnail-4'].src }}" loading="lazy" alt="" class="thumbnail-image"></a>{%- endif -%}
+              <a data-w-id="3191cb5b-75ba-36e8-d2d3-f5e4ea9098f4" href="#" class="thumbnail _1 w-inline-block"><img src="{{ product.images[0] | image_url }}" loading="lazy" alt="" class="thumbnail-image"></a>
+              <a data-w-id="7813836e-60de-2d0d-e2e6-358d303e1275" href="#" class="thumbnail _2 w-inline-block"><img src="{{ product.images[1] | image_url }}" loading="lazy" alt="" class="thumbnail-image"></a>
+              <a data-w-id="d0237639-4689-1c24-19fe-86eae5e2e588" href="#" class="thumbnail _3 w-inline-block"><img src="{{ product.images[2] | image_url }}" loading="lazy" alt="" class="thumbnail-image"></a>
+              <a data-w-id="a2c8c338-243d-6335-3e1a-7406688a40ca" href="#" class="thumbnail _4 w-inline-block"><img src="{{ product.images[3] | image_url }}" loading="lazy" alt="" class="thumbnail-image"></a>
             </div>
           </div>
           <div class="details">
