@@ -1,0 +1,64 @@
+<a sym-bind="{&quot;link&quot;:{&quot;type&quot;:&quot;Select&quot;,&quot;val&quot;:{&quot;from&quot;:{&quot;type&quot;:&quot;Variable&quot;,&quot;val&quot;:&quot;data&quot;},&quot;prop&quot;:&quot;467ee678-6419-d581-72e1-88a7b9c88fd0&quot;}}}" href="{% if section.settings.blog_link %}{{ section.settings.blog_link }}{% else %}#{% endif %}" class="blog-post-card w-inline-block">
+          <div class="blog-post-image">{%- if section.settings.blog_thumbnail_image == nil -%}<img loading="lazy" src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" alt="" class="blog-thumbnail">{%- else -%}<img loading="lazy" src="{{ section.settings.blog_thumbnail_image.src | img_url: 'master' }}" alt="{{ section.settings.blog_thumbnail_image.alt | escape }}" class="blog-thumbnail">{%- endif -%}</div>
+          <div class="blog-details">
+            <h3 class="blog-title">{{ section.settings.blog_title }}</h3>
+            <div class="author-details">
+              <div class="author-name">
+                <div class="text-block-25 author">{{ section.settings.author }}</div><img src="{{ 'group-11.svg' | asset_url }}" loading="lazy" alt="">
+              </div>
+              <div class="div-block-25">
+                <div class="text-block-25">{{ section.settings.date }}</div>
+                <div class="text-block-30">{{ 't2e' | t }}</div>
+                <div class="text-block-25">{{ section.settings.read_time }}</div>
+              </div>
+            </div>
+          </div>
+        </a>
+
+{% unless request.design_mode %}
+<script>var currentSection = document.currentScript.closest('.shopify-section'); currentSection.outerHTML = currentSection.innerHTML;</script>
+{% endunless %}
+        
+{% schema %}
+{
+  "name": "Blog Card",
+  "tag": "div",
+  "class": "blog-post-card w-inline-block",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "read_time",
+      "label": "Read Time",
+      "default": "<p>Text Area</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "date",
+      "label": "Date",
+      "default": "<p>Text Area</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "author",
+      "label": "Author",
+      "default": "<p>Text Area</p>"
+    },
+    {
+      "type": "text",
+      "id": "blog_title",
+      "label": "Blog Title",
+      "default": "Heading"
+    },
+    {
+      "type": "image_picker",
+      "id": "blog_thumbnail_image",
+      "label": "Blog Thumbnail - Image"
+    },
+    {
+      "id": "blog_link",
+      "label": "Blog Link",
+      "type": "url"
+    }
+  ]
+}
+{% endschema %}

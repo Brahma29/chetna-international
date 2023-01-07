@@ -1,67 +1,52 @@
 
-      <a href="{{ routes.root_url }}" aria-current="page" class="brand w-inline-block w--current">
-        <div class="lottie-animation-3" data-w-id="5ef5fb41-5f13-6f70-f986-5afa9665d8cd" data-animation-type="lottie" data-src="{{ 'chetnalighterbg-01.json' | asset_url }}" data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg" data-default-duration="1.9686352217844805" data-duration="4"></div>
-        <div class="logo"><span class="coco-text">{{ 't783de8a7' | t }}<br></span>{{ 'tn554e6192' | t }}<br></div>
+      <a href="{% if section.settings.logo %}{{ section.settings.logo }}{% else %}{{ routes.root_url }}{% endif %}" aria-current="page" class="brand w-inline-block w--current">
+        {%- if section.settings.lottie_animation_3_visibility -%}<div class="lottie-animation-3" data-w-id="5ef5fb41-5f13-6f70-f986-5afa9665d8cd" data-animation-type="lottie" data-src="{{ 'chetnalighterbg-01.json' | asset_url }}" data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg" data-default-duration="1.9686352217844805" data-duration="4"></div>{%- endif -%}
       </a>
       <div class="nav-menu">
         <div class="flex">
-          <a href="{{ pages["shop"].url }}" class="shop-link-bg w-inline-block">
+          <a href="{% if section.settings.shop_link_bg_link %}{{ section.settings.shop_link_bg_link }}{% else %}{{ pages["shop"].url }}{% endif %}" class="shop-link-bg w-inline-block">
             <div id="ShopLink" class="shop">{{ section.settings.shop_text }}</div>
             <div id="shop-btn-border" class="div-block-38"></div>
           </a>
           <a href="{{ pages["shop"].url }}" class="shopactivedot w-inline-block"></a>
         </div>
         <div class="flex">
-          <a href="{{ pages["about"].url }}" class="menu-item w-inline-block">
-            <div>{{ 't3c2336d' | t }}</div>
+          <a href="{% if section.settings.menu_item_link %}{{ section.settings.menu_item_link }}{% else %}{{ pages["about"].url }}{% endif %}" class="menu-item w-inline-block">
+            <div>{{ section.settings.text_block_text_2 }}</div>
           </a>
           <a href="{{ pages["about"].url }}" class="active-dot w-inline-block"></a>
         </div>
         <div class="flex">
-          <a href="{{ pages["materials"].url }}" class="menu-item w-inline-block">
-            <div>{{ 'tn5ff49ff4' | t }}</div>
+          <a href="{% if section.settings.menu_item_link_2 %}{{ section.settings.menu_item_link_2 }}{% else %}{{ pages["materials"].url }}{% endif %}" class="menu-item w-inline-block">
+            <div>{{ section.settings.nav_link_3 }}</div>
           </a>
           <a href="{{ pages["materials"].url }}" class="active-dot w-inline-block"></a>
         </div>
-        <div data-hover="false" data-delay="0" class="dropdown hide w-dropdown">
-          <div data-w-id="5faf21bf-ff95-dc0d-1814-13ba8a45c800" class="menu-item dropdown w-dropdown-toggle">
-            <div>{{ 't13ede05' | t }}</div>
-            <div class="icon-2 w-icon-dropdown-toggle"></div>
-          </div>
-          <nav class="dropdown-list w-dropdown-list">
-            <a href="#" class="droplink w-dropdown-link">{{ 'tn1baefe39' | t }}</a>
-            <a href="#" class="droplink w-dropdown-link">{{ 't7c121960' | t }}</a>
-            <a href="#" class="droplink w-dropdown-link">{{ 't56bf8c3b' | t }}</a>
-            <a href="#" class="droplink w-dropdown-link">{{ 't20d03d' | t }}</a>
-            <a href="#" class="droplink w-dropdown-link">{{ 'tn3a4f9735' | t }}</a>
-            <a href="#" class="droplink w-dropdown-link">{{ 'tn7fe2d65b' | t }}</a>
-          </nav>
-        </div>
         <div data-w-id="dffda831-15d8-dafd-7e52-e8064fccac94" class="dropdown">
-          <a id="Resource-Link" data-w-id="e8f609a8-e828-8371-cf89-37cc8f6b6663" href="{{ pages["resources"].url }}" class="menu-item dropdown w-inline-block">
+          <a id="Resource-Link" data-w-id="e8f609a8-e828-8371-cf89-37cc8f6b6663" href="{% if section.settings.menu_item_link_3 %}{{ section.settings.menu_item_link_3 }}{% else %}{{ pages["resources"].url }}{% endif %}" class="menu-item dropdown w-inline-block">
             <div>{{ section.settings.text_block_text }}</div>
             <div class="icon-2 w-icon-dropdown-toggle"></div>
           </a>
           <div class="dropdown-list">
-            <a href="{{ pages["sustainability"].url }}" class="droplink w-inline-block">
+            <a href="{% if section.settings.droplink_link_2 %}{{ section.settings.droplink_link_2 }}{% else %}{{ pages["sustainability"].url }}{% endif %}" class="droplink w-inline-block">
               <div>{{ 'tn1baefe39' | t }}</div>
             </a>
-            <a href="{{ pages["our-brands"].url }}" class="droplink w-inline-block">
+            <a href="{% if section.settings.droplink_link_3 %}{{ section.settings.droplink_link_3 }}{% else %}{{ pages["our-brands"].url }}{% endif %}" class="droplink w-inline-block">
               <div>{{ 't7c121960' | t }}</div>
             </a>
-            <a href="{{ pages["compliance"].url }}" class="droplink w-inline-block">
+            <a href="{% if section.settings.droplink_link_4 %}{{ section.settings.droplink_link_4 }}{% else %}{{ pages["compliance"].url }}{% endif %}" class="droplink w-inline-block">
               <div>{{ 't56bf8c3b' | t }}</div>
             </a>
-            <a href="{{ pages["faqs"].url }}" class="droplink w-inline-block">
+            <a href="{% if section.settings.droplink_link_5 %}{{ section.settings.droplink_link_5 }}{% else %}{{ pages["faqs"].url }}{% endif %}" class="droplink w-inline-block">
               <div>{{ 't20d03d' | t }}</div>
             </a>
-            <a href="{{ pages["blogs"].url }}" class="droplink w-inline-block">
+            <a href="{% if section.settings.droplink_link_6 %}{{ section.settings.droplink_link_6 }}{% else %}{{ pages["blogs"].url }}{% endif %}" class="droplink w-inline-block">
               <div>{{ 't3d4d4f1' | t }}</div>
             </a>
             <a href="{% if section.settings.droplink_link %}{{ section.settings.droplink_link }}{% else %}{{ pages["downloads"].url }}{% endif %}" class="droplink w-inline-block">
               <div>{{ 'tn3a4f9735' | t }}</div>
             </a>
-            <a href="{{ pages["terms-and-conditions"].url }}" class="droplink w-inline-block">
+            <a href="{% if section.settings.droplink_link_7 %}{{ section.settings.droplink_link_7 }}{% else %}{{ pages["terms-and-conditions"].url }}{% endif %}" class="droplink w-inline-block">
               <div>{{ 'tn7fe2d65b' | t }}</div>
             </a>
           </div>
@@ -131,7 +116,7 @@
             </div>
           </div>
         </div>
-        <a id="contact-btn" href="{{ pages["contact-us"].url }}" class="button w-button">{{ section.settings.button_text }}</a>
+        <a id="contact-btn" href="{% if section.settings.button_link %}{{ section.settings.button_link }}{% else %}{{ pages["contact-us"].url }}{% endif %}" class="button w-button">{{ section.settings.button_text }}</a>
       </div>
       <div id="menu-icon" data-w-id="ace890ed-dd39-4876-a1ea-c43959dc2bd7" class="meun-icon">
         <div class="icon-bar _1"></div>
@@ -154,10 +139,72 @@
       "default": "Contact Us"
     },
     {
+      "id": "droplink_link_7",
+      "label": "DropLink - Link 7",
+      "type": "url"
+    },
+    {
+      "id": "droplink_link",
+      "label": "DropLink - Link",
+      "type": "url"
+    },
+    {
+      "id": "droplink_link_6",
+      "label": "DropLink - Link 6",
+      "type": "url"
+    },
+    {
+      "id": "droplink_link_5",
+      "label": "DropLink - Link 5",
+      "type": "url"
+    },
+    {
+      "id": "droplink_link_4",
+      "label": "DropLink - Link 4",
+      "type": "url"
+    },
+    {
+      "id": "droplink_link_3",
+      "label": "DropLink - Link 3",
+      "type": "url"
+    },
+    {
+      "id": "droplink_link_2",
+      "label": "DropLink - Link 2",
+      "type": "url"
+    },
+    {
       "type": "richtext",
       "id": "text_block_text",
       "label": "Text Block - Text",
       "default": "<p>Text Area</p>"
+    },
+    {
+      "id": "menu_item_link_3",
+      "label": "Menu-Item - Link 3",
+      "type": "url"
+    },
+    {
+      "type": "richtext",
+      "id": "nav_link_3",
+      "label": "Nav Link 3",
+      "default": "<p>Text Area</p>"
+    },
+    {
+      "id": "menu_item_link_2",
+      "label": "Menu-Item - Link 2",
+      "type": "url"
+    },
+    {
+      "type": "richtext",
+      "id": "text_block_text_2",
+      "label": "Text Block - Text 2",
+      "default": "<p>Text Area</p>"
+    },
+    {
+      "id": "menu_item_link",
+      "label": "Menu-Item - Link",
+      "type": "url"
     },
     {
       "type": "richtext",
@@ -166,8 +213,24 @@
       "default": "<p>Text Area</p>"
     },
     {
-      "id": "droplink_link",
-      "label": "DropLink - Link",
+      "id": "shop_link_bg_link",
+      "label": "Shop-Link-BG - Link",
+      "type": "url"
+    },
+    {
+      "type": "checkbox",
+      "id": "lottie_animation_3_visibility",
+      "label": "Lottie Animation 3 - Visibility",
+      "default": true
+    },
+    {
+      "id": "logo",
+      "label": "Logo",
+      "type": "url"
+    },
+    {
+      "id": "button_link",
+      "label": "Button - Link",
       "type": "url"
     }
   ]
