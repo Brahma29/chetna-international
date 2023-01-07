@@ -64,48 +64,65 @@
             <a href="#" class="btn bg-cart-btn cursor-auto w-button">{{ 't71bb21fc' | t }}</a>
           </div>
         </div>
-        <div class="product-card shop-card">
-          <a href="#" class="link-block-4 w-inline-block">
-            <div class="product-image shopcard-img"><img loading="lazy" src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" alt="" class="product-img"></div>
-          </a>
-          <div class="product-details shopcard-details">
-            <div class="product-category">{{ 't7635fb4f' | t }}</div>
-            <a href="#" class="link-block-3 w-inline-block">
-              <h2 class="product-name-slider">{{ 'tn6d5fea1e' | t }}</h2>
-            </a>
-            <div class="text-wrapper justify-start">
-              <div class="text-wrapper">
-                <div class="product-price hide">{{ 't20b9' | t }}</div>
-                <div data-commerce-type="variation-price" class="product-price">{{ 't7635fb4f' | t }}</div>
-              </div>
-              <div class="text-wrapper">
-                <div class="product-original-price hide">{{ 't20b9' | t }}</div>
-                <div class="product-original-price">{{ 't7635fb4f' | t }}</div>
-              </div>
-            </div>
-            <a href="#" class="btn bg-cart-btn cursor-auto w-button">{{ 't71bb21fc' | t }}</a>
-          </div>
+        <div class="w-dyn-empty">
+          <div>{{ 't3d503d2b' | t }}</div>
         </div>
-        <div class="product-card shop-card">
-          <a href="#" class="link-block-4 w-inline-block">
-            <div class="product-image shopcard-img"><img loading="lazy" src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" alt="" class="product-img"></div>
-          </a>
-          <div class="product-details shopcard-details">
-            <div class="product-category">{{ 't7635fb4f' | t }}</div>
-            <a href="#" class="link-block-3 w-inline-block">
-              <h2 class="product-name-slider">{{ 'tn6d5fea1e' | t }}</h2>
-            </a>
-            <div class="text-wrapper justify-start">
-              <div class="text-wrapper">
-                <div class="product-price hide">{{ 't20b9' | t }}</div>
-                <div data-commerce-type="variation-price" class="product-price">{{ 't7635fb4f' | t }}</div>
-              </div>
-              <div class="text-wrapper">
-                <div class="product-original-price hide">{{ 't20b9' | t }}</div>
-                <div class="product-original-price">{{ 't7635fb4f' | t }}</div>
+      </div>
+    </div>
+    <div id="shop-container" class="container _w-95">
+      <div id="products-all" class="w-dyn-list">
+        <div role="list" class="shop-collection-list w-dyn-items">
+          <div role="listitem" class="collection-item-shop w-dyn-item">
+
+            
+
+            
+
+            <script> console.log({{collection.products_count}}) </script>
+  {%- for product in collection.products_count -%}
+    <div class="product-card shop-card">
+              <a href="#" class="link-block-4 w-inline-block">
+                <div class="product-image shopcard-img"><img loading="lazy" src="{{ product.featured_image }}" alt="" class="product-img"></div>
+              </a>
+              <div class="product-details shopcard-details">
+                <div class="w-dyn-list">
+                  <div role="list" class="w-dyn-items">
+                    <div role="listitem" class="w-dyn-item">
+                      <div class="product-category"></div>
+                    </div>
+                  </div>
+                </div>
+                <a href="#" class="link-block-3 w-inline-block">
+                  <h2 class="product-name-slider"> {{ product.title }} </h2>
+                </a>
+                <div class="text-wrapper justify-start">
+                  <div class="text-wrapper">
+                    <div class="product-price hide">{{ 't20b9' | t }}</div>
+                    <div class="product-price"></div>
+                  </div>
+                  <div class="text-wrapper">
+                    <div class="product-original-price hide">{{ 't20b9' | t }}</div>
+                    <div class="product-original-price"></div>
+                  </div>
+                </div>
+                <a href="#" class="btn bg-cart-btn cursor-auto hide w-button">{{ 't71bb21fc' | t }}</a>
+                <div>
+                  {%- form "product", item, data-node-type: "commerce-add-to-cart-form", class: "w-commerce-commerceaddtocartform" -%}<label for="quantity-37281beb835658194e034a80e252bc6d" class="field-label-2">{{ 'tn48bd3755' | t }}</label><input type="number" pattern="^[0-9]+$" inputmode="numeric" id="quantity-37281beb835658194e034a80e252bc6d" name="quantity" min="1" class="w-commerce-commerceaddtocartquantityinput quantity-2" value="1"><input type="submit" data-node-type="commerce-add-to-cart-button" data-loading-text="Adding to cart..." value="Add to Bag" aria-busy="false" aria-haspopup="dialog" class="w-commerce-commerceaddtocartbutton btn bg-cart-btn cursor-auto">
+                    <a data-node-type="commerce-buy-now-button" data-default-text="Buy now" data-subscription-text="Subscribe now" aria-busy="false" aria-haspopup="false" class="w-commerce-commercebuynowbutton buy-now-button" href="/checkout">{{ 't71bb9a1c' | t }}</a>
+                  {%- render "product-variants-data" product: item -%}{%- endform -%}
+                  <div tabindex="0" style="display:none" class="w-commerce-commerceaddtocartoutofstock">
+                    <div>{{ 't7aaa2dac' | t }}</div>
+                  </div>
+                  <div aria-live="assertive" data-node-type="commerce-add-to-cart-error" style="display:none" class="w-commerce-commerceaddtocarterror">
+                    <div data-node-type="commerce-add-to-cart-error" data-w-add-to-cart-quantity-error="Product is not available in this quantity." data-w-add-to-cart-general-error="Something went wrong when adding this item to the cart." data-w-add-to-cart-mixed-cart-error="You can’t purchase another product with a subscription." data-w-add-to-cart-buy-now-error="Something went wrong when trying to purchase this item." data-w-add-to-cart-checkout-disabled-error="Checkout is disabled on this site." data-w-add-to-cart-select-all-options-error="Please select an option in each set.">{{ 'tn1c765d0d' | t }}</div>
+                  </div>
+                </div>
               </div>
             </div>
-            <a href="#" class="btn bg-cart-btn cursor-auto w-button">{{ 't71bb21fc' | t }}</a>
+  {%- endfor -%}
+
+
+            
           </div>
         </div>
       </div>
