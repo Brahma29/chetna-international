@@ -35,7 +35,7 @@ pointer-events:none;}
                 <div class="product-price height-less">{{ product.price | money_with_currency }}</div>
                 <div class="product-original-price">{{ product.compare_at_price | money_with_currency }}</div>
               </div>
-              <p class="product-description">{{ product.description }}</p>
+              {% comment %} <p class="product-description">{{ product.description }}</p> {% endcomment %}
             </div>
             <div class="package-container">
               <div class="product-container-header">{{ 't2ae6092a' | t }}</div>
@@ -82,26 +82,6 @@ pointer-events:none;}
           <div class="key-details">
             <div class="details-heading">{{ 't55167e0b' | t }}</div>
             <div class="list description-list w-richtext">{{ product.description }}</div>
-            <ul role="list" class="list description-list hide w-list-unstyled">
-              <li>
-                <div class="text-block-11">{{ 't2eea6175' | t }}</div>
-              </li>
-              <li>
-                <div class="text-block-11">{{ 't66f28e92' | t }}</div>
-              </li>
-              <li>
-                <div class="text-block-11">{{ 'tn77adeaba' | t }}</div>
-              </li>
-              <li>
-                <div class="text-block-11">{{ 't557a7517' | t }}</div>
-              </li>
-              <li>
-                <div class="text-block-11">{{ 'tn49d06cd6' | t }}</div>
-              </li>
-              <li>
-                <div class="text-block-11">{{ 'tn4fe7af0a' | t }}</div>
-              </li>
-            </ul>
             <div class="w-embed">
               <style>
 ul li{
