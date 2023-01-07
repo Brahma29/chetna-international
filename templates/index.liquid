@@ -142,7 +142,9 @@ pointer-events:none;}
       </a>
     </div>
     <div id="Product-Slider" data-w-id="de7a1f53-1871-e5c7-4bcf-529e2002d748" class="cards no-wrap">
-      {%- section 'product-card' -%}
+      {%- for product in collections['all'].products -%}
+      {%- render 'product-card', card_product : product -%}
+      {%- endfor -%}
       <div class="product-card">
         <a href="#" class="w-inline-block">
           <div class="product-image h-36"><img loading="lazy" src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" alt="" class="product-img"></div>
