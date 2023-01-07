@@ -28,7 +28,7 @@ pointer-events:none;}
               <a data-w-id="a2c8c338-243d-6335-3e1a-7406688a40ca" href="#" class="thumbnail _4 w-inline-block"><img src="{{ product.images[3] | image_url }}" loading="lazy" alt="" class="thumbnail-image"></a>
             </div>
           </div>
-          <div class="details" style="display : none">
+          <div class="details" >
             <div class="product-name underline">
               <h1 class="heading name text-left">{{ product.title }}</h1>
               <div class="text-wrapper justify-start items-bottom">
@@ -37,10 +37,10 @@ pointer-events:none;}
               </div>
               {% comment %} <p class="product-description">{{ product.description }}</p> {% endcomment %}
             </div>
-            <div class="package-container hide">
+            <div class="package-container hide" style="display : none">
               <div class="product-container-header">{{ 't2ae6092a' | t }}</div>
             </div>
-            <div class="product-buttons hide">
+            <div class="product-buttons hide" style="display : none">
               <div class="add-to-cart">
                 {%- form "product", product, data-node-type: "commerce-add-to-cart-form", class: "w-commerce-commerceaddtocartform default-state" -%}{%- unless product.has_only_default_variant or product.variants.size == 1 -%}<div data-node-type="add-to-cart-option-list" class="option-list" position-id="80f55b21-5069-45d9-5d32-4a65aa850e55">{%- for option in product.options_with_values -%}<fieldset data-node-type="add-to-cart-option" class="option" style="{% if product.has_only_default_variant or product.variants.size == 1 %}display: none; {% endif %}"><select data-node-type="add-to-cart-option-select" class="quantity variant-select w-select" style="display: none;" name="{{ "option" | append: forloop.index }}">{%- render "product-options", option: option -%}</select><div data-node-type="add-to-cart-option-pill-group" class="button-group w-commerce-commerceaddtocartoptionpillgroup" aria-label="{{ "option" | append: forloop.index  }}">{%- for value in option.values -%}<div data-node-type="add-to-cart-option-pill" class="w-commerce-commerceaddtocartoptionpill" data-option-name="{{ value | handle }}"><div data-node-type="block">{{ value }}</div></div>{%- endfor -%}</div><div data-node-type="block" class="text-block-33">{{ 't8f4f875' | t }}</div></fieldset>{%- endfor -%}</div>{%- endunless -%}{%- assign condition_value = product.type | strip -%}{%- unless condition_value == "e348fd487d0102946c9179d2a94bb613" -%}<label for="quantity-37281beb835658194e034a80e252bc6d" position-id="80f55b21-5069-45d9-5d32-4a65aa850e5c" id="w-node-_80f55b21-5069-45d9-5d32-4a65aa850e5c-8b7dd615" class="product-container-header">{{ 'tn48bd3755' | t }}</label>{%- endunless -%}{%- assign condition_value = product.type | strip -%}{%- unless condition_value == "e348fd487d0102946c9179d2a94bb613" -%}<input type="number" pattern="^[0-9]+$" inputmode="numeric" id="quantity-37281beb835658194e034a80e252bc6d" name="quantity" min="1" position-id="80f55b21-5069-45d9-5d32-4a65aa850e5e" class="w-commerce-commerceaddtocartquantityinput quantity w-node-_80f55b21-5069-45d9-5d32-4a65aa850e5e-8b7dd615" value="1">{%- endunless -%}
                   <div position-id="54c2dac9-164b-12ea-3928-39c39b7b2acf" id="w-node-_54c2dac9-164b-12ea-3928-39c39b7b2acf-8b7dd615" class="product-buttons">
