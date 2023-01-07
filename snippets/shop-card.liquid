@@ -1,35 +1,37 @@
 {%- if card_product and card_product != empty -%}
-  <a href="#" class="link-block-4 w-inline-block">
-    <div class="product-image shopcard-img">
-      <img
-        loading="lazy"
-        src="{{ card_product.featured_media | img_url }}"
-        alt="{{ section.settings.product_img_image.alt | escape }}"
-        class="product-img"
-      >
-    </div>
-  </a>
-  <div class="product-details shopcard-details">
-    <div class="product-category">{{ section.settings.product_category }}</div>
-    <a href="{{card_product.url}}" class="link-block-3 w-inline-block">
-      <h2 class="product-name-slider">{{ card_product.title }}</h2>
+  <div class="product-card shop-card">
+    <a href="#" class="link-block-4 w-inline-block">
+      <div class="product-image shopcard-img">
+        <img
+          loading="lazy"
+          src="{{ card_product.featured_media | img_url }}"
+          alt="{{ section.settings.product_img_image.alt | escape }}"
+          class="product-img"
+        >
+      </div>
     </a>
-    <div class="text-wrapper justify-start">
-      <div class="text-wrapper">
-        <div data-commerce-type="variation-price" class="product-price">
-          {{ card_product.price | money_with_currency }}
+    <div class="product-details shopcard-details">
+      <div class="product-category">{{ section.settings.product_category }}</div>
+      <a href="{{card_product.url}}" class="link-block-3 w-inline-block">
+        <h2 class="product-name-slider">{{ card_product.title }}</h2>
+      </a>
+      <div class="text-wrapper justify-start">
+        <div class="text-wrapper">
+          <div data-commerce-type="variation-price" class="product-price">
+            {{ card_product.price | money_with_currency }}
+          </div>
+        </div>
+        <div class="text-wrapper">
+          <div class="product-original-price">{{ card_product.compare_at_price | money_with_currency }}</div>
         </div>
       </div>
-      <div class="text-wrapper">
-        <div class="product-original-price">{{ card_product.compare_at_price | money_with_currency }}</div>
-      </div>
+      <a
+        href="{{product.url}}"
+        class="btn bg-cart-btn cursor-auto w-button"
+      >
+        View Product
+      </a>
     </div>
-    <a
-      href="{{product.url}}"
-      class="btn bg-cart-btn cursor-auto w-button"
-    >
-      View Product
-    </a>
   </div>
 {%- endif -%}
 
