@@ -7,11 +7,9 @@
 
       <div  class="collection-list-wrapper-3 w-dyn-list">
 <div  class="collection-list-4">
-<div class="w-dyn-item">
         {% for blog in blogs['blog'].articles %}
         {%- render 'blog-card', blog_card : blog -%}
         {% endfor %}
-</div>
 </div>
       </div>
       </div>
