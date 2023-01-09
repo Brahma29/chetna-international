@@ -3,91 +3,11 @@
   <div class="hero-section blog wf-section">
     {%- section 'navbar' -%}
     <h1 class="heading text-left mt-2">{{ 't3d4d4f1' | t }}</h1>
-    <div>
+    <div style="margin-top : 2rem">
       <div class="collection-list-4">
         {% for blog in blogs['blog'].articles %}
         {%- render 'blog-card', blog_card : blog -%}
         {% endfor %}
-        {% comment %} <a href="#" class="blog-post-card w-inline-block">
-          <div class="blog-post-image"><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="blog-thumbnail"></div>
-          <div class="blog-details">
-            <h3 class="blog-title">{{ 'tn6d5fea1e' | t }}</h3>
-            <div class="author-details">
-              <div class="author-name">
-                <div class="text-block-25 author">{{ 'tn4a456943' | t }}</div><img src="{{ 'group-11.svg' | asset_url }}" loading="lazy" alt="">
-              </div>
-              <div class="div-block-25">
-                <div class="text-block-25">{{ 't7500585c' | t }}</div>
-                <div class="text-block-30">{{ 't2e' | t }}</div>
-                <div class="text-block-25">{{ 't2d05144' | t }}</div>
-              </div>
-            </div>
-          </div>
-        </a>
-        <a href="#" class="blog-post-card w-inline-block">
-          <div class="blog-post-image"><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="blog-thumbnail"></div>
-          <div class="blog-details">
-            <h3 class="blog-title">{{ 'tn6d5fea1e' | t }}</h3>
-            <div class="author-details">
-              <div class="author-name">
-                <div class="text-block-25 author">{{ 'tn4a456943' | t }}</div><img src="{{ 'group-11.svg' | asset_url }}" loading="lazy" alt="">
-              </div>
-              <div class="div-block-25">
-                <div class="text-block-25">{{ 't7500585c' | t }}</div>
-                <div class="text-block-30">{{ 't2e' | t }}</div>
-                <div class="text-block-25">{{ 't2d05144' | t }}</div>
-              </div>
-            </div>
-          </div>
-        </a>
-        <a href="#" class="blog-post-card w-inline-block">
-          <div class="blog-post-image"><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="blog-thumbnail"></div>
-          <div class="blog-details">
-            <h3 class="blog-title">{{ 'tn6d5fea1e' | t }}</h3>
-            <div class="author-details">
-              <div class="author-name">
-                <div class="text-block-25 author">{{ 'tn4a456943' | t }}</div><img src="{{ 'group-11.svg' | asset_url }}" loading="lazy" alt="">
-              </div>
-              <div class="div-block-25">
-                <div class="text-block-25">{{ 't7500585c' | t }}</div>
-                <div class="text-block-30">{{ 't2e' | t }}</div>
-                <div class="text-block-25">{{ 't2d05144' | t }}</div>
-              </div>
-            </div>
-          </div>
-        </a>
-        <a href="#" class="blog-post-card w-inline-block">
-          <div class="blog-post-image"><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="blog-thumbnail"></div>
-          <div class="blog-details">
-            <h3 class="blog-title">{{ 'tn6d5fea1e' | t }}</h3>
-            <div class="author-details">
-              <div class="author-name">
-                <div class="text-block-25 author">{{ 'tn4a456943' | t }}</div><img src="{{ 'group-11.svg' | asset_url }}" loading="lazy" alt="">
-              </div>
-              <div class="div-block-25">
-                <div class="text-block-25">{{ 't7500585c' | t }}</div>
-                <div class="text-block-30">{{ 't2e' | t }}</div>
-                <div class="text-block-25">{{ 't2d05144' | t }}</div>
-              </div>
-            </div>
-          </div>
-        </a>
-        <a href="#" class="blog-post-card w-inline-block">
-          <div class="blog-post-image"><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="blog-thumbnail"></div>
-          <div class="blog-details">
-            <h3 class="blog-title">{{ 'tn6d5fea1e' | t }}</h3>
-            <div class="author-details">
-              <div class="author-name">
-                <div class="text-block-25 author">{{ 'tn4a456943' | t }}</div><img src="{{ 'group-11.svg' | asset_url }}" loading="lazy" alt="">
-              </div>
-              <div class="div-block-25">
-                <div class="text-block-25">{{ 't7500585c' | t }}</div>
-                <div class="text-block-30">{{ 't2e' | t }}</div>
-                <div class="text-block-25">{{ 't2d05144' | t }}</div>
-              </div>
-            </div>
-          </div>
-        </a> {% endcomment %}
       </div>
       <a data-w-id="30646a92-7c32-1be9-e30a-e4d268be1604" href="#" class="btn btn-bg-coco blog-btn w-button">{{ 't162663f0' | t }}</a>
     </div>

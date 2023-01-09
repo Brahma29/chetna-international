@@ -17,9 +17,9 @@ pointer-events:none;}
     <div class="hero-section blog blog-page wf-section">
       {%- section 'navbar' -%}
       <h1 class="heading text-left mt-2 blog-page">{{ article.title }}</h1>
-      <div class="author-details blog-page"><img loading="lazy" id="w-node-_5effd46e-8743-1a51-59a9-9f94c2bdaf52-fa7dd614" src="{{ article.metafields.udesly['author-image'].src }}" alt="" class="author-image blog-page">
+      <div class="author-details blog-page"><img loading="lazy" id="w-node-_5effd46e-8743-1a51-59a9-9f94c2bdaf52-fa7dd614" src="{{ article.metafields.custom.author_image | image_url }}" alt="{{ article.id }}" class="author-image blog-page">
         <div class="author-name">
-          <div class="text-block-25 author blog-page">{{ article.metafields.udesly['author-name'] }}</div><img src="{{ 'group-11.svg' | asset_url }}" loading="lazy" alt="">
+          <div class="text-block-25 author blog-page">{{ article.author }}</div><img src="{{ 'group-11.svg' | asset_url }}" loading="lazy" alt="">
         </div>
         <div id="w-node-_05a34f4f-2aef-5527-6c9d-f49d65354815-fa7dd614">
           <div id="w-node-_18145f39-cd51-b4cd-be2b-4fcdb2e275f1-fa7dd614" class="text-block-25 blog-page head">{{ article.created_at | date: "%B %e, %Y" }}</div>

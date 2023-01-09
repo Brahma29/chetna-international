@@ -33,7 +33,7 @@
           >
         </div>
         <div class="div-block-25">
-          <div class="text-block-25">{{ blog_card.created_at | article.created_at }}</div>
+          <div class="text-block-25">{{ blog_card.created_at | date: '%B %e, %Y' }}</div>
           <div class="text-block-30">{{ 't2e' | t }}</div>
           <div class="text-block-25">{{ blog_card.metafields.custom.read_time }} Mins</div>
         </div>
