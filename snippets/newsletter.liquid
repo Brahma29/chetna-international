@@ -6,7 +6,7 @@
       <div class="form-block w-form">
         {%- form "customer",  class: "form flex-col" -%}<input type="email" class="btn form-field w-input" maxlength="256" name="contact[email]" data-name="Email" placeholder="johndoe@mail.com" id="subsEmail" required="required">
           <div class="btn btn-bg-coco flex form-btn">
-            <div>{{ 'tn69de02d6' | t }}</div><input type="submit" value="Create" data-wait="Please wait..." id="subscribeBtn" class="submit-button w-button"><img loading="lazy" src="{{ 'icons8-right-arrow-32_1icons8-right-arrow-32.png' | asset_url }}" alt="" class="btn-arrow">
+            <div>{{ 'tn69de02d6' | t }}</div><input type="submit" value="Submit" data-wait="Please wait..." id="subscribeBtn" class="submit-button w-button"><img loading="lazy" src="{{ 'icons8-right-arrow-32_1icons8-right-arrow-32.png' | asset_url }}" alt="" class="btn-arrow">
           </div>
         {%- assign form_success = form.posted_successfully? -%}{%- assign form_errors = form.errors -%}{%- render "form-general-script", form_success: form_success, form_errors: form_errors -%}{%- endform -%}
         <div class="success-message-2 w-form-done  {% if form_success %}form-posted-successfully{% endif %}">
