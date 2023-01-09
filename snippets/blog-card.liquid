@@ -26,7 +26,7 @@
       <div class="author-details">
         <div class="author-name">
           <div class="text-block-25 author">{{ blog_card.author }}</div>
-          <img src="{{ blog_card.metafields.custom.author_image | img_url : width : 200 | image_tag }}" loading="lazy" alt="">
+          <img src="{{ blog_card.metafields.custom.author_image | img_url : width : 100 }}" loading="lazy" alt="">
         </div>
         <div class="div-block-25">
           <div class="text-block-25">{{ blog_card.created_at | article.created_at }}</div>
