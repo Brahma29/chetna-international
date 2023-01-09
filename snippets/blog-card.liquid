@@ -3,7 +3,6 @@
     sym-bind="{&quot;link&quot;:{&quot;type&quot;:&quot;Select&quot;,&quot;val&quot;:{&quot;from&quot;:{&quot;type&quot;:&quot;Variable&quot;,&quot;val&quot;:&quot;data&quot;},&quot;prop&quot;:&quot;467ee678-6419-d581-72e1-88a7b9c88fd0&quot;}}}"
     href="{{ blog_card.url }}"
     class="blog-post-card w-inline-block"
-    style="max-width : 14rem"
   >
     <div class="blog-post-image">
       {%- if blog_card.image.src == null -%}
@@ -19,7 +18,6 @@
           src="{{ blog_card.image.src | img_url }}"
           alt="{{ blog_card.title }}"
           class="blog-thumbnail"
-          style="max-height : 14rem, object-fit : cover"
         >
       {%- endif -%}
     </div>
