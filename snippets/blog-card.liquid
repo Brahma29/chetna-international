@@ -1,7 +1,7 @@
 {% if blog_card and blog_card != empty %}
   <a
     sym-bind="{&quot;link&quot;:{&quot;type&quot;:&quot;Select&quot;,&quot;val&quot;:{&quot;from&quot;:{&quot;type&quot;:&quot;Variable&quot;,&quot;val&quot;:&quot;data&quot;},&quot;prop&quot;:&quot;467ee678-6419-d581-72e1-88a7b9c88fd0&quot;}}}"
-    href="{% if section.settings.blog_link %}{{ section.settings.blog_link }}{% else %}#{% endif %}"
+    href="{{ blog_card.url }}"
     class="blog-post-card w-inline-block"
   >
     <div class="blog-post-image">
@@ -35,7 +35,7 @@
         <div class="div-block-25">
           <div class="text-block-25">{{ blog_card.created_at | article.created_at }}</div>
           <div class="text-block-30">{{ 't2e' | t }}</div>
-          <div class="text-block-25">{{ blog_card.metafields.custom.read_time }}</div>
+          <div class="text-block-25">{{ blog_card.metafields.custom.read_time }} Mins</div>
         </div>
       </div>
     </div>
