@@ -30,7 +30,7 @@
       </div>
       <div class="wrapper flex-col gap-0 items-center _w-50">
         <div class="contact-form w-form">
-          {%- form "customer",  class: "contact-form" -%}
+          {%- form "contact",  class: "contact-form" -%}
             <div class="wrapper form-field-wrapper"><input type="text" class="form-field w-input" maxlength="256" name="contact[name]" data-name="Name" placeholder="Name" id="Name-4" required=""><input type="email" class="form-field w-input" maxlength="256" name="contact[email]" data-name="Email" placeholder="Email ID" id="email" required=""></div>
             <div class="wrapper form-field-wrapper"><input type="text" class="form-field w-input" maxlength="256" name="contact[message_title]" data-name="Message-Title" placeholder="What is this about?" id="Message-Title" required=""></div>
             <div class="wrapper form-field-wrapper"><textarea placeholder="Enter your message" maxlength="5000" id="Message-2" name="contact[message]" data-name="Message" required="" class="form-field form-text-area w-input"></textarea></div><input type="submit" value="Send Message" data-wait="Please wait..." class="form-field form-button w-button">
