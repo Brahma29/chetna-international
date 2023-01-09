@@ -4,10 +4,16 @@
     {%- section 'navbar' -%}
     <h1 class="heading text-left mt-2">{{ 't3d4d4f1' | t }}</h1>
     <div style="margin-top : 2rem">
-      <div class="collection-list-4">
+
+      <div  class="collection-list-wrapper-3 w-dyn-list">
+<div  class="collection-list-4 w-dyn-items">
+<div class="w-dyn-item">
         {% for blog in blogs['blog'].articles %}
         {%- render 'blog-card', blog_card : blog -%}
         {% endfor %}
+</div>
+</div>
+      </div>
       </div>
       <a data-w-id="30646a92-7c32-1be9-e30a-e4d268be1604" href="#" class="btn btn-bg-coco blog-btn w-button">{{ 't162663f0' | t }}</a>
     </div>
