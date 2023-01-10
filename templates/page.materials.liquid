@@ -18,7 +18,7 @@
       </div>
       <div class="style-grid">
         {% for material in collections %}
-          <script>console.log({{material | json}})</script>
+          <script>console.log({{material.metafields | json}})</script>
           {% if material.metafields.custom.isMaterial == true %}
             {% render 'material-card', material %}
             {% endif %}
