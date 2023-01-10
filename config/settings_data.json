@@ -1,5 +1,7 @@
 {
   "current": {
+    "checkout_logo_image": "shopify:\/\/shop_images\/chetna1.png",
+    "checkout_logo_size": "large",
     "checkout_body_background_color": "#efeeec",
     "checkout_input_background_color_mode": "white",
     "checkout_sidebar_background_color": "#efeeec",
