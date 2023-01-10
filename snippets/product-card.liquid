@@ -1,3 +1,10 @@
+<style>
+.block{
+  display : block;
+}
+
+</style>
+
 {%- if card_product and card_product != empty -%}
   <div class="product-card">
     <a href="{{card_product.url}}" class="w-inline-block">
@@ -38,7 +45,7 @@
         {%- form 'product',
           card_product,
           data-node-type: 'commerce-add-to-cart-form',
-          class: 'w-commerce-commerceaddtocartform default-state'
+          class: 'w-commerce-commerceaddtocartform default-state block'
         -%}
           {%- unless card_product.has_only_default_variant or card_product.variants.size == 1 -%}
             <div
