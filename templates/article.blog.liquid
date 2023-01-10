@@ -56,7 +56,10 @@ pointer-events:none;}
       </div>
       <h1 class="heading text-left mt-2">{{ 'tn43f2c630' | t }}</h1>
       <div id="blog-slider" data-w-id="b959461a-1ed4-c78a-bfd9-08e4ab9746c4" class="cards no-wrap pl-0 mt-5">
-        <a href="#" class="blog-post-card w-inline-block">
+        {% for blog in blogs['blog'].articles %}
+        {%- render 'blog-card', blog_card : blog -%}
+        {% endfor %}
+<!--         <a href="#" class="blog-post-card w-inline-block">
           <div class="blog-post-image"><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="blog-thumbnail"></div>
           <div class="blog-details">
             <h3 class="blog-title">{{ 'tn6d5fea1e' | t }}</h3>
@@ -135,7 +138,7 @@ pointer-events:none;}
               </div>
             </div>
           </div>
-        </a>
+        </a> -->
       </div>
     </div>
   </div>
