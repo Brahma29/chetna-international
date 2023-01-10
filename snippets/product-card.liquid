@@ -92,36 +92,12 @@
             </label>
           {%- endunless -%}
           {%- assign condition_value = card_product.type | strip -%}
-          {%- unless condition_value == 'e348fd487d0102946c9179d2a94bb613' -%}
-            <input
-              type="number"
-              pattern="^[0-9]+$"
-              inputmode="numeric"
-              id="quantity-37281beb835658194e034a80e252bc6d"
-              name="quantity"
-              min="1"
-              position-id="80f55b21-5069-45d9-5d32-4a65aa850e5e"
-              class="w-commerce-commerceaddtocartquantityinput quantity w-node-_80f55b21-5069-45d9-5d32-4a65aa850e5e-8b7dd615"
-              value="1"
-            >
-          {%- endunless -%}
           <div
             position-id="54c2dac9-164b-12ea-3928-39c39b7b2acf"
             id="w-node-_54c2dac9-164b-12ea-3928-39c39b7b2acf-8b7dd615"
             class="product-buttons"
           >
-            <a
-              id="Buy-Btn"
-              data-node-type="commerce-buy-now-button"
-              data-default-text="Buy Now"
-              data-subscription-text="Subscribe now"
-              aria-busy="false"
-              aria-haspopup="false"
-              class="w-commerce-commercebuynowbutton btn btn-bg-coco product-btn"
-              href="/checkout"
-            >
-              {{- 't71bb21fc' | t -}}</a
-            ><input
+            <input
               type="submit"
               id="w-node-_80f55b21-5069-45d9-5d32-4a65aa850e5f-8b7dd615"
               data-node-type="commerce-add-to-cart-button"
