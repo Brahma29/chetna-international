@@ -1,5 +1,10 @@
 {
   "current": {
+    "checkout_body_background_color": "#efeeec",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_color": "#efeeec",
+    "checkout_accent_color": "#9d612b",
+    "checkout_button_color": "#9d612b",
     "sections": {
       "navbar": {
         "type": "navbar",
