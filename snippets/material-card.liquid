@@ -1,8 +1,8 @@
 {%- if material and material != empty -%}
-<div data-w-id="72d1a650-bf46-386f-17b1-91deb1ce3d60" style="-webkit-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="style-card"><img loading="lazy" src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" alt="" class="style-card-img">
+<div data-w-id="72d1a650-bf46-386f-17b1-91deb1ce3d60" style="-webkit-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="style-card"><img loading="lazy" src="{{ material.featured_image | image_url }}" alt="" class="style-card-img">
           <div class="style-card-text">
-            <div class="style-card-heading">{{ 't7635fb4f' | t }}</div>
-            <a href="#" class="btn style-card-btn w-button">{{ 'tcfbdf89' | t }}</a>
+            <div class="style-card-heading">{{ material.title }}</div>
+            <a href="{{ material.url }}" class="btn style-card-btn w-button">{{ 'tcfbdf89' | t }}</a>
           </div>
           <div class="style-card-overlay"></div>
         </div>
