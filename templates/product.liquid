@@ -47,7 +47,7 @@ pointer-events:none;}
                     <a id="Buy-Btn" data-node-type="commerce-buy-now-button" data-default-text="Buy Now" data-subscription-text="Subscribe now" aria-busy="false" aria-haspopup="false" class="w-commerce-commercebuynowbutton btn btn-bg-coco product-btn" href="/checkout">{{ 't71bb21fc' | t }}</a><input type="submit" id="w-node-_80f55b21-5069-45d9-5d32-4a65aa850e5f-8b7dd615" data-node-type="commerce-add-to-cart-button" data-loading-text="Adding to cart..." value="Add to Bag" aria-busy="false" aria-haspopup="dialog" class="w-commerce-commerceaddtocartbutton btn bg-cart-btn-product-page">
                   </div>
                 {% for variant in product.variants %}
-                  {{ variant }}
+                  {{ variant.title }}
                   {% endfor %}}
                 {%- render "product-variants-data", product: product -%}{%- endform -%}
                 <div tabindex="0" style="display:none" class="w-commerce-commerceaddtocartoutofstock">
