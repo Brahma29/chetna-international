@@ -4,7 +4,17 @@
   </div>
   <div class="text-wrapper">
     <div class="form-block w-form">
-      {%- form 'contacts', class: 'form flex-col' -%}
+      {% form 'customer' %}
+        <div class="email">
+          <label for="email">Email</label>
+          <input type="email" name="contact[email]">
+        </div>
+
+        <div class="submit">
+          <input type="submit" value="Sign up">
+        </div>
+      {% endform %}
+      {%- form 'contact', class: 'form flex-col' -%}
         <input type="hidden" name="contact[tags]" value="newsletter"
         ><input
           type="email"
