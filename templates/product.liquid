@@ -40,6 +40,7 @@ pointer-events:none;}
             <div class="package-container hide">
               <div class="product-container-header">{{ 't2ae6092a' | t }}</div>
             </div>
+            <script>console.log({{product.variants | json}})</script>
             {% if product.variants.size > 1 %}
         {% for option in product.options_with_values %}
       <div class="options">
