@@ -120,14 +120,17 @@
             >
       {% comment %} {%- render "categories_where_visibile_eq_true" -%} {% endcomment %}
     </div> {% endcomment %}
-    <div id="shop-container" class="container _w-95">      
+    <div id="shop-container" class="container _w-95">   
+       {% if collection.products != empty %}
       <div class="shop-collection-list">
-        {% if collection.products != empty %}
+       
         {%- for product in collection.products -%}
         {%- render 'shop-card', card_product : product -%}
         {%- endfor -%}
-          {% else %}
-           <div id="no-items-found" class="no-items-found div-block-39 ">
+          
+      </div>
+         {% else %}
+          <div id="no-items-found" class="no-items-found div-block-39 ">
         <div class="div-block-43">
           <img src="https://uploads-ssl.webflow.com/634fff4b200197692b3efce0/63a6cffcd3398ddc268e3242_noun-no-item-4440881.svg" loading="lazy" alt="" class="image-30">
           <div class="div-block-44">
@@ -138,7 +141,6 @@
         <a bind="09e05d1e-06d3-44ca-3fac-c9ceed6292be" href="/shop" aria-current="page" class="btn btn-black w-button w--current">Go Back To Shop</a>
       </div>
           {% endif %}
-      </div>
     </div>
   </div>
 </div>
