@@ -56,6 +56,7 @@
   {%- render 'categories' -%}
   {% for filter in collection.filters %}
       {% if filter.active_values != empty %}
+          {% assign isActive= true %}
           {% assign classname = "dropdown-toggle btn btn-bg-coco drop-toggle w-dropdown-toggle active" %}
           {% assign activeFilter = filter.active_values[0].label %}
         {% else %}
@@ -66,20 +67,23 @@
   <div data-hover="true" data-delay="0" id="dropdown" class="dropdown-2 w-dropdown">
     <div id="drop-toggle" class="{{ classname }}" >
       <div id="category-text" class="text-block-37">{{ activeFilter }}</div>
-      <img
-        src="{{ 'icons8-down-arrow-32_1icons8-down-arrow-32.png' | asset_url }}"
-        loading="lazy"
-        id="drop-coco-icon"
-        alt=""
-        class="drop-down-icon"
-
-      ><img
+      {% if isActive %}
+        <img
         src="{{ 'path-552.svg' | asset_url }}"
         loading="lazy"
         id="drop-white-icon"
         alt=""
         class="drop-down-icon "
       >
+        {% else %}
+      <img
+        src="{{ 'icons8-down-arrow-32_1icons8-down-arrow-32.png' | asset_url }}"
+        loading="lazy"
+        id="drop-coco-icon"
+        alt=""
+        class="drop-down-icon"
+      >
+        {% endif %}
     </div>
     <nav class="dropdown-list-2 w-dropdown-list">
 <!--       <div class="btn border-btn tabs-btn drop-btn active">
