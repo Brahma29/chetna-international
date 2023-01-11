@@ -54,14 +54,8 @@
     </div>
   </div>
   {%- render 'categories' -%}
-  {% if request.path contains "filter" %}
-    {% assign classname = "dropdown-toggle btn btn-bg-coco drop-toggle w-dropdown-toggle active" %}
-  {% else %}
-    {{ request.path }}
-    {% assign classname = "dropdown-toggle btn btn-bg-coco drop-toggle w-dropdown-toggle" %}
-    {% endif %}
   <div data-hover="true" data-delay="0" id="dropdown" class="dropdown-2 w-dropdown">
-    <div id="drop-toggle" class="{{ classname }}">
+    <div id="drop-toggle" class="dropdown-toggle btn btn-bg-coco drop-toggle w-dropdown-toggle">
       <div id="category-text" class="text-block-37">{{ 'tn3be6ddc4' | t }}</div>
       <img
         src="{{ 'icons8-down-arrow-32_1icons8-down-arrow-32.png' | asset_url }}"
@@ -274,8 +268,9 @@
   window.onload = function () {
     document.getElementsByTagName('body')[0].style.overflow = 'auto';
     const urlParams = new URLSearchParams(window.location.search);
-    const myParam = urlParams.get('material');
+    const myParam = urlParams.get('collection');
     if (myParam) {
+      
       document.getElementById('shop-container').style.marginTop = '3.5rem';
       document.getElementById('dropdown').remove();
       document.getElementById('material-heading').innerHTML = `<h1 class="heading text-left w-80 mb-2">${myParam}</h1>`;
@@ -397,6 +392,12 @@
     document.getElementById('navbar').style.marginRight = '1rem';
     document.getElementById('navbar').style.marginLeft = '1rem';
   }
+
+
+  
+
+
+  
 </script>
 
 {{ 'udesly-shopify.min.js' | asset_url | script_tag }}
