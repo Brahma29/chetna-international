@@ -107,6 +107,7 @@
       {% comment %} {%- render "categories_where_visibile_eq_true" -%} {% endcomment %}
     </div> {% endcomment %}
     <div id="shop-container" class="container _w-95">
+      <p>{{ request.path }}</p>
       <div class="shop-collection-list">
         {%- for product in collections['all'].products -%}
         {%- render 'shop-card', card_product : product -%}
