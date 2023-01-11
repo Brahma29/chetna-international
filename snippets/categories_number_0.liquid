@@ -2,7 +2,7 @@
                         {% for item in collections %}
                           {% if item.metafields.custom.isfilter %}
                         <div role="listitem" class="collection-item-8 w-dyn-item">
-              <a href="{{ request.path }}?filter.p.m.custom.collection={{ item.title }}" class="btn border-btn tabs-btn drop-btn w-dropdown-link">{{ item.title }}</a>
+              <a href="{% if item.title == "All" %} /collections/all {% else %} {{ request.path }}?filter.p.m.custom.collection={{ item.title }}{% endif %}" class="btn border-btn tabs-btn drop-btn w-dropdown-link">{{ item.title }}</a>
             </div>
                             {% endif %}
                         {% endfor %}
