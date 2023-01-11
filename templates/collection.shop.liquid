@@ -88,11 +88,7 @@
     <div class="btn border-btn tabs-btn active">
       <div>{{ 't10181' | t }}</div>
     </div>
-    {% for filter in collection.filters %}
-      {% for active in filter.active_values %}
-        <p>{{ active.label }}</p>
-        {% endfor %}
-    {% endfor %}
+    
     {%- render 'categories_where_visibile_eq_true' -%}
   </div>
   {% comment %} <div id="shop-container" class="container _w-95">
@@ -112,6 +108,11 @@
       {% comment %} {%- render "categories_where_visibile_eq_true" -%} {% endcomment %}
     </div> {% endcomment %}
     <div id="shop-container" class="container _w-95">
+      {% for filter in collection.filters %}
+      {% for active in filter.active_values %}
+        <p>{{ active.label }}</p>
+        {% endfor %}
+    {% endfor %}
       <div class="shop-collection-list">
         {%- for product in collection.products -%}
         {%- render 'shop-card', card_product : product -%}
