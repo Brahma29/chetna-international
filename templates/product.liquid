@@ -41,7 +41,7 @@ pointer-events:none;}
               <div class="product-container-header">{{ 't2ae6092a' | t }}</div>
             </div>
             <script>console.log({{product.variants | json}})</script>
-            {% if product.variants.size > 1 %}
+            {% if product.variants.size > 0 %}
         {% for option in product.options_with_values %}
       <div class="options">
       <div>{{ option.name }}</div>
