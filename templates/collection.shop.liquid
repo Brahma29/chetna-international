@@ -108,7 +108,7 @@
     </div> {% endcomment %}
     <div id="shop-container" class="container _w-95">
       <div class="shop-collection-list">
-        {%- for product in collections['all'].products -%}
+        {%- for product in collection.products -%}
         {%- render 'shop-card', card_product : product -%}
         {%- endfor -%}
       </div>
