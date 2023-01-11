@@ -18,103 +18,105 @@
 {%- render 'page-loader' -%}
 <div class="section bg-transparent _404 wf-section">
   {%- section 'navbar' -%}
-  <div class="nav-container">
-    <a href="{{ routes.root_url }}" class="brand w-inline-block">
-      <div class="logo">
-        <span class="coco-text">
-          {{- 't783de8a7' | t -}}
+  <!--
+    <div class="nav-container">
+      <a href="{{ routes.root_url }}" class="brand w-inline-block">
+        <div class="logo">
+          <span class="coco-text">
+            {{- 't783de8a7' | t -}}
+            <br>
+          </span>
+          {{- 'tn554e6192' | t -}}
           <br>
-        </span>
-        {{- 'tn554e6192' | t -}}
-        <br>
-      </div>
-    </a>
-    <div data-w-id="78806ed0-6d7b-de31-9009-41fc3748330e" class="nav-menu">
-      <div class="flex">
-        <a href="{{ pages["shop"].url }}" class="shop-link-bg w-inline-block">
-          <div id="ShopLink" class="shop">{{ 't274f16' | t }}</div>
-        </a>
-        <a href="{{ pages["shop"].url }}" class="shopactivedot w-inline-block"></a>
-      </div>
-      <div class="flex">
-        <a href="{{ pages["about"].url }}" class="menu-item w-inline-block">
-          <div>{{ 't3c2336d' | t }}</div>
-        </a>
-        <a href="{{ pages["about"].url }}" class="active-dot w-inline-block"></a>
-      </div>
-      <div class="flex">
-        <a href="{{ pages["materials"].url }}" class="menu-item w-inline-block">
-          <div>{{ 'tn5ff49ff4' | t }}</div>
-        </a>
-        <a href="{{ pages["materials"].url }}" class="active-dot w-inline-block"></a>
-      </div>
-      <div data-hover="false" data-delay="0" class="dropdown hide w-dropdown">
-        <div data-w-id="78806ed0-6d7b-de31-9009-41fc3748331f" class="menu-item dropdown w-dropdown-toggle">
-          <div>{{ 't13ede05' | t }}</div>
-          <div class="icon-2 w-icon-dropdown-toggle"></div>
         </div>
-        <nav
-          data-w-id="78806ed0-6d7b-de31-9009-41fc37483323"
-          style="opacity:0;display:none"
-          class="dropdown-list w-dropdown-list"
-        >
-          <a href="#" class="droplink w-dropdown-link">{{ 'tn1baefe39' | t }}</a>
-          <a href="#" class="droplink w-dropdown-link">{{ 't7c121960' | t }}</a>
-          <a href="#" class="droplink w-dropdown-link">{{ 't56bf8c3b' | t }}</a>
-          <a href="#" class="droplink w-dropdown-link">{{ 't20d03d' | t }}</a>
-          <a href="#" class="droplink w-dropdown-link">{{ 'tn3a4f9735' | t }}</a>
-          <a href="#" class="droplink w-dropdown-link">{{ 'tn7fe2d65b' | t }}</a>
-        </nav>
-      </div>
-      <div data-w-id="78806ed0-6d7b-de31-9009-41fc37483330" class="dropdown">
-        <a
-          id="Resource-Link"
-          data-w-id="78806ed0-6d7b-de31-9009-41fc37483331"
-          href="{{ pages["resources"].url }}"
-          class="menu-item dropdown w-inline-block"
-        >
-          <div>{{ 't13ede05' | t }}</div>
-          <div class="icon-2 w-icon-dropdown-toggle"></div>
-        </a>
-        <div data-w-id="78806ed0-6d7b-de31-9009-41fc37483335" style="opacity:0;display:none" class="dropdown-list">
-          <a href="{{ pages["sustainability"].url }}" class="droplink w-inline-block">
-            <div>{{ 'tn1baefe39' | t }}</div>
-          </a>
-          <a href="{{ pages["our-brands"].url }}" class="droplink w-inline-block">
-            <div>{{ 't7c121960' | t }}</div>
-          </a>
-          <a href="{{ pages["compliance"].url }}" class="droplink w-inline-block">
-            <div>{{ 't56bf8c3b' | t }}</div>
-          </a>
-          <a href="{{ pages["faqs"].url }}" class="droplink w-inline-block">
-            <div>{{ 't20d03d' | t }}</div>
-          </a>
-          <a href="{{ pages["blogs"].url }}" class="droplink w-inline-block">
-            <div>{{ 't3d4d4f1' | t }}</div>
-          </a>
-          <a href="#" class="droplink w-inline-block">
-            <div>{{ 'tn3a4f9735' | t }}</div>
-          </a>
-          <a href="{{ pages["terms-and-conditions"].url }}" class="droplink w-inline-block">
-            <div>{{ 'tn7fe2d65b' | t }}</div>
-          </a>
-        </div>
-      </div>
-      <div class="flex hide">
-        <a href="{{ pages["resources"].url }}" class="menu-item w-inline-block">
-          <div>{{ 't13ede05' | t }}</div>
-        </a>
-        <a href="{{ pages["resources"].url }}" class="active-dot w-inline-block"></a>
-      </div>
-      <a id="contact-btn" href="{{ pages["contact-us"].url }}" class="button btn-white w-button">
-        {{- 't7f2746de' | t -}}
       </a>
+      <div data-w-id="78806ed0-6d7b-de31-9009-41fc3748330e" class="nav-menu">
+        <div class="flex">
+          <a href="{{ pages["shop"].url }}" class="shop-link-bg w-inline-block">
+            <div id="ShopLink" class="shop">{{ 't274f16' | t }}</div>
+          </a>
+          <a href="{{ pages["shop"].url }}" class="shopactivedot w-inline-block"></a>
+        </div>
+        <div class="flex">
+          <a href="{{ pages["about"].url }}" class="menu-item w-inline-block">
+            <div>{{ 't3c2336d' | t }}</div>
+          </a>
+          <a href="{{ pages["about"].url }}" class="active-dot w-inline-block"></a>
+        </div>
+        <div class="flex">
+          <a href="{{ pages["materials"].url }}" class="menu-item w-inline-block">
+            <div>{{ 'tn5ff49ff4' | t }}</div>
+          </a>
+          <a href="{{ pages["materials"].url }}" class="active-dot w-inline-block"></a>
+        </div>
+        <div data-hover="false" data-delay="0" class="dropdown hide w-dropdown">
+          <div data-w-id="78806ed0-6d7b-de31-9009-41fc3748331f" class="menu-item dropdown w-dropdown-toggle">
+            <div>{{ 't13ede05' | t }}</div>
+            <div class="icon-2 w-icon-dropdown-toggle"></div>
+          </div>
+          <nav
+            data-w-id="78806ed0-6d7b-de31-9009-41fc37483323"
+            style="opacity:0;display:none"
+            class="dropdown-list w-dropdown-list"
+          >
+            <a href="#" class="droplink w-dropdown-link">{{ 'tn1baefe39' | t }}</a>
+            <a href="#" class="droplink w-dropdown-link">{{ 't7c121960' | t }}</a>
+            <a href="#" class="droplink w-dropdown-link">{{ 't56bf8c3b' | t }}</a>
+            <a href="#" class="droplink w-dropdown-link">{{ 't20d03d' | t }}</a>
+            <a href="#" class="droplink w-dropdown-link">{{ 'tn3a4f9735' | t }}</a>
+            <a href="#" class="droplink w-dropdown-link">{{ 'tn7fe2d65b' | t }}</a>
+          </nav>
+        </div>
+        <div data-w-id="78806ed0-6d7b-de31-9009-41fc37483330" class="dropdown">
+          <a
+            id="Resource-Link"
+            data-w-id="78806ed0-6d7b-de31-9009-41fc37483331"
+            href="{{ pages["resources"].url }}"
+            class="menu-item dropdown w-inline-block"
+          >
+            <div>{{ 't13ede05' | t }}</div>
+            <div class="icon-2 w-icon-dropdown-toggle"></div>
+          </a>
+          <div data-w-id="78806ed0-6d7b-de31-9009-41fc37483335" style="opacity:0;display:none" class="dropdown-list">
+            <a href="{{ pages["sustainability"].url }}" class="droplink w-inline-block">
+              <div>{{ 'tn1baefe39' | t }}</div>
+            </a>
+            <a href="{{ pages["our-brands"].url }}" class="droplink w-inline-block">
+              <div>{{ 't7c121960' | t }}</div>
+            </a>
+            <a href="{{ pages["compliance"].url }}" class="droplink w-inline-block">
+              <div>{{ 't56bf8c3b' | t }}</div>
+            </a>
+            <a href="{{ pages["faqs"].url }}" class="droplink w-inline-block">
+              <div>{{ 't20d03d' | t }}</div>
+            </a>
+            <a href="{{ pages["blogs"].url }}" class="droplink w-inline-block">
+              <div>{{ 't3d4d4f1' | t }}</div>
+            </a>
+            <a href="#" class="droplink w-inline-block">
+              <div>{{ 'tn3a4f9735' | t }}</div>
+            </a>
+            <a href="{{ pages["terms-and-conditions"].url }}" class="droplink w-inline-block">
+              <div>{{ 'tn7fe2d65b' | t }}</div>
+            </a>
+          </div>
+        </div>
+        <div class="flex hide">
+          <a href="{{ pages["resources"].url }}" class="menu-item w-inline-block">
+            <div>{{ 't13ede05' | t }}</div>
+          </a>
+          <a href="{{ pages["resources"].url }}" class="active-dot w-inline-block"></a>
+        </div>
+        <a id="contact-btn" href="{{ pages["contact-us"].url }}" class="button btn-white w-button">
+          {{- 't7f2746de' | t -}}
+        </a>
+      </div>
+      <div id="menu-icon" data-w-id="78806ed0-6d7b-de31-9009-41fc37483352" class="meun-icon">
+        <div class="icon-bar _1"></div>
+        <div class="icon-bar _2"></div>
+      </div>
     </div>
-    <div id="menu-icon" data-w-id="78806ed0-6d7b-de31-9009-41fc37483352" class="meun-icon">
-      <div class="icon-bar _1"></div>
-      <div class="icon-bar _2"></div>
-    </div>
-  </div>
+  -->
   <div class="div-block-33">
     <div id="w-node-e26ac829-7093-6995-cc38-88b1fb6fbefd-867dd606" class="_404-text">
       <img src="{{ 'group-177.svg' | asset_url }}" loading="lazy" alt="" class="image-23">
