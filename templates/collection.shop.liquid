@@ -123,9 +123,15 @@
     <div id="shop-container" class="container _w-95">
       
       <div class="shop-collection-list">
+        {% if collection.products != empty %}
         {%- for product in collection.products -%}
         {%- render 'shop-card', card_product : product -%}
         {%- endfor -%}
+          {% else %}
+          <p>
+            No Items Found.
+          </p>
+          {% endif %}
       </div>
     </div>
   </div>
