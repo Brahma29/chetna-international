@@ -272,7 +272,7 @@
     if (myParam) {
       
       document.getElementById('shop-container').style.marginTop = '3.5rem';
-      document.getElementById('dropdown').remove();
+      document.getElementById('dropdown').classList.add('active');
       document.getElementById('material-heading').innerHTML = `<h1 class="heading text-left w-80 mb-2">${myParam}</h1>`;
       Array.from(document.getElementsByClassName('shop-category-name')).forEach((item) => {
         if (item.innerText === myParam) {
