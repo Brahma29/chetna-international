@@ -251,7 +251,7 @@
   [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]
 -->
 <script>
-  window.onload = function () {
+  window.onload = function () 
     document.getElementsByTagName('body')[0].style.overflow = 'auto';
     if (window.innerWidth < 780) {
       document.getElementById('Resource-Link').removeAttribute('href');
@@ -261,12 +261,7 @@
         document.getElementsByTagName('body')[0].classList.toggle('overflowHide');
       });
     }
-  };
-  //window.onload = function(){document.getElementsByTagName("body")[0].style.overflow = "auto";};
-</script>
-<script>
-  window.onload = function () {
-    document.getElementsByTagName('body')[0].style.overflow = 'auto';
+  document.getElementsByTagName('body')[0].style.overflow = 'auto';
     const urlParams = new URLSearchParams(window.location.search);
     const myParam = urlParams.get('collection');
     if (myParam) {
@@ -301,6 +296,12 @@
         document.getElementsByTagName('body')[0].classList.toggle('overflowHide');
       });
     }
+  };
+  //window.onload = function(){document.getElementsByTagName("body")[0].style.overflow = "auto";};
+</script>
+<script>
+  window.onload = function () {
+    
   };
   //Scroll Handling
   const scrollHandler = (id) => {
