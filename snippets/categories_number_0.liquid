@@ -1,8 +1,10 @@
 {% capture listItems %}
                         {% for item in collections %}
+                          {% if item.metafields.custom.isfilter == true %}
                         <div role="listitem" class="collection-item-8 w-dyn-item">
               <a href="/collections/{{ item.handle }}" class="btn border-btn tabs-btn drop-btn w-dropdown-link">{{ item.title }}</a>
             </div>
+                            {% endif %}
                         {% endfor %}
                         {% endcapture %}
 {% assign items_length = listItems | strip | size %}
