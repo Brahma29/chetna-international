@@ -54,9 +54,18 @@
     </div>
   </div>
   {%- render 'categories' -%}
+  {% for filter in collection.filters %}
+      {% if filter.active_values != empty %}
+          {% assign classname = "dropdown-toggle btn btn-bg-coco drop-toggle w-dropdown-toggle active" %}
+          {% assign activeFilter = filter.active_values[0].label %}
+        {% else %}
+        {% assign classname = "dropdown-toggle btn btn-bg-coco drop-toggle w-dropdown-toggle" %}
+          {% assign activeFilter = "Categories" %}
+      {% endif %}
+    {% endfor %}
   <div data-hover="true" data-delay="0" id="dropdown" class="dropdown-2 w-dropdown">
-    <div id="drop-toggle" class="dropdown-toggle btn btn-bg-coco drop-toggle w-dropdown-toggle" >
-      <div id="category-text" class="text-block-37">{{ 'tn3be6ddc4' | t }}</div>
+    <div id="drop-toggle" class="{{ classname }}" >
+      <div id="category-text" class="text-block-37">{{ activeFilter }}</div>
       <img
         src="{{ 'icons8-down-arrow-32_1icons8-down-arrow-32.png' | asset_url }}"
         loading="lazy"
@@ -108,15 +117,7 @@
       {% comment %} {%- render "categories_where_visibile_eq_true" -%} {% endcomment %}
     </div> {% endcomment %}
     <div id="shop-container" class="container _w-95">
-      {% for filter in collection.filters %}
-      {% if filter.active_values != empty %}
-      {% for active in filter.active_values %}
-        <p>{{ active.label }}</p>
-        {% endfor %}
-        {% else %}
-        <p>empty</p>
-      {% endif %}
-    {% endfor %}
+      
       <div class="shop-collection-list">
         {%- for product in collection.products -%}
         {%- render 'shop-card', card_product : product -%}
