@@ -54,8 +54,13 @@
     </div>
   </div>
   {%- render 'categories' -%}
+  {% if request.path contains "filter" %}
+    {% assign classname = "dropdown-toggle btn btn-bg-coco drop-toggle w-dropdown-toggle active" %}
+  {% else %}
+    {% assign classname = "dropdown-toggle btn btn-bg-coco drop-toggle w-dropdown-toggle active" %}
+    {% endif %}
   <div data-hover="true" data-delay="0" id="dropdown" class="dropdown-2 w-dropdown">
-    <div id="drop-toggle" class="dropdown-toggle btn btn-bg-coco drop-toggle w-dropdown-toggle {% if page.title contains "All" %} active {% endif %} ">
+    <div id="drop-toggle" class="{{ classname }}">
       <div id="category-text" class="text-block-37">{{ 'tn3be6ddc4' | t }}</div>
       <img
         src="{{ 'icons8-down-arrow-32_1icons8-down-arrow-32.png' | asset_url }}"
