@@ -55,7 +55,7 @@
   </div>
   {%- render 'categories' -%}
   <div data-hover="true" data-delay="0" id="dropdown" class="dropdown-2 w-dropdown">
-    <div id="drop-toggle" class="dropdown-toggle btn btn-bg-coco drop-toggle w-dropdown-toggle {% if request.path contains "collection" %} active {% endif %} ">
+    <div id="drop-toggle" class="dropdown-toggle btn btn-bg-coco drop-toggle w-dropdown-toggle {% if request.path contains "filter" %} active {% endif %} ">
       <div id="category-text" class="text-block-37">{{ 'tn3be6ddc4' | t }}</div>
       <img
         src="{{ 'icons8-down-arrow-32_1icons8-down-arrow-32.png' | asset_url }}"
