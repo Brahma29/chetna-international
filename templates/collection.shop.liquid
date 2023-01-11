@@ -1,11 +1,3 @@
-<script>
-  window.onload = function(){
-  if(window.location.search.includes('filter')){
-    document.getElementById('drop-toggle').classList.add('active');
-  }
-  }
-</script>
-
 {%- assign headerSnippetPath = 'header-pageshop' -%}
 {%- assign wfPage = '63b460d12385d1f1977dd628' -%}
 {%- assign bodyClasses = 'body-2 px-6' -%}
@@ -96,6 +88,11 @@
     <div class="btn border-btn tabs-btn active">
       <div>{{ 't10181' | t }}</div>
     </div>
+    {% for filter in collection.filters %}
+      {% for active in filter.active_values %}
+        <p>{{ active.label }}</p>
+        {% endfor %}
+    {% endfor %}
     {%- render 'categories_where_visibile_eq_true' -%}
   </div>
   {% comment %} <div id="shop-container" class="container _w-95">
