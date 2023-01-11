@@ -1,6 +1,6 @@
 {% capture listItems %}
                         {% for item in collections %}
-                          {% if item.metafields.custom.isfilter == true %}
+                          {% if item.metafields.custom.isfilter %}
                         <div role="listitem" class="collection-item-8 w-dyn-item">
               <a href="/collections/{{ item.handle }}" class="btn border-btn tabs-btn drop-btn w-dropdown-link">{{ item.title }}</a>
             </div>
