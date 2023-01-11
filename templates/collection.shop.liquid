@@ -1,5 +1,7 @@
 <script>
-  console.log(window.location.search)
+  if(window.location.search.contains('filter')){
+    document.getElementById('drop-toggle').classList.add('active');
+  }
 </script>
 
 {%- assign headerSnippetPath = 'header-pageshop' -%}
