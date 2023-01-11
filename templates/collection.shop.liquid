@@ -279,43 +279,43 @@
   //window.onload = function(){document.getElementsByTagName("body")[0].style.overflow = "auto";};
 </script>
 <script>
-  window.onload = function () {
-    document.getElementsByTagName('body')[0].style.overflow = 'auto';
-    const urlParams = new URLSearchParams(window.location.search);
-    const myParam = urlParams.get('collection');
-    if (myParam) {
+  // window.onload = function () {
+  //   document.getElementsByTagName('body')[0].style.overflow = 'auto';
+  //   const urlParams = new URLSearchParams(window.location.search);
+  //   const myParam = urlParams.get('collection');
+  //   if (myParam) {
       
-      document.getElementById('shop-container').style.marginTop = '3.5rem';
-      document.getElementById('drop-toggle').classList.add('active');
-      document.getElementById('material-heading').innerHTML = `<h1 class="heading text-left w-80 mb-2">${myParam}</h1>`;
-      Array.from(document.getElementsByClassName('shop-category-name')).forEach((item) => {
-        if (item.innerText === myParam) {
-          item.parentElement.firstChild.style.display = 'block';
-          document.getElementById('about-para').style.display = 'block';
-        }
-      });
-      cards.forEach((card) => {
-        if (
-          card.lastChild.firstChild.firstChild.firstChild.firstChild.innerText !== window.location.search.substring(10)
-        ) {
-          card.parentElement.remove();
-        }
-      });
-      if (document.getElementsByClassName('shop-card').length === 0) {
-        document.getElementById('products-all').style.display = 'none';
-        document.getElementById('no-items-found').style.display = 'flex';
-      }
-      document.getElementById('all-shop').remove();
-    }
-    if (window.innerWidth < 780) {
-      document.getElementById('Resource-Link').removeAttribute('href');
-      console.log('Hi');
-      document.getElementById('menu-icon').addEventListener('click', function () {
-        console.log('Hi');
-        document.getElementsByTagName('body')[0].classList.toggle('overflowHide');
-      });
-    }
-  };
+  //     document.getElementById('shop-container').style.marginTop = '3.5rem';
+  //     document.getElementById('drop-toggle').classList.add('active');
+  //     document.getElementById('material-heading').innerHTML = `<h1 class="heading text-left w-80 mb-2">${myParam}</h1>`;
+  //     Array.from(document.getElementsByClassName('shop-category-name')).forEach((item) => {
+  //       if (item.innerText === myParam) {
+  //         item.parentElement.firstChild.style.display = 'block';
+  //         document.getElementById('about-para').style.display = 'block';
+  //       }
+  //     });
+  //     cards.forEach((card) => {
+  //       if (
+  //         card.lastChild.firstChild.firstChild.firstChild.firstChild.innerText !== window.location.search.substring(10)
+  //       ) {
+  //         card.parentElement.remove();
+  //       }
+  //     });
+  //     if (document.getElementsByClassName('shop-card').length === 0) {
+  //       document.getElementById('products-all').style.display = 'none';
+  //       document.getElementById('no-items-found').style.display = 'flex';
+  //     }
+  //     document.getElementById('all-shop').remove();
+  //   }
+  //   if (window.innerWidth < 780) {
+  //     document.getElementById('Resource-Link').removeAttribute('href');
+  //     console.log('Hi');
+  //     document.getElementById('menu-icon').addEventListener('click', function () {
+  //       console.log('Hi');
+  //       document.getElementsByTagName('body')[0].classList.toggle('overflowHide');
+  //     });
+  //   }
+  // };
   //Scroll Handling
   const scrollHandler = (id) => {
     const slider = document.getElementById(id);
