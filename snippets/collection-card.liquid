@@ -1,7 +1,9 @@
-<div data-w-id="67598789-817c-b598-f6b0-d79b5a290b3e" class="style-card"><img loading="lazy" src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" alt="" class="style-card-img">
+{% if material and material != empty %}
+<div data-w-id="67598789-817c-b598-f6b0-d79b5a290b3e" class="style-card"><img loading="lazy" src="{{ material.featured_image | image_url }}" alt="" class="style-card-img">
           <div class="style-card-text">
-            <div class="style-card-heading">{{ 't7635fb4f' | t }}</div>
-            <a href="#" class="btn style-card-btn w-button">{{ 'tcfbdf89' | t }}</a>
+            <div class="style-card-heading">{{ material.title }}</div>
+            <a href="{{ material.url }}" class="btn style-card-btn w-button">{{ 'tcfbdf89' | t }}</a>
           </div>
           <div class="style-card-overlay"></div>
         </div>
+  {% endif %}
