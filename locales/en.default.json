@@ -611,5 +611,15 @@
       "submit": "Submit",
       "close": "Close search"
     }
+  },
+  "shopify": {
+    "checkout": {
+      "general": {
+        "back_to_cart": " "
+      },
+      "failed_payment": {
+        "return_to_cart_button_label": " "
+      }
+    }
   }
 }
