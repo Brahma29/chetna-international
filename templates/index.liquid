@@ -342,8 +342,9 @@ pointer-events:none;}
     <div data-w-id="a0a598f2-6242-2a34-0bf5-7f5ed65b6dfc" class="mt-5">
       <div id="Insta-Slider" data-w-id="6cca477e-5600-52cf-0801-fa56f72cf778" class="cards">
         <script>console.log({{ blogs }} | json)</script>
-
-        {%- section 'insta-card' -%}
+  {% for post in blogs['Instagram'].articles %}
+        {%- render 'insta-card', post : post -%}
+    {% endfor %}
         <div class="insta-image mt-2"><img src="{{ '41439bbf3265f3bbd320ec9fe9a7ee6c2x.png' | asset_url }}" loading="eager" sizes="(max-width: 479px) 167.98611450195312px, (max-width: 767px) 255.98959350585938px, (max-width: 991px) 33vw, (max-width: 1439px) 320px, 383.9930725097656px" srcset="{{ '41439bbf3265f3bbd320ec9fe9a7ee6c2x-p-500.png' | asset_url }} 500w, {{ '41439bbf3265f3bbd320ec9fe9a7ee6c2x.png' | asset_url }} 658w" alt=""></div>
         <div class="insta-image"><img src="{{ '41439bbf3265f3bbd320ec9fe9a7ee6c2x.png' | asset_url }}" loading="eager" sizes="(max-width: 479px) 167.98611450195312px, (max-width: 767px) 255.98959350585938px, (max-width: 991px) 33vw, (max-width: 1439px) 320px, 383.9930725097656px" srcset="{{ '41439bbf3265f3bbd320ec9fe9a7ee6c2x-p-500.png' | asset_url }} 500w, {{ '41439bbf3265f3bbd320ec9fe9a7ee6c2x.png' | asset_url }} 658w" alt=""></div>
         <div class="insta-image mt-2"><img src="{{ '41439bbf3265f3bbd320ec9fe9a7ee6c2x.png' | asset_url }}" loading="eager" sizes="(max-width: 479px) 167.98611450195312px, (max-width: 767px) 255.98959350585938px, (max-width: 991px) 33vw, (max-width: 1439px) 320px, 383.9930725097656px" srcset="{{ '41439bbf3265f3bbd320ec9fe9a7ee6c2x-p-500.png' | asset_url }} 500w, {{ '41439bbf3265f3bbd320ec9fe9a7ee6c2x.png' | asset_url }} 658w" alt=""></div>
