@@ -123,6 +123,14 @@
     },
     "content_for_index": [
 
-    ]
+    ],
+    "blocks": {
+      "c9a0edb5-7a78-4f9f-9114-a166251463a3": {
+        "type": "shopify:\/\/apps\/instagram-feed-story-tiktok\/blocks\/social-widget\/508b8d5b-b176-4dc6-a0ba-2b222db6eb79",
+        "disabled": false,
+        "settings": {
+        }
+      }
+    }
   }
 }
