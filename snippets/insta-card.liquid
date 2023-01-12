@@ -2,9 +2,7 @@
   <img
     src="{{ post.featured_image.src | image_url }}"
     loading="eager"
-    alt=""
-    sizes="(max-width: 479px) 167.98611450195312px, (max-width: 767px) 255.98959350585938px, (max-width: 991px) 33vw, (max-width: 1439px) 320px, 383.9930725097656px"
-    srcset="{{ '41439bbf3265f3bbd320ec9fe9a7ee6c2x-p-500.png' | asset_url }} 500w, {{ '41439bbf3265f3bbd320ec9fe9a7ee6c2x.png' | asset_url }} 658w"
+    alt="{{ post.title }}"
   >
 {%- endif -%}
 
