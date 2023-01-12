@@ -1,6 +1,6 @@
 {%- if post and post != empty -%}
   <img
-    src="{{ post.featured_image.src | image_url }}"
+    src="{{ post.featured_image | image_url }}"
     loading="eager"
     alt="{{ post.title }}"
   >
