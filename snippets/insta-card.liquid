@@ -1,9 +1,11 @@
 {%- if post and post != empty -%}
+  <div class="insta-image">
   <img
     src="{{ post.image.src | image_url }}"
     loading="eager"
     alt="{{ post.title }}"
   >
+    </div>
 {%- endif -%}
 
 <script>
