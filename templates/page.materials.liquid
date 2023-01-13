@@ -19,9 +19,7 @@
       <div class="style-grid">
         {% for material in collections %}
           <script>console.log({{material.metafields.custom | json}})</script>
-          <p>
-      {{material.metafields.custom.gallary[0] | image_url: width: 450}}
-          </p>
+          <script>console.log({{material.metafields.custom.gallary[0] | metafield_tag}})</script>
           {% if material.metafields.custom.ismaterial == true %}
             {% render 'material-card', material : material %}
             {% endif %}
