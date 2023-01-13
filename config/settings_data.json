@@ -72,7 +72,7 @@
         "type": "advantage-section",
         "settings": {
           "btn_text_3": "Buy catalog",
-          "btn_link_3": "",
+          "btn_link_3": "shopify:\/\/collections\/all",
           "card_heading_text_3": "Proudly made in India",
           "btn_text_2": "Learn more",
           "btn_link_2": "",
@@ -89,11 +89,6 @@
         "settings": {
           "button_url": "",
           "style_card_heading_text": "<p>Text Area<\/p>"
-        }
-      },
-      "insta-card": {
-        "type": "insta-card",
-        "settings": {
         }
       },
       "navbar-white-variant": {
@@ -123,14 +118,6 @@
     },
     "content_for_index": [
 
-    ],
-    "blocks": {
-      "c9a0edb5-7a78-4f9f-9114-a166251463a3": {
-        "type": "shopify:\/\/apps\/instagram-feed-story-tiktok\/blocks\/social-widget\/508b8d5b-b176-4dc6-a0ba-2b222db6eb79",
-        "disabled": false,
-        "settings": {
-        }
-      }
-    }
+    ]
   }
 }
