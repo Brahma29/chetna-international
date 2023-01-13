@@ -1,31 +1,12 @@
-<a sym-bind="{&quot;link&quot;:{&quot;type&quot;:&quot;Select&quot;,&quot;val&quot;:{&quot;from&quot;:{&quot;type&quot;:&quot;Variable&quot;,&quot;val&quot;:&quot;data&quot;},&quot;prop&quot;:&quot;b36ff793-51ea-7332-c444-65eb3b6f59d7&quot;}}}" href="{% if section.settings.card_link %}{{ section.settings.card_link }}{% else %}#{% endif %}" class="resource-tile _w-100 download-card-1 w-inline-block">
-            <div class="text-wrapper _w-100">
-              <div class="card-heading resource-card-heading _w-50">{{ section.settings.card_name }}</div>
-              <div class="div-block"><img src="{{ 'icons8-right-arrow-32-1_1icons8-right-arrow-32-1.png' | asset_url }}" loading="lazy" alt="" class="download-arrow"></div>
-            </div>
-          </a>
-
-{% unless request.design_mode %}
-<script>var currentSection = document.currentScript.closest('.shopify-section'); currentSection.outerHTML = currentSection.innerHTML;</script>
-{% endunless %}
-        
 {% schema %}
-{
-  "name": "Download Card",
-  "tag": "div",
-  "class": "resource-tile _w-100 download-card-1 w-inline-block",
-  "settings": [
-    {
-      "type": "richtext",
-      "id": "card_name",
-      "label": "Card Name",
-      "default": "<p>Text Area</p>"
-    },
-    {
-      "id": "card_link",
-      "label": "Card Link",
-      "type": "url"
-    }
-  ]
-}
+  {
+    "name": "Section name",
+    "settings": []
+  }
 {% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
