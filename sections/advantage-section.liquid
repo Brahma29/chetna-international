@@ -19,7 +19,7 @@
         <div class="card-img">{%- if section.settings.advantage_card_image_image_3 == nil -%}<img src="{{ '1b19b97ee38eb905720a1e1a504e1ecf2x.png' | asset_url }}" loading="lazy" alt="" sizes="(max-width: 767px) 255.98959350585938px, (max-width: 991px) 28vw, (max-width: 1919px) 29vw, 440.3125305175781px" srcset="{{ '1b19b97ee38eb905720a1e1a504e1ecf2x-p-500.png' | asset_url }} 500w, {{ '1b19b97ee38eb905720a1e1a504e1ecf2x.png' | asset_url }} 794w" class="advantage-card-image">{%- else -%}<img src="{{ section.settings.advantage_card_image_image_3.src | img_url: 'master' }}" loading="lazy" alt="{{ section.settings.advantage_card_image_image_3.alt | escape }}" class="advantage-card-image">{%- endif -%}</div>
         <div class="card-text">
           <h1 class="card-heading advantage-card-heading">{{ section.settings.card_heading_text_3 }}</h1>
-          <a href="{% if section.settings.btn_link_3 %}{{ section.settings.btn_link_3 }}{% else %}{{ pages["shop"].url }}{% endif %}" class="btn card-btn w-button">{{ section.settings.btn_text_3 }}</a>
+          <a href="/collections/all" class="btn card-btn w-button">{{ section.settings.btn_text_3 }}</a>
         </div>
       </div>
     </div>
