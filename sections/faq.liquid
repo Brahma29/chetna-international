@@ -1,7 +1,4 @@
 {% for block in section.blocks %}
-{% if block.type == "header" %}
-<h3 class=”faq-header”>{{block.settings.header}}</h3>
-{% else %}
   <div class="faq-div" >
                 <div class="question-number">
                   <div>{{block.settings.question_number}}</div>
@@ -15,7 +12,6 @@
                   </div>
                 </div>
               </div>
-{% endif %}
 {% endfor %}
 {% schema %}
 {
