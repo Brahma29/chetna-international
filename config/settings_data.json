@@ -190,6 +190,32 @@
         "settings": {
           "drop_heading": "PDF Catalogue"
         }
+      },
+      "certification-download-drop": {
+        "type": "certification-download-drop",
+        "blocks": {
+          "6f22c9bb-27ab-475d-b961-502d6d8e7818": {
+            "type": "slide",
+            "settings": {
+              "card_heading": "Oeko Tex Standard 100",
+              "download_link": "https:\/\/https:\/\/cdn.shopify.com\/s\/files\/1\/0699\/8478\/0586\/files\/BI_CATALOG14Web.pdf?v=1673604551"
+            }
+          },
+          "e17fd485-85df-4c61-8046-3123f9859678": {
+            "type": "slide",
+            "settings": {
+              "card_heading": "RCS Certificate",
+              "download_link": "https:\/\/https:\/\/cdn.shopify.com\/s\/files\/1\/0699\/8478\/0586\/files\/BI_CATALOG14Web.pdf?v=1673604551"
+            }
+          }
+        },
+        "block_order": [
+          "6f22c9bb-27ab-475d-b961-502d6d8e7818",
+          "e17fd485-85df-4c61-8046-3123f9859678"
+        ],
+        "settings": {
+          "drop_heading": "Certification"
+        }
       }
     },
     "content_for_index": [
