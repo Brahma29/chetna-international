@@ -1,12 +1,75 @@
+{% for block in section.blocks %}
+{% if block.type == "header" %}
+<h3 class=”faq-header”>{{block.settings.header}}</h3>
+{% else %}
+  <div class="faq-div" >
+                <div class="question-number">
+                  <div>{{block.settings.question_number}}</div>
+                </div>
+                <div class="faq-question" id={{id}}>
+                  <div class="question">
+                    <div>{{block.settings.question}}</div>
+                  </div>
+                  <div class="faq-answer">
+                    <p class="paragraph-2">{{block.settings.answer}}</p>
+                  </div>
+                </div>
+              </div>
+{% endif %}
+{% endfor %}
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+   "name":"FAQ",
+   "class":"faq_section",
+   "settings":[
+      
+   ],
+   "blocks":[
+      {
+         "type":"slide",
+         "name":"Question",
+         "settings":[
+            {
+               "type":"header",
+               "content":"Question Item"
+            },
+            {
+               "type":"number",
+               "id":"id",
+               "label":"id — integer"
+            },
+            {
+               "type":"text",
+               "id":"question_number",
+               "label":"Question Number"
+            },
+            {
+               "type":"text",
+               "id":"question",
+               "label":"Question — text"
+            },
+            {
+               "type":"html",
+               "id":"answer",
+               "label":"Answer — html"
+            }
+         ]
+      },
+      {
+         "type":"header",
+         "name":"Header",
+         "settings":[
+            {
+               "type":"header",
+               "content":"Header"
+            },
+            {
+               "type":"text",
+               "id":"header",
+               "label":"Header"
+            }
+         ]
+      }
+   ]
+}
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}
