@@ -172,6 +172,24 @@
         ],
         "settings": {
         }
+      },
+      "download-card": {
+        "type": "download-card",
+        "blocks": {
+          "8c63f704-a45a-49b8-9e5e-c5a00d9b6051": {
+            "type": "slide",
+            "settings": {
+              "card_heading": "General & About Us",
+              "download_link": "shopify:\/\/pages\/about"
+            }
+          }
+        },
+        "block_order": [
+          "8c63f704-a45a-49b8-9e5e-c5a00d9b6051"
+        ],
+        "settings": {
+          "drop_heading": "PDF Catalogue"
+        }
       }
     },
     "content_for_index": [
