@@ -224,6 +224,25 @@
         "settings": {
           "drop_heading": "Certification"
         }
+      },
+      "domestic-faq": {
+        "type": "domestic-faq",
+        "blocks": {
+          "0d0510f1-0054-4051-807e-b9f8d599e505": {
+            "type": "slide",
+            "settings": {
+              "id": 1,
+              "question_number": "01",
+              "question": "What are the brands that Chetna International operates?",
+              "answer": "At Chetna, sustainability is at the heart of everything we do. From our incorporation in 1984 our journey of making quality buttons started, and so did our pursuit of making sure our impact to the environment was minimal and our processes are aimed towards sustainability and a circular economy."
+            }
+          }
+        },
+        "block_order": [
+          "0d0510f1-0054-4051-807e-b9f8d599e505"
+        ],
+        "settings": {
+        }
       }
     },
     "content_for_index": [
