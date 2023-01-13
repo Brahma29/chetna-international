@@ -180,14 +180,14 @@
             "type": "slide",
             "settings": {
               "card_heading": "General & About Us",
-              "download_link": "shopify:\/\/pages\/about"
+              "download_link": "<p>shopify:\/\/pages\/about<\/p>"
             }
           },
           "8e74bf73-2c52-407f-aef9-5f6f7ca94241": {
             "type": "slide",
             "settings": {
               "card_heading": "Chetna Shape",
-              "download_link": "shopify:\/\/pages\/about"
+              "download_link": "<p>https:\/\/cdn.shopify.com\/s\/files\/1\/0699\/8478\/0586\/files\/BI_CATALOG14Web.pdf?v=1673604551<\/p>"
             }
           }
         },
