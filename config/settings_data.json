@@ -175,33 +175,12 @@
       },
       "download-card": {
         "type": "download-card",
-        "blocks": {
-          "8c63f704-a45a-49b8-9e5e-c5a00d9b6051": {
-            "type": "slide",
-            "settings": {
-              "card_heading": "General & About Us",
-              "download_link": "<p>shopify:\/\/pages\/about<\/p>"
-            }
-          },
-          "8e74bf73-2c52-407f-aef9-5f6f7ca94241": {
-            "type": "slide",
-            "settings": {
-              "card_heading": "Chetna Shape",
-              "download_link": "<p>https:\/\/cdn.shopify.com\/s\/files\/1\/0699\/8478\/0586\/files\/BI_CATALOG14Web.pdf?v=1673604551<\/p>"
-            }
-          }
-        },
-        "block_order": [
-          "8c63f704-a45a-49b8-9e5e-c5a00d9b6051",
-          "8e74bf73-2c52-407f-aef9-5f6f7ca94241"
-        ],
         "settings": {
-          "drop_heading": "PDF Catalogue"
         }
       }
-    },
-    "content_for_index": [
+    }
+  },
+  "content_for_index": [
 
-    ]
-  }
+  ]
 }
