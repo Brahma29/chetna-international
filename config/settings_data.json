@@ -115,10 +115,10 @@
           "button_link": "shopify:\/\/pages\/contact"
         }
       },
-      "faq": {
-        "type": "faq",
+      "terminology-faq": {
+        "type": "terminology-faq",
         "blocks": {
-          "06c397ab-8cb3-4fcc-aa8d-6091a4942c8b": {
+          "a3f6da24-c82e-4121-a924-a736a068d179": {
             "type": "slide",
             "settings": {
               "id": 1,
@@ -127,7 +127,7 @@
               "answer": "At Chetna, sustainability is at the heart of everything we do. From our incorporation in 1984 our journey of making quality buttons started, and so did our pursuit of making sure our impact to the environment was minimal and our processes are aimed towards sustainability and a circular economy."
             }
           },
-          "31c243aa-caa1-4657-9c92-04d3b7d43391": {
+          "7af3c853-8660-44fe-8fb5-c0b1c1038a4a": {
             "type": "slide",
             "settings": {
               "id": 2,
@@ -135,22 +135,17 @@
               "question": "How do I download the catalogs?",
               "answer": "At Chetna, sustainability is at the heart of everything we do. From our incorporation in 1984 our journey of making quality buttons started, and so did our pursuit of making sure our impact to the environment was minimal and our processes are aimed towards sustainability and a circular economy."
             }
-          },
-          "422d8f0e-8b06-49b8-8053-8fea08eaeac4": {
-            "type": "slide",
-            "settings": {
-              "id": 3,
-              "question_number": "03",
-              "question": "What are the brands that Chetna International operates?",
-              "answer": "At Chetna, sustainability is at the heart of everything we do. From our incorporation in 1984 our journey of making quality buttons started, and so did our pursuit of making sure our impact to the environment was minimal and our processes are aimed towards sustainability and a circular economy."
-            }
           }
         },
         "block_order": [
-          "06c397ab-8cb3-4fcc-aa8d-6091a4942c8b",
-          "31c243aa-caa1-4657-9c92-04d3b7d43391",
-          "422d8f0e-8b06-49b8-8053-8fea08eaeac4"
+          "a3f6da24-c82e-4121-a924-a736a068d179",
+          "7af3c853-8660-44fe-8fb5-c0b1c1038a4a"
         ],
+        "settings": {
+        }
+      },
+      "shipping-faq": {
+        "type": "shipping-faq",
         "settings": {
         }
       }
