@@ -103,135 +103,139 @@
       </a>
     </div>
   </div>
-  <div
-    data-node-type="commerce-cart-wrapper"
-    data-open-product=""
-    data-wf-cart-type="modal"
-    data-wf-cart-query=""
-    data-wf-page-link-href-prefix=""
-    class="w-commerce-commercecartwrapper"
-    udy-collection="cart"
-  >
-    <a
+ <div
+   data-node-type="commerce-cart-wrapper"
+   data-open-product=""
+   data-wf-cart-type="modal"
+   data-wf-cart-query=""
+   data-wf-page-link-href-prefix=""
+   class="w-commerce-commercecartwrapper"
+   udy-collection="cart"
+   >
+   <a
       href="#"
       data-node-type="commerce-cart-open-link"
       aria-haspopup="dialog"
       aria-label="Open cart"
       role="button"
-      class="w-commerce-commercecartopenlink btn btn-bg-coco cart-btn w-inline-block"
-    >
+      class="w-commerce-commercecartopenlink btn btn-bg-coco cart-btn hide w-inline-block"
+      >
       <svg class="w-commerce-commercecartopenlinkicon" width="17px" height="17px" viewBox="0 0 17 17">
-        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-          <path d="M2.60592789,2 L0,2 L0,0 L4.39407211,0 L4.84288393,4 L16,4 L16,9.93844589 L3.76940945,12.3694378 L2.60592789,2 Z M15.5,17 C14.6715729,17 14,16.3284271 14,15.5 C14,14.6715729 14.6715729,14 15.5,14 C16.3284271,14 17,14.6715729 17,15.5 C17,16.3284271 16.3284271,17 15.5,17 Z M5.5,17 C4.67157288,17 4,16.3284271 4,15.5 C4,14.6715729 4.67157288,14 5.5,14 C6.32842712,14 7,14.6715729 7,15.5 C7,16.3284271 6.32842712,17 5.5,17 Z" fill="currentColor" fill-rule="nonzero"></path>
-        </g>
+         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <path d="M2.60592789,2 L0,2 L0,0 L4.39407211,0 L4.84288393,4 L16,4 L16,9.93844589 L3.76940945,12.3694378 L2.60592789,2 Z M15.5,17 C14.6715729,17 14,16.3284271 14,15.5 C14,14.6715729 14.6715729,14 15.5,14 C16.3284271,14 17,14.6715729 17,15.5 C17,16.3284271 16.3284271,17 15.5,17 Z M5.5,17 C4.67157288,17 4,16.3284271 4,15.5 C4,14.6715729 4.67157288,14 5.5,14 C6.32842712,14 7,14.6715729 7,15.5 C7,16.3284271 6.32842712,17 5.5,17 Z" fill="currentColor" fill-rule="nonzero"></path>
+         </g>
       </svg>
       <div class="w-inline-block">{{ 't1fef40' | t }}</div>
       <div class="w-commerce-commercecartopenlinkcount cart-quantity">{{ cart.item_count }}</div>
-    </a>
-    <div
+   </a>
+   <div
       data-node-type="commerce-cart-container-wrapper"
       style="display:none"
       class="w-commerce-commercecartcontainerwrapper w-commerce-commercecartcontainerwrapper--cartType-modal cart-wrapper"
-    >
-      <div
-        role="dialog"
-        data-node-type="commerce-cart-container"
-        class="w-commerce-commercecartcontainer cart-container"
       >
-        <div class="w-commerce-commercecartheader cart-header">
-          <h4 class="w-commerce-commercecartheading heading-9">{{ 't1fef40' | t }}</h4>
-          <a
-            href="#"
-            data-node-type="commerce-cart-close-link"
-            role="button"
-            aria-label="Close cart"
-            class="w-commerce-commercecartcloselink w-inline-block"
-          >
-            <svg class="icon-6" width="16px" height="16px" viewBox="0 0 16 16">
-              <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                <g fill-rule="nonzero" fill="#333333">
-                  <polygon points="6.23223305 8 0.616116524 13.6161165 2.38388348 15.3838835 8 9.76776695 13.6161165 15.3838835 15.3838835 13.6161165 9.76776695 8 15.3838835 2.38388348 13.6161165 0.616116524 8 6.23223305 2.38388348 0.616116524 0.616116524 2.38388348 6.23223305 8"></polygon>
-                </g>
-              </g>
-            </svg>
-          </a>
-        </div>
-        <div class="w-commerce-commercecartformwrapper">
-          <form data-node-type="commerce-cart-form" style="display:none" class="w-commerce-commercecartform">
-            <div class="w-commerce-commercecartfooter cart-footer">
-              <div aria-atomic="true" aria-live="polite" class="w-commerce-commercecartlineitem cart-line-item">
-                <div class="div-block-6">
-                  <div class="text-block-13">{{ 'tn77079b6c' | t }}</div>
-                </div>
-                <div class="div-block-5">
-                  <div class="col cart">
-                    <div class="div-block-7">
-                      <div class="text-block-14">{{ 'tn76f396dc' | t }}</div>
-                      <div class="w-commerce-commercecartordervalue text-block-15">
-                        {{ cart.items_subtotal_price | money }}
-                      </div>
-                    </div>
-                    <div class="div-block-8">
-                      <div class="text-block-16">{{ 't4d3eb24' | t }}</div>
-                      <div class="w-commerce-commercecartordervalue text-block-17 carttotal">
-                        {{ cart.items_subtotal_price | money }}
-                      </div>
-                    </div>
+      <div
+         role="dialog"
+         data-node-type="commerce-cart-container"
+         class="w-commerce-commercecartcontainer cart-container"
+         >
+         <div class="w-commerce-commercecartheader cart-header">
+            <h4 class="w-commerce-commercecartheading heading-9">{{ 't1fef40' | t }}</h4>
+            <a
+               href="#"
+               data-node-type="commerce-cart-close-link"
+               role="button"
+               aria-label="Close cart"
+               class="w-commerce-commercecartcloselink close-button w-inline-block"
+               ><img src="{{ 'path-327.svg' | asset_url }}" loading="lazy" alt=""
+               ></a>
+         </div>
+         <div class="w-commerce-commercecartformwrapper">
+            <form data-node-type="commerce-cart-form" style="display:none" class="w-commerce-commercecartform">
+               <div class="w-commerce-commercecartfooter cart-footer">
+                  <div aria-atomic="true" aria-live="polite" class="w-commerce-commercecartlineitem cart-line-item">
+                     <div class="div-block-6">
+                        <div class="text-block-13">{{ 'tn77079b6c' | t }}</div>
+                     </div>
+                     <div class="div-block-5">
+                        <div class="col cart">
+                           <div class="div-block-7">
+                              <div class="text-block-14">{{ 'tn76f396dc' | t }}</div>
+                              <div class="w-commerce-commercecartordervalue text-block-15">
+                                 {{ cart.items_subtotal_price | money }}
+                              </div>
+                           </div>
+                           <div class="div-block-8">
+                              <div class="text-block-16">{{ 't4d3eb24' | t }}</div>
+                              <div class="w-commerce-commercecartordervalue text-block-17">
+                                 {{ cart.items_subtotal_price | money }}
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col cart">
+                           <div>
+                              <a
+                                 href="/checkout"
+                                 value="Place Order"
+                                 data-node-type="cart-checkout-button"
+                                 class="w-commerce-commercecartcheckoutbutton btn btn-bg-coco cart"
+                                 data-loading-text="Hang Tight..."
+                                 >
+                              {{- 'ta750ab5' | t -}}
+                              </a>
+                           </div>
+                        </div>
+                     </div>
                   </div>
-                  <div class="col cart">
-                    <div>
-                      <a
-                        href="/checkout"
-                        value="Place Order"
-                        data-node-type="cart-checkout-button"
-                        class="w-commerce-commercecartcheckoutbutton btn btn-bg-coco cart"
-                        data-loading-text="Hang Tight..."
-                      >
-                        {{- 'ta750ab5' | t -}}
-                      </a>
-                    </div>
+               </div>
+               <div class="div-block-9">
+                  <div class="div-block-6">
+                     <div class="text-block-13">{{ 'tn685f8ab2' | t }}</div>
                   </div>
-                </div>
-              </div>
+                  <script type="text/x-wf-template" id="wf-template-5b596057-aeee-c8b3-29d3-9001975d39d3">
+                     <div data-node-type="cart-item" class="cart-item w-commerce-commercecartitem" template-part-bind="5b596057-aeee-c8b3-29d3-9001975d39d4"><img data-node-type="cart-item-image" class="image-19 w-commerce-commercecartitemimage" template-part-bind="5b596057-aeee-c8b3-29d3-9001975d39d5" src="<%= it.image %>">
+                     <div>
+                     <a data-node-type="link" class="link-block-10" template-part-bind="1691a2ae-6dd9-ed36-b7ad-3753fe3431fa" href="<%= it.url%>"><div data-node-type="cart-item-info" class="div-block-13 w-commerce-commercecartiteminfo" template-part-bind="5b596057-aeee-c8b3-29d3-9001975d39d6"><div data-node-type="cart-product-name" class="text-block-20 w-commerce-commercecartproductname" template-part-bind="5b596057-aeee-c8b3-29d3-9001975d39d7"><%= it.title %></div><ul class="option-list-3 w-commerce-commercecartoptionlist" template-part-bind="5b596057-aeee-c8b3-29d3-9001975d39d9"><% Object.entries(it.properties).forEach( data =>  { %><li data-node-type="cart-option-list-item"><span data-node-type="cart-option-list-item-label" template-part-bind="5b596057-aeee-c8b3-29d3-9001975d39db"><%= data[0] %></span><span>: </span><span data-node-type="cart-option-list-item-value" template-part-bind="5b596057-aeee-c8b3-29d3-9001975d39de"><%= data[1] %></span></li><% }) %></ul></div></a>
+                     <input class="w-commerce-commercecartquantity quantity cart" name="<%= it.id %>" type="number" min="0" min="1" value="<%= it.quantity %>" data-node-type="cart-quantity">
+                     </div>
+                     <div>
+                     <div class="div-block-12"><div class="text-block-19" template-part-bind="5b596057-aeee-c8b3-29d3-9001975d39d8"><%= it.price %></div>
+                     <a data-node-type="cart-remove-link" class="remove-button" href="#" role="button" aria-label="Remove item from cart" template-part-bind="5b596057-aeee-c8b3-29d3-9001975d39df" data-product-id="<%= it.id %>"><div class="text-block-21">Remove</div></a>
+                     </div>
+                     <div class="div-block-14"><div class="div-block-11"><ul data-node-type="list" class="list-2"><li data-node-type="list-item"><div class="text-block-18" >Delivery in 2 days , Sun | Free</div></li></ul></div></div>
+                     </div>
+                     </div>
+                  </script>
+                  <div
+                     class="w-commerce-commercecartlist cart-list"
+                     data-wf-collection="database.commerceOrder.userItems"
+                     data-wf-template-id="wf-template-5b596057-aeee-c8b3-29d3-9001975d39d3"
+                     ></div>
+               </div>
+            </form>
+            <div class="w-commerce-commercecartemptystate">
+               <div aria-live="polite" aria-label="This cart is empty">{{ 't3d503d2b' | t }}</div>
             </div>
-            <div class="div-block-9">
-              <div class="div-block-6">
-                <div class="text-block-13">{{ 'tn685f8ab2' | t }}</div>
-              </div>
-              <script type="text/x-wf-template" id="wf-template-60f92897-843e-8cd1-d3ca-34e5d2372ebb">
-                <div data-node-type="cart-item" class="cart-item w-commerce-commercecartitem" template-part-bind="60f92897-843e-8cd1-d3ca-34e5d2372ebc"><img data-node-type="cart-item-image" class="image-19 w-commerce-commercecartitemimage" template-part-bind="60f92897-843e-8cd1-d3ca-34e5d2372ebd" src="<%= it.image %>"><div data-node-type="cart-item-info" class="div-block-13 w-commerce-commercecartiteminfo" template-part-bind="60f92897-843e-8cd1-d3ca-34e5d2372ebe"><div data-node-type="cart-product-name" class="text-block-20 w-commerce-commercecartproductname" template-part-bind="60f92897-843e-8cd1-d3ca-34e5d2372ebf"><%= it.title %></div><ul class="option-list-3 w-commerce-commercecartoptionlist" template-part-bind="60f92897-843e-8cd1-d3ca-34e5d2372ec0"><% Object.entries(it.properties).forEach( data =>  { %><li data-node-type="cart-option-list-item"><span data-node-type="cart-option-list-item-label" template-part-bind="60f92897-843e-8cd1-d3ca-34e5d2372ec2"><%= data[0] %></span><span>: </span><span data-node-type="cart-option-list-item-value" template-part-bind="60f92897-843e-8cd1-d3ca-34e5d2372ec5"><%= data[1] %></span></li><% }) %></ul></div><input class="w-commerce-commercecartquantity quantity cart" name="<%= it.id %>" type="number" min="0" min="1" value="<%= it.quantity %>" data-node-type="cart-quantity"><div class="div-block-12"><div class="text-block-19" template-part-bind="60f92897-843e-8cd1-d3ca-34e5d2372ec8"><%= it.price %></div><a data-node-type="cart-remove-link" class="remove-button" href="#" role="button" aria-label="Remove item from cart" template-part-bind="60f92897-843e-8cd1-d3ca-34e5d2372ec9" data-product-id="<%= it.id %>"><div class="text-block-21">Remove</div></a></div><div class="div-block-14"><div class="div-block-11"><ul data-node-type="list" class="list-2"><li data-node-type="list-item"><div class="text-block-18">Delivery in 2 days , Sun | Free</div></li></ul></div></div></div>
-              </script>
-              <div
-                class="w-commerce-commercecartlist cart-list"
-                data-wf-collection="database.commerceOrder.userItems"
-                data-wf-template-id="wf-template-60f92897-843e-8cd1-d3ca-34e5d2372ebb"
-              ></div>
-            </div>
-          </form>
-          <div class="w-commerce-commercecartemptystate">
-            <div aria-live="polite" aria-label="This cart is empty">{{ 't3d503d2b' | t }}</div>
-          </div>
-          <div
-            aria-live="assertive"
-            style="display:none"
-            data-node-type="commerce-cart-error"
-            class="w-commerce-commercecarterrorstate"
-          >
             <div
-              class="w-cart-error-msg"
-              data-w-cart-quantity-error="Product is not available in this quantity."
-              data-w-cart-general-error="Something went wrong when adding this item to the cart."
-              data-w-cart-checkout-error="Checkout is disabled on this site."
-              data-w-cart-cart_order_min-error="The order minimum was not met. Add more items to your cart to continue."
-              data-w-cart-subscription_error-error="Before you purchase, please use your email invite to verify your address so we can send order updates."
-            >
-              {{ 'tn1c765d0d' | t }}
+               aria-live="assertive"
+               style="display:none"
+               data-node-type="commerce-cart-error"
+               class="w-commerce-commercecarterrorstate"
+               >
+               <div
+                  class="w-cart-error-msg"
+                  data-w-cart-quantity-error="Product is not available in this quantity."
+                  data-w-cart-general-error="Something went wrong when adding this item to the cart."
+                  data-w-cart-checkout-error="Checkout is disabled on this site."
+                  data-w-cart-cart_order_min-error="The order minimum was not met. Add more items to your cart to continue."
+                  data-w-cart-subscription_error-error="Before you purchase, please use your email invite to verify your address so we can send order updates."
+                  >
+                  {{ 'tn1c765d0d' | t }}
+               </div>
             </div>
-          </div>
-        </div>
+         </div>
       </div>
-    </div>
-  </div>
+   </div>
+</div>
   <a
     id="contact-btn"
     href="{% if section.settings.button_link %}{{ section.settings.button_link }}{% else %}{{ pages["contact-us"].url }}{% endif %}"
