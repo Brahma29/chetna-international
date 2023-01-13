@@ -175,10 +175,26 @@
       },
       "download-card": {
         "type": "download-card",
+        "blocks": {
+          "fd8b0b40-7a95-4c3b-9146-e29c96d8990a": {
+            "type": "slide",
+            "settings": {
+              "card_heading": "General & About Us",
+              "download_link": "https:\/\/cdn.shopify.com\/s\/files\/1\/0699\/8478\/0586\/files\/BI_CATALOG14Web.pdf?v=1673604551"
+            }
+          }
+        },
+        "block_order": [
+          "fd8b0b40-7a95-4c3b-9146-e29c96d8990a"
+        ],
         "settings": {
+          "drop_heading": "PDF Catalogue"
         }
       }
-    }
+    },
+    "content_for_index": [
+
+    ]
   },
   "content_for_index": [
 
