@@ -182,10 +182,18 @@
               "card_heading": "General & About Us",
               "download_link": "https:\/\/cdn.shopify.com\/s\/files\/1\/0699\/8478\/0586\/files\/BI_CATALOG14Web.pdf?v=1673604551"
             }
+          },
+          "52433ca9-ccd0-4ee9-a1e9-320e5df8ae48": {
+            "type": "slide",
+            "settings": {
+              "card_heading": "Corozo",
+              "download_link": "https:\/\/https:\/\/cdn.shopify.com\/s\/files\/1\/0699\/8478\/0586\/files\/BI_CATALOG14Web.pdf?v=1673604551"
+            }
           }
         },
         "block_order": [
-          "fd8b0b40-7a95-4c3b-9146-e29c96d8990a"
+          "fd8b0b40-7a95-4c3b-9146-e29c96d8990a",
+          "52433ca9-ccd0-4ee9-a1e9-320e5df8ae48"
         ],
         "settings": {
           "drop_heading": "PDF Catalogue"
