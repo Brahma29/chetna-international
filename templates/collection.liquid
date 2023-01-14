@@ -22,7 +22,10 @@ pointer-events:none;}
             <h1 class="heading text-left">{{ collection.title }}</h1>
           </div>
         </div>
-        <script> console.log({{ all_products }}) </script>
+                                                             {% for product in all_products %}
+                                                               {{ product.title }}
+                                                               {% endfor %}
+<!--         <script> console.log({{ all_products }}) </script> -->
         <p class="about-para _w-80 text-center materials-para center">{{ collection.description }}</p>
         <div class="wrapper flex-col gap-0 items-center buttons-center">
           <a href="#" class="btn btn-bg-coco fs-6 _w-100 w-button">{{ 't246f9881' | t }}</a>
