@@ -22,10 +22,10 @@ pointer-events:none;}
             <h1 class="heading text-left">{{ collection.title }}</h1>
           </div>
         </div>
-        <p class="about-para _w-80 text-center materials-para center">{{ collection.metafields.udesly['about-para'] }}</p>
+        <p class="about-para _w-80 text-center materials-para center">{{ collection.description }}</p>
         <div class="wrapper flex-col gap-0 items-center buttons-center">
           <a href="#" class="btn btn-bg-coco fs-6 _w-100 w-button">{{ 't246f9881' | t }}</a>
-          <a id="material-shop-btn" href="{{ pages["shop"].url }}" class="btn bg-cart-btn _w-100 w-button">{{ 'tn10d26d54' | t }}</a>
+          <a id="material-shop-btn" href="/collections/all?filter.p.m.custom.collection={{ collection.title }}" class="btn bg-cart-btn _w-100 w-button">{{ 'tn10d26d54' | t }}</a>
           <a href="#" class="btn border-btn fs-6 px-1 _w-100 w-button">{{ 't515902f1' | t }}</a>
         </div>
       </div>
@@ -41,6 +41,17 @@ pointer-events:none;}
     <div class="text-wrapper pr-2 pl-2">
       <h1 style="-webkit-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="heading text-left">{{ 't8eb013f' | t }}</h1>
     </div>
+
+  <div id="Gallery-slider" data-w-id="e6f0de6c-bd0c-0366-34ac-e10b6ea4e3d8" style="-webkit-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" role="list" class="cards no-wrap w-dyn-items">
+       <div role="listitem" class="collection-item-3 w-dyn-item">
+          <div class="product-card gallary-card">
+            <div class="product-image materials-card-img gallery-card"><img loading="lazy" src="https://mailrelay.com/wp-content/uploads/2018/03/que-es-un-blog-1.png" alt="" class="product-img"></div>
+          </div>
+        </div>
+      </div>
+
+    
+    
     {%- assign setItems = collection.metafields.udesly['gallery'] -%}<div class="w-dyn-list">
       {%- unless setItems.size == 0 -%}<div id="Gallery-slider" data-w-id="e6f0de6c-bd0c-0366-34ac-e10b6ea4e3d8" style="-webkit-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" role="list" class="cards no-wrap w-dyn-items">
         {%- for setItem in setItems -%}<div role="listitem" class="collection-item-3 w-dyn-item">
@@ -71,19 +82,19 @@ pointer-events:none;}
       <div class="text-wrapper">
         <div class="w-layout-grid details-card-grid">
           <div class="text-wrapper gap-2 flex-start"><img src="{{ 'noun-layers-2063359.svg' | asset_url }}" loading="lazy" alt="" class="icon">
-            <div class="details-card-text">{{ collection.metafields.udesly['feature-1'] }}</div>
+            <div class="details-card-text">{{ collection.metafields.custom.feature_1 }}</div>
           </div>
           <div class="text-wrapper gap-2 flex-start"><img src="{{ 'noun-delivery-3383839.svg' | asset_url }}" loading="lazy" alt="" class="icon">
-            <div class="details-card-text">{{ collection.metafields.udesly['feature-4'] }}</div>
+            <div class="details-card-text">{{ collection.metafields.custom.feature_4 }}</div>
           </div>
           <div class="text-wrapper gap-2 flex-start"><img src="{{ 'noun-price-tag-3803922.svg' | asset_url }}" loading="lazy" alt="" class="icon">
-            <div class="details-card-text">{{ collection.metafields.udesly['feature-2'] }}</div>
+            <div class="details-card-text">{{ collection.metafields.custom.feature_2 }}</div>
           </div>
           <div class="text-wrapper gap-2 flex-start"><img src="{{ 'group-345.svg' | asset_url }}" loading="lazy" alt="" class="icon dye">
-            <div class="details-card-text">{{ collection.metafields.udesly['feature-5'] }}</div>
+            <div class="details-card-text">{{ collection.metafields.custom.feature_5 }}</div>
           </div>
           <div id="w-node-_5504fd09-e9e1-67ab-7458-9a28049e4c8d-e97dd60f" class="text-wrapper gap-2 flex-start _w-60"><img src="{{ 'group-343.svg' | asset_url }}" loading="lazy" alt="" class="icon">
-            <div class="details-card-text">{{ collection.metafields.udesly['feature-3'] }}</div>
+            <div class="details-card-text">{{ collection.metafields.custom.feature_3 }}</div>
           </div>
         </div>
       </div>
@@ -199,8 +210,7 @@ slider.addEventListener('mousemove', (e) => {
 }
 scrollHandler('Gallery-slider');
 //*******************************
-const materialName = document.getElementById("material-name").innerText;
-const shopBtn = document.getElementById("material-shop-btn").href=`https://chetna-international.webflow.io/shop?material=${materialName}`;
+
 </script>
 
 {{ 'udesly-shopify.min.js' | asset_url | script_tag }}
