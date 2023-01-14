@@ -43,7 +43,7 @@ pointer-events:none;}
     <div class="text-wrapper pr-2 pl-2">
       <h1 style="-webkit-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="heading text-left">{{ 't8eb013f' | t }}</h1>
     </div>
-    <script>console.log({{ collection.metafields.custom.gallary[0] }})</script>
+    <script>console.log({{ collection.metafields.custom.gallary }})</script>
     <p>{{ collection.metafields.custom.gallary[0] | image_url: width: 200 | image_tag }}</p>
     {%- assign setItems = collection.metafields.udesly['gallery'] -%}<div class="w-dyn-list">
       {%- unless setItems.size == 0 -%}<div id="Gallery-slider" data-w-id="e6f0de6c-bd0c-0366-34ac-e10b6ea4e3d8" style="-webkit-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" role="list" class="cards no-wrap w-dyn-items">
@@ -51,7 +51,7 @@ pointer-events:none;}
           <div role="listitem" class="collection-item-3 w-dyn-item">
           <div class="product-card gallary-card">
             <div class="product-image materials-card-img gallery-card">
-               <img loading="lazy" src="{{ image  | img_url:400x}}" alt="" class="product-img"
+<!--               <img loading="lazy" src="{{ image }}" alt="" class="product-img"> -->
             </div>
           </div>
         </div>
