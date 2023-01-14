@@ -121,6 +121,9 @@
       {% comment %} {%- render "categories_where_visibile_eq_true" -%} {% endcomment %}
     </div> {% endcomment %}
     <div id="shop-container" class="container _w-95">   
+       {%- for product in collection.products -%}
+      <p>{{ product.title }}</p>
+      {% endfor %}
        {% if collection.products != empty %}
       <div class="shop-collection-list">
        
