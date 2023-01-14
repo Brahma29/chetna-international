@@ -72,10 +72,6 @@ pointer-events:none;}
         <div>No items found.</div>
       </div>
     </div></template></div>
-
-    {%- for product in collection.products -%}
-      <p>{{ product.title }}</p>
-      {% endfor %}
     
   <script> console.log({{ collections.all.products | json}}) </script>
     <div id="Gallary-slider" data-w-id="4bbefa8e-4226-6ca9-69df-b189a2894747" class="cards no-wrap hide">
