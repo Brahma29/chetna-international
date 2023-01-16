@@ -46,7 +46,7 @@ pointer-events:none;}
     </div>
     {% assign pics = collection.metafields.custom.gallary[0] | split : "/" %}
     {% assign arr = [a, b, c, d, e] %}
-    <script> console.log({{arr}})</script>
+    <script> console.log(arr)</script>
       {% for this in arr %}
       <script>
         console.log({{this}})
