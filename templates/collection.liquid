@@ -48,7 +48,7 @@ pointer-events:none;}
       {%- for pic in collection.metafields.custom.gallary -%}
         {{ pic }}
       {%- endfor -%}
-      {{ collection.metafields.custom.gallery | size }}
+      {{ collection.metafields.custom.gallary | first }}
       <div class="collection-item-3">
         <div class="product-card gallary-card">
           <div class="product-image materials-card-img gallery-card"><img loading="lazy" src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" alt="" class="product-img"></div>
