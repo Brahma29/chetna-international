@@ -46,7 +46,7 @@ pointer-events:none;}
         {{collection.metafields.custom.gallary}}.forEach(item=>{
           const img = document.createElement("img");
           img.src = item;
-          document.getElementById("this").appendChild(img);
+          document.body.appendChild(img);
         })
       </script>
       {%- for pic in collection.metafields.custom.gallary -%}
