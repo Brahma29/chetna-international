@@ -43,7 +43,11 @@ pointer-events:none;}
     </div>
     <div data-w-id="2cb7f69f-9069-6b59-f1b3-42a4ae6da4a6" style="-webkit-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="cards no-wrap" id="Gallery-slider">
       <script>
-        {{collection.metafields.custom.gallary}}.forEach(item=>console.log(item))
+        {{collection.metafields.custom.gallary}}.forEach(item=>{
+          const img = document.createElement("img");
+          img.src = item;
+          document.getElementById("this").appendChild(img);
+        })
       </script>
       {%- for pic in collection.metafields.custom.gallary -%}
         {{ pic }}
@@ -51,7 +55,7 @@ pointer-events:none;}
       {{ collection.metafields.custom.gallary[0] }}
       <div class="collection-item-3">
         <div class="product-card gallary-card">
-          <div class="product-image materials-card-img gallery-card"><img loading="lazy" src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" alt="" class="product-img"></div>
+          <div class="product-image materials-card-img gallery-card" id="this"><img loading="lazy" src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" alt="" class="product-img"></div>
         </div>
       </div>
       <div class="collection-item-3">
@@ -205,7 +209,6 @@ slider.addEventListener('mousemove', (e) => {
   const x = e.pageX - slider.offsetLeft;
   const walk = (x - startX) * 3; //scroll-fast
   slider.scrollLeft = scrollLeft - walk;
-  console.log(walk);
 });
 }
 scrollHandler('Gallery-slider');
