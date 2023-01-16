@@ -44,19 +44,10 @@ pointer-events:none;}
     </div>
 
   <div id="Gallery-slider" data-w-id="e6f0de6c-bd0c-0366-34ac-e10b6ea4e3d8" style="-webkit-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" role="list" class="cards no-wrap w-dyn-items">
-      <p>hi</p>
-    {% for pic in collection.metafields.custom['gallary'] %}
-      <div role="listitem" class="collection-item-3 w-dyn-item">
+
+  <div role="listitem" class="collection-item-3 w-dyn-item">
           <div class="product-card gallary-card">
-            <div class="product-image materials-card-img gallery-card"><img loading="lazy" src="{{ image | image_url }}" alt="" class="product-img"></div>
-          </div>
-        </div>
-    {% else %}
-      <p>It is empty</p>
-      {% endfor %}
-<!--     <div role="listitem" class="collection-item-3 w-dyn-item">
-          <div class="product-card gallary-card">
-            <div class="product-image materials-card-img gallery-card"><img loading="lazy" src="https://mailrelay.com/wp-content/uploads/2018/03/que-es-un-blog-1.png" alt="" class="product-img"></div>
+            <div class="product-image materials-card-img gallery-card"><img loading="lazy" src="{{ collection.metafields.custom.gallary[0] | media_tag }}" alt="" class="product-img"></div>
           </div>
         </div>
     <div role="listitem" class="collection-item-3 w-dyn-item">
@@ -73,7 +64,7 @@ pointer-events:none;}
           <div class="product-card gallary-card">
             <div class="product-image materials-card-img gallery-card"><img loading="lazy" src="https://mailrelay.com/wp-content/uploads/2018/03/que-es-un-blog-1.png" alt="" class="product-img"></div>
           </div>
-        </div> -->
+        </div> 
       </div>
 
     
