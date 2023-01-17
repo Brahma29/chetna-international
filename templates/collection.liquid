@@ -64,7 +64,7 @@
     </div>
   </div>
 </div>
-{%- assign releases = collection.metafields.custom.gallery -%}
+{%- assign releases = collection.metafields.custom.gallery.value -%}
 {{ releases }}
 <!--
   {% for release in releases.releases %}
