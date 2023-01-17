@@ -64,6 +64,7 @@
     </div>
   </div>
 </div>
+<h1>Start</h1>
 {%- assign releases = collection.metafields.custom.gallery -%}
 <script>
   console.log("he",{{ releases }})
@@ -71,6 +72,7 @@
 {% for release in releases.releases %}
   {{ release.releaseName }}
 {%- endfor -%}
+<h1>End</h1>
 <div data-w-id="4bbefa8e-4226-6ca9-69df-b189a2894743" class="section bg-transparent mr-0 pr-0 store-section wf-section">
   <div class="text-wrapper pr-2 pl-2">
     <h1
