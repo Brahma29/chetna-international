@@ -65,11 +65,8 @@
   </div>
 </div>
 <h1>Start</h1>
-{%- assign releases = collection.metafields.custom.gallery.value -%}
-<script>
-  console.log("he",{{ releases }})
-</script>
-{% for release in releases %}
+{%- assign images = collection.metafields.custom.gallery.value -%}
+{% for image in releases %}
   <img
     loading="lazy"
     src="{{ release | image_url }}"
