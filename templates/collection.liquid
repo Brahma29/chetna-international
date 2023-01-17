@@ -86,7 +86,7 @@
         <div class="product-image materials-card-img gallery-card">
           <img
             loading="lazy"
-            src="{{ image | image_url }}"
+            src="{% if image != empty %} {{ image | image_url }} {% else %} https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg {% endif %}"
             alt=""
             class="product-img"
           >
@@ -94,6 +94,54 @@
       </div>
     </div>
     {%- endfor -%}
+<!--     <div class="collection-item-3">
+      <div class="product-card gallary-card">
+        <div class="product-image materials-card-img gallery-card">
+          <img
+            loading="lazy"
+            src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg"
+            alt=""
+            class="product-img"
+          >
+        </div>
+      </div>
+    </div>
+    <div class="collection-item-3">
+      <div class="product-card gallary-card">
+        <div class="product-image materials-card-img gallery-card">
+          <img
+            loading="lazy"
+            src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg"
+            alt=""
+            class="product-img"
+          >
+        </div>
+      </div>
+    </div>
+    <div class="collection-item-3">
+      <div class="product-card gallary-card">
+        <div class="product-image materials-card-img gallery-card">
+          <img
+            loading="lazy"
+            src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg"
+            alt=""
+            class="product-img"
+          >
+        </div>
+      </div>
+    </div>
+    <div class="collection-item-3">
+      <div class="product-card gallary-card">
+        <div class="product-image materials-card-img gallery-card">
+          <img
+            loading="lazy"
+            src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg"
+            alt=""
+            class="product-img"
+          >
+        </div>
+      </div>
+    </div> -->
   </div>
 </div>
 <div data-w-id="5504fd09-e9e1-67ab-7458-9a28049e4c75" class="section bg-transparent py-8 pt-6 pb-4 wf-section">
