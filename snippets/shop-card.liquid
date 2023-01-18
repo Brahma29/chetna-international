@@ -38,7 +38,7 @@
           data-node-type: 'commerce-add-to-cart-form',
           class: 'w-commerce-commerceaddtocartform default-state block'
         -%}
-          {%- unless card_product.has_only_default_variant or card_product.variants.size == 2 -%}
+          {%- unless card_product.has_only_default_variant or card_product.variants.size == 3 -%}
             <div
               data-node-type="add-to-cart-option-list"
               class="option-list"
