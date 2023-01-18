@@ -34,7 +34,8 @@
 
       <div class="add-to-cart">
         {%- form 'product',
-          card_product.id,
+          card_product,
+           id:card_product.id,
           data-node-type: 'commerce-add-to-cart-form',
           class: 'w-commerce-commerceaddtocartform default-state block'
         -%}
