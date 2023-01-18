@@ -155,6 +155,7 @@ pointer-events:none;}
       {%- render 'product-card', card_product : product -%}
       {%- endfor -%}
     </div>
+    <script>console.log({{product.selected_or_first_available_variant}})</script>
   </div>
   <div id="Process" class="slider-section wf-section">
     <div data-delay="4000" data-animation="slide" class="slider hide w-slider" data-autoplay="false" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true">
