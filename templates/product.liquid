@@ -33,7 +33,7 @@ pointer-events:none;}
               {% assign current = product.selected_or_first_available_variant %}
               <h1 class="heading name text-left">{{ product.title }}</h1>
               <div class="text-wrapper justify-start items-bottom">
-                <div class="product-price height-less">{{ current.price | money_with_currency }}</div>
+                <div class="product-price height-less">{{ product.selected_or_first_available_variant.price | money_with_currency }}</div>
                 <div class="product-original-price">{{ product.compare_at_price | money_with_currency }}</div>
               </div>
               {% comment %} <p class="product-description">{{ product.description }}</p> {% endcomment %}
