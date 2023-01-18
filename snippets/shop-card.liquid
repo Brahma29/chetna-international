@@ -2,7 +2,6 @@
 .block{
   display : block;
 }
-
 </style>
 
 {%- if card_product and card_product != empty -%}
@@ -25,12 +24,11 @@
       <div class="text-wrapper justify-start">
         <div class="text-wrapper">
           <div data-commerce-type="variation-price" class="product-price">
-  <script>console.log({{product.has_only_default_variant }})</script>
-            {{ card_product.selected_or_first_available_variant.price | money_with_currency }}
+            {{ card_product.price | money_with_currency }}
           </div>
         </div>
         <div class="text-wrapper">
-          <div class="product-original-price">{{ card_product.selected_or_first_available_variant.compare_at_price | money_with_currency }}</div>
+          <div class="product-original-price">{{ card_product.compare_at_price | money_with_currency }}</div>
         </div>
       </div>
 
@@ -96,7 +94,7 @@
               class="w-commerce-commerceaddtocartbutton btn bg-cart-btn-product-page bg-cart-btn cursor-auto w-button"
             >
           </div>
-<!--           {%- render 'product-variants-data', product: card_product -%} -->
+          {%- render 'product-variants-data', product: card_product -%}
         {%- endform -%}
         <div tabindex="0" style="display:none" class="w-commerce-commerceaddtocartoutofstock">
           <div>{{ 't7aaa2dac' | t }}</div>
