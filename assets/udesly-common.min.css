@@ -12,6 +12,9 @@
 .udesly-fake-number-input {
     -moz-appearance: textfield;
 }
+.hide-wrapper{
+  display:none;
+}
 [data-node-type="cart-remove-link"] * {
     pointer-events: none;
 }
@@ -29,8 +32,4 @@
 
 .notyf__icon {
     display: none;
-}
-
-.notyf{
-  display:none;
 }
