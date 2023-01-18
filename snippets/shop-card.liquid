@@ -25,6 +25,7 @@
       <div class="text-wrapper justify-start">
         <div class="text-wrapper">
           <div data-commerce-type="variation-price" class="product-price">
+  <script>console.log({{product.has_only_default_variant }})</script>
             {{ card_product.selected_or_first_available_variant.price | money_with_currency }}
           </div>
         </div>
@@ -54,13 +55,26 @@
                   <select
                     data-node-type="add-to-cart-option-select"
                     class="quantity variant-select w-select"
-                    style="display: block;"
+                    style="display: none;"
                     name="{{ "option" | append: forloop.index }}"
                   >
                     {%- render 'product-options', option: option -%}
-                
                   </select>
-               
+                  <div
+                    data-node-type="add-to-cart-option-pill-group"
+                    class="button-group w-commerce-commerceaddtocartoptionpillgroup"
+                    aria-label="{{ "option" | append: forloop.index  }}"
+                  >
+                    {%- for value in option.values -%}
+                      <div
+                        data-node-type="add-to-cart-option-pill"
+                        class="w-commerce-commerceaddtocartoptionpill"
+                        data-option-name="{{ value | handle }}"
+                      >
+                        <div data-node-type="block">{{ value }}</div>
+                      </div>
+                    {%- endfor -%}
+                  </div>
                   <div data-node-type="block" class="text-block-33">{{ 't8f4f875' | t }}</div>
                 </fieldset>
               {%- endfor -%}
@@ -82,7 +96,7 @@
               class="w-commerce-commerceaddtocartbutton btn bg-cart-btn-product-page bg-cart-btn cursor-auto w-button"
             >
           </div>
-
+<!--           {%- render 'product-variants-data', product: card_product -%} -->
         {%- endform -%}
         <div tabindex="0" style="display:none" class="w-commerce-commerceaddtocartoutofstock">
           <div>{{ 't7aaa2dac' | t }}</div>
