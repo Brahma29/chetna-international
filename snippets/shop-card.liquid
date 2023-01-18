@@ -60,21 +60,7 @@
                     {%- render 'product-options', option: option -%}
                 
                   </select>
-                  <div
-                    data-node-type="add-to-cart-option-pill-group"
-                    class="button-group w-commerce-commerceaddtocartoptionpillgroup"
-                    aria-label="{{ "option" | append: forloop.index  }}"
-                  >
-                    {%- for value in option.values -%}
-                      <div
-                        data-node-type="add-to-cart-option-pill"
-                        class="w-commerce-commerceaddtocartoptionpill"
-                        data-option-name="{{ value | handle }}"
-                      >
-                        <div data-node-type="block">{{ value }}</div>
-                      </div>
-                    {%- endfor -%}
-                  </div>
+               
                   <div data-node-type="block" class="text-block-33">{{ 't8f4f875' | t }}</div>
                 </fieldset>
               {%- endfor -%}
