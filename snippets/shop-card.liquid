@@ -58,6 +58,7 @@
                     name="{{ "option" | append: forloop.index }}"
                   >
                     {%- render 'product-options', option: option -%}
+                
                   </select>
                   <div
                     data-node-type="add-to-cart-option-pill-group"
@@ -95,7 +96,7 @@
               class="w-commerce-commerceaddtocartbutton btn bg-cart-btn-product-page bg-cart-btn cursor-auto w-button"
             >
           </div>
-<!--           {%- render 'product-variants-data', product: card_product -%} -->
+
         {%- endform -%}
         <div tabindex="0" style="display:none" class="w-commerce-commerceaddtocartoutofstock">
           <div>{{ 't7aaa2dac' | t }}</div>
