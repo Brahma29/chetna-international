@@ -34,11 +34,11 @@
 
       <div class="add-to-cart">
         {%- form 'product',
-          card_product,
+          card_product.id,
           data-node-type: 'commerce-add-to-cart-form',
           class: 'w-commerce-commerceaddtocartform default-state block'
         -%}
-          {%- unless card_product.variants.size == 3 -%}
+          {%- unless card_product.has_only_default_variant or card_product.variants.size == 1 -%}
             <div
               data-node-type="add-to-cart-option-list"
               class="option-list"
