@@ -44,17 +44,17 @@ pointer-events:none;}
             <div class="product-buttons hide">
               <div class="add-to-cart">
                 {%- form 'product', product, id : product.id, data-node-type: "commerce-add-to-cart-form", class: "w-commerce-commerceaddtocartform default-state" -%}
-                  {%- unless card_product.has_only_default_variant or card_product.variants.size == 1 -%}
+                  {%- unless product.has_only_default_variant or product.variants.size == 1 -%}
             <div
               data-node-type="add-to-cart-option-list"
               class="option-list"
               position-id="80f55b21-5069-45d9-5d32-4a65aa850e55"
             >
-              {%- for option in card_product.options_with_values -%}
+              {%- for option in product.options_with_values -%}
                 <fieldset
                   data-node-type="add-to-cart-option"
                   class="option"
-                  style="{% if card_product.has_only_default_variant or product.variants.size == 1 %}display: none; {% endif %}"
+                  style="{% if product.has_only_default_variant or product.variants.size == 1 %}display: none; {% endif %}"
                 >
                   <select
                     data-node-type="add-to-cart-option-select"
