@@ -68,8 +68,7 @@ pointer-events:none;}
                     id="product-select"
                   >
                     {%- for value in option.values -%}
-                      {{ product.selected_or_first_available_variant.value }}
-                        <option value="{{value.id | escape }}" {% if product.selected_or_first_available_variant.value == value %}selected="selected"{% endif %}>{{ value }}</option>
+                        <option value="{{value.id | escape }}" {% if product.selected_or_first_available_variant.value == value %}selected="selected"{% endif %}>{{ value }}-{{ product.selected_or_first_available_variant.value }}</option>
                     {%- endfor -%}
                   </select>
 <!--                   <div
