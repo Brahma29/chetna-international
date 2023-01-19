@@ -59,28 +59,6 @@ pointer-events:none;}
                   class="option"
                   style="{% if product.has_only_default_variant or product.variants.size == 1 %}display: none; {% endif %}"
                 >
-    <select
-        name="options[{{ option.name | escape }}]"
-        id="Option-{{ product.id }}-{{ forloop.index0 }}"
-        class="select__select"
-        form="{{ product_form_id }}"
-      >
-        {%- for variant in product.variants -%}
-          <option
-            {% if variant == product.selected_or_first_available_variant %}
-              selected="selected"
-            {% endif %}
-            {% if variant.available == false %}
-              disabled
-            {% endif %}
-            value="{{ variant.id }}"
-          >
-            {{ variant.title }}
-            - {{ variant.price | money | strip_html }}
-            {%- if variant.available == false %} - {{ 'products.product.sold_out' | t }}{% endif %}
-          </option>
-        {%- endfor -%}
-      </select>
                   <select
                     data-node-type="add-to-cart-option-select"
                     class="quantity variant-select w-select"
@@ -90,7 +68,7 @@ pointer-events:none;}
                     id="product-select"
                   >
                     {%- for value in option.values -%}
-                        <option value="{{value.id | escape }}" {% if option.selected_value == value %}selected="selected"{% endif %}>{{ value }}</option>
+                        <option value="{{value.id | escape }}" {% if product.selected_or_first_available_variant.value == value %}selected="selected"{% endif %}>{{ value }}</option>
                     {%- endfor -%}
                   </select>
 <!--                   <div
