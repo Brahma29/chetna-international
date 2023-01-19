@@ -60,7 +60,9 @@ pointer-events:none;}
                   class="option"
                   style="{% if product.has_only_default_variant or product.variants.size == 1 %}display: none; {% endif %}"
                 >
-                        {{ product.selected_variant }}
+                        {% for variant in product.variants %}
+                          {{ variant.id }}
+                          {% endfor %}
                 {{ product.selected_or_first_available_variant.title }}
                 <select id="product-select" name="id">
   {% for variant in product.variants %}
