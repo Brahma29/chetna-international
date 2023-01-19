@@ -45,6 +45,7 @@ pointer-events:none;}
             <div class="product-buttons hide">
               <div class="add-to-cart">
                 {%- form 'product', product, id : product.id, data-node-type: "commerce-add-to-cart-form", class: "w-commerce-commerceaddtocartform default-state" -%}
+                  <input type="hidden" name="id" value={{ product.selected_or_first_available_variant.id }}/>
                   {%- unless product.has_only_default_variant or product.variants.size == 1 -%}
             <div
               data-node-type="add-to-cart-option-list"
