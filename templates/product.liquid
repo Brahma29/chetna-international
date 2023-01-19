@@ -14,6 +14,7 @@ pointer-events:none;}
     </div>
   </div>
   {%- render 'page-loader' -%}
+  {%- assign product_form_id = 'product-form-' | append: product.id -%}
   <div class="div-block-26">
     <div class="hero-section wf-section">
       {%- section 'navbar' -%}
@@ -44,7 +45,7 @@ pointer-events:none;}
                
             <div class="product-buttons hide">
               <div class="add-to-cart">
-                {%- form 'product', product, id : product.id, data-node-type: "commerce-add-to-cart-form", class: "w-commerce-commerceaddtocartform default-state" -%}
+                {%- form 'product', product, id : product_form_id, data-node-type: "commerce-add-to-cart-form", class: "w-commerce-commerceaddtocartform default-state" -%}
                   <input type="hidden" name="id" value={{ product.selected_or_first_available_variant.id }}/>
                   {%- unless product.has_only_default_variant or product.variants.size == 1 -%}
             <div
@@ -62,9 +63,12 @@ pointer-events:none;}
                     data-node-type="add-to-cart-option-select"
                     class="quantity variant-select w-select"
                     style="display: block;"
+                    form="{{ product_form_id }}"
                     name="{{ "option" | append: forloop.index }}"
                   >
-                    {%- render 'product-options', option: option -%}
+                    {%- for value in option.values -%}
+                        <option value="{{value | handle }}" {% if option.selected_value == value %}selected="selected"{% endif %}>{{ value }}</option>
+                    {%- endfor -%}
                   </select>
 <!--                   <div
                     data-node-type="add-to-cart-option-pill-group"
