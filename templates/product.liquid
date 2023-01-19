@@ -64,7 +64,7 @@ pointer-events:none;}
                     class="quantity variant-select w-select"
                     style="display: block;"
                     form="{{ product_form_id }}"
-                    name="{{ "option" | append: forloop.index }}"
+                    name="{{ "option" | append: forloop.index0 }}"
                   >
                     {%- for value in option.values -%}
                       <script>console.log("{{ value }}")</script>
