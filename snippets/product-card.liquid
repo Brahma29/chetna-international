@@ -1,8 +1,7 @@
 <style>
-.block{
-  display : block;
-}
-
+  .block{
+    display : block;
+  }
 </style>
 
 {%- if card_product and card_product != empty -%}
@@ -42,49 +41,35 @@
         </div>
       </div>
       <div class="add-to-cart">
-        {%- form 'product',
+        {%-
+          form 'product',
           card_product,
+          id : "product_card_form-{{ card_product.id }}"
           data-node-type: 'commerce-add-to-cart-form',
           class: 'w-commerce-commerceaddtocartform default-state block'
         -%}
+          <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}/">
           {%- unless card_product.has_only_default_variant or card_product.variants.size == 1 -%}
             <div
               data-node-type="add-to-cart-option-list"
               class="option-list"
               position-id="80f55b21-5069-45d9-5d32-4a65aa850e55"
             >
-              {%- for option in card_product.options_with_values -%}
-                <fieldset
-                  data-node-type="add-to-cart-option"
-                  class="option"
-                  style="{% if card_product.has_only_default_variant or product.variants.size == 1 %}display: none; {% endif %}"
-                >
-                  <select
-                    data-node-type="add-to-cart-option-select"
-                    class="quantity variant-select w-select"
-                    style="display: none;"
-                    name="{{ "option" | append: forloop.index }}"
+              <select
+                data-node-type="add-to-cart-option-select"
+                class="quantity variant-select w-select"
+                style="display: block;"
+                id="product-select"
+                name="id"
+              >
+                {% for variant in product.variants %}
+                  <option
+                    value="{{ variant.id }}"
                   >
-                    {%- render 'product-options', option: option -%}
-                  </select>
-                  <div
-                    data-node-type="add-to-cart-option-pill-group"
-                    class="button-group w-commerce-commerceaddtocartoptionpillgroup"
-                    aria-label="{{ "option" | append: forloop.index  }}"
-                  >
-                    {%- for value in option.values -%}
-                      <div
-                        data-node-type="add-to-cart-option-pill"
-                        class="w-commerce-commerceaddtocartoptionpill"
-                        data-option-name="{{ value | handle }}"
-                      >
-                        <div data-node-type="block">{{ value }}</div>
-                      </div>
-                    {%- endfor -%}
-                  </div>
-                  <div data-node-type="block" class="text-block-33">{{ 't8f4f875' | t }}</div>
-                </fieldset>
-              {%- endfor -%}
+                    {{ variant.title }}
+                  </option>
+                {%- endfor -%}
+              </select>
             </div>
           {%- endunless -%}
           <div
