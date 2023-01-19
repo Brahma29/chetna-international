@@ -64,7 +64,8 @@ pointer-events:none;}
                     class="quantity variant-select w-select"
                     style="display: block;"
                     form="{{ product_form_id }}"
-                    name="{{ "option" | append: forloop.index0 }}"
+                    name="id"
+                    id="product-select"
                   >
                     {%- for value in option.values -%}
                         <option value="{{value | escape }}" {% if option.selected_value == value %}selected="selected"{% endif %}>{{ value }}</option>
