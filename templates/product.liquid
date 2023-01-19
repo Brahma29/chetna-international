@@ -78,14 +78,20 @@
                     class="option-list"
                     position-id="80f55b21-5069-45d9-5d32-4a65aa850e55"
                   >
-                    <select id="product-select" name="id">
-                      {% for variant in product.variants %}
+                    <select
+                      data-node-type="add-to-cart-option-select"
+                      class="quantity variant-select w-select"
+                      style="display: block;"
+                      id="product-select"
+                      name="id"
+                    >
+                      {%- for value in option.values -%}
                         <option
                           value="{{ variant.id }}"
                         >
                           {{ variant.title }} - {{ variant.price | money }}
                         </option>
-                      {% endfor %}
+                      {%- endfor -%}
                     </select>
                   </div>
                 {%- endunless -%}
