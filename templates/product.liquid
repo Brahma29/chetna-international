@@ -85,7 +85,7 @@
                       id="product-select"
                       name="id"
                     >
-                      {%- for value in option.values -%}
+                      {% for variant in product.variants %}
                         <option
                           value="{{ variant.id }}"
                         >
