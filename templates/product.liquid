@@ -68,7 +68,7 @@ pointer-events:none;}
     </option>
   {% endfor %}
 </select>
-                  <select
+<!--                   <select
                     data-node-type="add-to-cart-option-select"
                     class="quantity variant-select w-select"
                     style="display: block;"
@@ -79,7 +79,7 @@ pointer-events:none;}
                     {%- for value in option.values -%}
                         <option value="{{value }}" {% if product.selected_or_first_available_variant.title == value %}selected="selected"{% endif %}>{{ value }}</option>
                     {%- endfor -%}
-                  </select>
+                  </select> -->
 <!--                   <div
                     data-node-type="add-to-cart-option-pill-group"
                     class="button-group w-commerce-commerceaddtocartoptionpillgroup"
