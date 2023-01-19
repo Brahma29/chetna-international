@@ -87,53 +87,6 @@
                         </option>
                       {% endfor %}
                     </select>
-                    {%- for option in product.options_with_values -%}
-                      <fieldset
-                        data-node-type="add-to-cart-option"
-                        class="option"
-                        style="{% if product.has_only_default_variant or product.variants.size == 1 %}display: none; {% endif %}"
-                      >
-                        <select id="product-select" name="id">
-                          {% for variant in product.variants %}
-                            <option
-                              value="{{ variant.id }}"
-                            >
-                              {{ variant.title }} - {{ variant.price | money }}
-                            </option>
-                          {% endfor %}
-                        </select>
-                        <!--
-                          <select
-                            data-node-type="add-to-cart-option-select"
-                            class="quantity variant-select w-select"
-                            style="display: block;"
-                            form="{{ product_form_id }}"
-                            name="id"
-                          >
-                            {%- for value in option.values -%}
-                                <option value="{{value }}" {% if product.selected_or_first_available_variant.title == value %}selected="selected"{% endif %}>{{ value }}</option>
-                            {%- endfor -%}
-                          </select>
-                        -->
-                        <!--
-                          <div
-                            data-node-type="add-to-cart-option-pill-group"
-                            class="button-group w-commerce-commerceaddtocartoptionpillgroup"
-                            aria-label="{{ "option" | append: forloop.index  }}"
-                          >
-                            {%- for value in option.values -%}
-                              <div
-                                data-node-type="add-to-cart-option-pill"
-                                class="w-commerce-commerceaddtocartoptionpill"
-                                data-option-name="{{ value | handle }}"
-                              >
-                                <div data-node-type="block">{{ value }}</div>
-                              </div>
-                            {%- endfor -%}
-                          </div>
-                        -->
-                      </fieldset>
-                    {%- endfor -%}
                   </div>
                 {%- endunless -%}
                 {%- assign condition_value = product.type | strip -%}
