@@ -67,7 +67,6 @@ pointer-events:none;}
                     name="{{ "option" | append: forloop.index0 }}"
                   >
                     {%- for value in option.values -%}
-                      <script>console.log("{{ value }}")</script>
                         <option value="{{value | escape }}" {% if option.selected_value == value %}selected="selected"{% endif %}>{{ value }}</option>
                     {%- endfor -%}
                   </select>
