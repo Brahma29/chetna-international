@@ -78,23 +78,25 @@
                     class="option-list"
                     position-id="80f55b21-5069-45d9-5d32-4a65aa850e55"
                   >
+                    <select id="product-select" name="id">
+                      {% for variant in product.variants %}
+                        <option
+                          value="{{ variant.id }}"
+                        >
+                          {{ variant.title }} - {{ variant.price | money }}
+                        </option>
+                      {% endfor %}
+                    </select>
                     {%- for option in product.options_with_values -%}
                       <fieldset
                         data-node-type="add-to-cart-option"
                         class="option"
                         style="{% if product.has_only_default_variant or product.variants.size == 1 %}display: none; {% endif %}"
                       >
-                        {% for variant in product.variants %}
-                          {{ variant.id }}
-                        {% endfor %}
-                        {{ product.selected_or_first_available_variant.title }}
                         <select id="product-select" name="id">
                           {% for variant in product.variants %}
                             <option
                               value="{{ variant.id }}"
-                              {% if variant == product.selected_or_first_available_variant %}
-                                selected="selected"
-                              {% endif %}
                             >
                               {{ variant.title }} - {{ variant.price | money }}
                             </option>
@@ -107,7 +109,6 @@
                             style="display: block;"
                             form="{{ product_form_id }}"
                             name="id"
-                            id="product-select"
                           >
                             {%- for value in option.values -%}
                                 <option value="{{value }}" {% if product.selected_or_first_available_variant.title == value %}selected="selected"{% endif %}>{{ value }}</option>
