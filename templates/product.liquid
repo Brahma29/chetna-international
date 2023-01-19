@@ -67,11 +67,11 @@
             <div class="add-to-cart">
               {%- form 'product',
                 product,
-                id: product_form_id,
+                id: '44070720799018',
                 data-node-type: 'commerce-add-to-cart-form',
                 class: 'w-commerce-commerceaddtocartform default-state'
               -%}
-                <input type="hidden" name="id" value="44070720799018">
+                <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}/">
                 {%- unless product.has_only_default_variant or product.variants.size == 1 -%}
                   <div
                     data-node-type="add-to-cart-option-list"
