@@ -60,8 +60,8 @@ pointer-events:none;}
                   style="{% if product.has_only_default_variant or product.variants.size == 1 %}display: none; {% endif %}"
                 >
     <select
-        name="id"
-        id="Variants-{{ product.id }}"
+        name="options[{{ option.name | escape }}]"
+        id="Option-{{ product.id }}-{{ forloop.index0 }}"
         class="select__select"
         form="{{ product_form_id }}"
       >
