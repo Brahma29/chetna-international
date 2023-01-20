@@ -22,7 +22,77 @@
                       <div class="product-original-price" data-commerce-type="variation-compare_at_price">{{ item.selected_or_first_available_variant.compare_at_price | money }}</div>
                     </div>
                   </div>
-                  <a href="{{ item.url | within: collection }}" data-w-id="cbbff648-c24f-4fbc-d769-21e2c17c11f7" class="btn bg-cart-btn cursor-auto w-button">Add to bag</a>
+                   <div class="add-to-cart">
+        {%- form 'product',
+          card_product,
+          data-node-type: 'commerce-add-to-cart-form',
+          class: 'w-commerce-commerceaddtocartform default-state block'
+        -%}
+          <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}/">
+          {%- unless card_product.has_only_default_variant or card_product.variants.size == 1 -%}
+            <div
+              data-node-type="add-to-cart-option-list"
+              class="option-list"
+              position-id="80f55b21-5069-45d9-5d32-4a65aa850e55"
+            >
+              <select
+                data-node-type="add-to-cart-option-select"
+                class="quantity variant-select w-select"
+                style="display: none;"
+                id="product-select"
+                name="id"
+              >
+                {% for variant in product.variants %}
+                  <option
+                    value="{{ variant.id }}"
+                  >
+                    {{ variant.title }}
+                  </option>
+                {%- endfor -%}
+              </select>
+            </div>
+          {%- endunless -%}
+          <div
+            position-id="54c2dac9-164b-12ea-3928-39c39b7b2acf"
+            id="w-node-_54c2dac9-164b-12ea-3928-39c39b7b2acf-8b7dd615"
+            class="product-buttons"
+          >
+            <input
+              type="submit"
+              id="w-node-_80f55b21-5069-45d9-5d32-4a65aa850e5f-8b7dd615"
+              data-node-type="commerce-add-to-cart-button"
+              data-loading-text="Adding to cart..."
+              value="Add to Bag"
+              aria-busy="false"
+              aria-haspopup="dialog"
+              class="w-commerce-commerceaddtocartbutton btn bg-cart-btn-product-page bg-cart-btn cursor-auto w-button"
+            >
+          </div>
+          {%- render 'product-variants-data', product: card_product -%}
+        {%- endform -%}
+        <div tabindex="0" style="display:none" class="w-commerce-commerceaddtocartoutofstock">
+          <div>{{ 't7aaa2dac' | t }}</div>
+        </div>
+        <div
+          aria-live="assertive"
+          data-node-type="commerce-add-to-cart-error"
+          style="display:none"
+          class="w-commerce-commerceaddtocarterror"
+        >
+          <div
+            data-node-type="commerce-add-to-cart-error"
+            data-w-add-to-cart-quantity-error="Product is not available in this quantity."
+            data-w-add-to-cart-general-error="Something went wrong when adding this item to the cart."
+            data-w-add-to-cart-mixed-cart-error="You can’t purchase another product with a subscription."
+            data-w-add-to-cart-buy-now-error="Something went wrong when trying to purchase this item."
+            data-w-add-to-cart-checkout-disabled-error="Checkout is disabled on this site."
+            data-w-add-to-cart-select-all-options-error="Please select an option in each set."
+          >
+            {{ 'tn1c765d0d' | t }}
+          </div>
+        </div>
+      </div>
+<!--                   <a href="{{ item.url | within: collection }}" data-w-id="cbbff648-c24f-4fbc-d769-21e2c17c11f7" class="btn bg-cart-btn cursor-auto w-button">Add to bag</a> -->
                 </div>
               </div>
             </div>
@@ -32,10 +102,14 @@
 {% assign items_length = listItems | strip | size %}
 
 <div class="collection-list-wrapper-2 w-dyn-list" udy-collection="product">
-          {%- unless items_length == 0 -%}<div role="list" class="cards no-wrap pr-2 w-dyn-items">
-            {{ listItems }}
-          </div>{%- endunless -%}
-          {%- if items_length == 0 -%}<div class="w-dyn-empty">
-            <div>No items found.</div>
-          </div>{%- endif -%}
-        </div>
+  {%- unless items_length == 0 -%}
+    <div role="list" class="cards no-wrap pr-2 w-dyn-items">
+      {{ listItems }}
+    </div>
+  {%- endunless -%}
+  {%- if items_length == 0 -%}
+    <div class="w-dyn-empty">
+      <div>No items found.</div>
+    </div>
+  {%- endif -%}
+</div>
