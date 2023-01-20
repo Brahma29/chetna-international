@@ -386,6 +386,7 @@
 
 <!-- Script for selecting variant ******START******* -->
 <script>
+
   var product = {{ product | json }};
 
   var selectedVariant;
@@ -394,7 +395,7 @@
     var matchedVariant = product.variants.find(variant => variant.id == document.getElementById('product-select').value);
     console.log(matchedVariant.price);
 
-    document.querySelector('#product-price').textContent = "{{" + matchedVariant.price + "| money_with_currency }}" ;
+    document.querySelector('#product-price').textContent =  matchedVariant.price;
   })
 </script>
 <!-- Script for selecting variant ******END******* -->
