@@ -385,14 +385,14 @@
 -->
 
 <!-- Script for selecting variant ******START******* -->
+<script>
+  var product = {{ product | json }};
 
-var product = {{ product | json }};
+  var selectedVariant;
 
-var selectedVariant;
-
-document.getElementById('product-select').addEventListener('change', function(){
-console.log(document.getElementById('product-select').value) })
-
+  document.getElementById('product-select').addEventListener('change', function(){
+  console.log(document.getElementById('product-select').value) })
+</script>
 <!-- Script for selecting variant ******END******* -->
 
 <script>
