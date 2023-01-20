@@ -59,9 +59,11 @@
             </div>
             {% comment %} <p class="product-description">{{ product.description }}</p> {% endcomment %}
           </div>
-          <div class="package-container hide">
-            <div class="product-container-header">{{ 't2ae6092a' | t }}</div>
-          </div>
+          {%- unless product.has_only_default_variant or product.variants.size == 1 -%}
+            <div class="package-container ">
+              <div class="product-container-header">{{ 't2ae6092a' | t }}</div>
+            </div>
+          {% endunless %}
 
           <div class="product-buttons hide">
             <div class="add-to-cart">
