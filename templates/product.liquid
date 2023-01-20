@@ -55,7 +55,9 @@
               <div class="product-price height-less" id="product-price">
                 {{ product.selected_or_first_available_variant.price | money_with_currency }}
               </div>
-              <div class="product-original-price">{{ product.compare_at_price | money_with_currency }}</div>
+              <div class="product-original-price" id="product-original-price">
+                {{ product.compare_at_price | money_with_currency }}
+              </div>
             </div>
             {% comment %} <p class="product-description">{{ product.description }}</p> {% endcomment %}
           </div>
@@ -396,6 +398,7 @@
     console.log(matchedVariant.price);
 
     document.querySelector('#product-price').textContent =  formatMoney(matchedVariant.price, "{{ shop.money_format }}");
+    document.querySelector('#product-original-price').textContent =  formatMoney(matchedVariant.compared_at_price, "{{ shop.money_format }}");
   })
 </script>
 <!-- Script for selecting variant ******END******* -->
