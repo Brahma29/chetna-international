@@ -393,6 +393,11 @@
   document.getElementById('product-select').addEventListener('change', function(){
     var matchedVariant = product.variants.find(variant => variant.id == document.getElementById('product-select').value);
     console.log(matchedVariant);
+
+    //Price change
+    document.querySelector('.product-price').textContent = {{ matchedVariant.price }}
+
+
   })
 </script>
 <!-- Script for selecting variant ******END******* -->
