@@ -5,11 +5,7 @@
   {%- section 'navbar' -%}
 </div>
 <section class="section bg-transparent" style="padding-top : 3rem !important;">
-  <div class="cart-heading">
-    <h1 class="heading text-left">Cart Items</h1>
-  </div>
   <div
-    role="dialog"
     data-node-type="commerce-cart-container"
     class=""
   >
@@ -109,14 +105,6 @@
           {{ 'tn1c765d0d' | t }}
         </div>
       </div>
-    </div>
-  </div>
-  <div class="cart-items">
-    {% for item in cart.items %}
-      {{ item }}
-    {% endfor %}
-    <div class="cart-item w-commerce-commercecartitem">
-      <img src="https://cdn4.wpbeginner.com/wp-content/uploads/2016/11/choose-best-blogging-platform.png" alt="this">
     </div>
   </div>
 </section>
