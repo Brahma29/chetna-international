@@ -383,6 +383,18 @@
 <!--
   [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]
 -->
+
+<!-- Script for selecting variant ******START******* -->
+
+var product = {{ product | json }};
+
+var selectedVariant;
+
+document.getElementById('product-select').addEventListener('change', function(){
+console.log(document.getElementById('product-select').value) })
+
+<!-- Script for selecting variant ******END******* -->
+
 <script>
     window.onload = function(){
       document.getElementsByTagName("body")[0].style.overflow = "auto";
