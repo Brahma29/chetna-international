@@ -57,6 +57,9 @@
               </div>
               <div class="product-original-price" id="product-original-price">
                 {{ product.compare_at_price | money_with_currency }}
+                <script>
+                  console.log("Reviews : ", {{ product.metafields.reviews | json }})
+                </script>
               </div>
             </div>
             {% comment %} <p class="product-description">{{ product.description }}</p> {% endcomment %}
