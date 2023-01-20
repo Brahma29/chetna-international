@@ -394,7 +394,7 @@
     var matchedVariant = product.variants.find(variant => variant.id == document.getElementById('product-select').value);
     console.log(matchedVariant.price);
 
-    document.querySelector('#product-price').textContent = matchedVariant.price ;
+    document.querySelector('#product-price').textContent = "{{" + matchedVariant.price + "| money_with_currency }}" ;
   })
 </script>
 <!-- Script for selecting variant ******END******* -->
