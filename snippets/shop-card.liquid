@@ -1,12 +1,12 @@
 <style>
-.block{
-  display : block;
-}
+  .block{
+    display : block;
+  }
 </style>
 
 {%- if card_product and card_product != empty -%}
   <div class="product-card shop-card">
-    <a href="#" class="link-block-4 w-inline-block">
+    <a href="{{ card_product.url }}" class="link-block-4 w-inline-block">
       <div class="product-image shopcard-img">
         <img
           loading="lazy"
@@ -35,7 +35,7 @@
       <div class="add-to-cart">
         {%- form 'product',
           card_product,
-           id:card_product.id,
+          id: card_product.id,
           data-node-type: 'commerce-add-to-cart-form',
           class: 'w-commerce-commerceaddtocartform default-state block'
         -%}
@@ -59,21 +59,23 @@
                   >
                     {%- render 'product-options', option: option -%}
                   </select>
-<!--                   <div
-                    data-node-type="add-to-cart-option-pill-group"
-                    class="button-group w-commerce-commerceaddtocartoptionpillgroup"
-                    aria-label="{{ "option" | append: forloop.index  }}"
-                  >
-                    {%- for value in option.values -%}
-                      <div
-                        data-node-type="add-to-cart-option-pill"
-                        class="w-commerce-commerceaddtocartoptionpill"
-                        data-option-name="{{ value | handle }}"
-                      >
-                        <div data-node-type="block">{{ value }}</div>
-                      </div>
-                    {%- endfor -%}
-                  </div> -->
+                  <!--
+                    <div
+                      data-node-type="add-to-cart-option-pill-group"
+                      class="button-group w-commerce-commerceaddtocartoptionpillgroup"
+                      aria-label="{{ "option" | append: forloop.index  }}"
+                    >
+                      {%- for value in option.values -%}
+                        <div
+                          data-node-type="add-to-cart-option-pill"
+                          class="w-commerce-commerceaddtocartoptionpill"
+                          data-option-name="{{ value | handle }}"
+                        >
+                          <div data-node-type="block">{{ value }}</div>
+                        </div>
+                      {%- endfor -%}
+                    </div>
+                  -->
                 </fieldset>
               {%- endfor -%}
             </div>
@@ -118,13 +120,15 @@
           </div>
         </div>
       </div>
-      
-<!--       <a
-        href="{{card_product.url}}"
-        class="btn bg-cart-btn cursor-auto w-button"
-      >
-        Add To Bag
-      </a> -->
+
+      <!--
+        <a
+          href="{{card_product.url}}"
+          class="btn bg-cart-btn cursor-auto w-button"
+        >
+          Add To Bag
+        </a>
+      -->
     </div>
   </div>
 {%- endif -%}
