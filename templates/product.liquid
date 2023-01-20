@@ -73,7 +73,11 @@
                 data-node-type: 'commerce-add-to-cart-form',
                 class: 'w-commerce-commerceaddtocartform default-state'
               -%}
-                <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}/">
+                <input
+                  type="hidden"
+                  name="id"
+                  value="{% if product.has_only_default_variant %} {{ product.selected_or_first_available_variant.id }} {% else %} {{ product.id }} {% endif %}"
+                >
                 {%- unless product.has_only_default_variant or product.variants.size == 1 -%}
                   <div
                     data-node-type="add-to-cart-option-list"
