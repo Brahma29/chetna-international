@@ -392,7 +392,7 @@
 
   document.getElementById('product-select').addEventListener('change', function(){
     var matchedVariant = product.variants.find(variant => variant.id == document.getElementById('product-select').value);
-    console.log(matchedVariant);
+    console.log(matchedVariant.price);
 
     //Price change
     document.querySelector('#product-price').textContent = {{ matchedVariant.price }}
