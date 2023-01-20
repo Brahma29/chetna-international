@@ -391,7 +391,9 @@
   var selectedVariant;
 
   document.getElementById('product-select').addEventListener('change', function(){
-  console.log(document.getElementById('product-select').value) })
+    var matchedVariant = product.variants.find(variant => variant.id == document.getElementById('product-select').value);
+    console.log(matchedVariant);
+  })
 </script>
 <!-- Script for selecting variant ******END******* -->
 
