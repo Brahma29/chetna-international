@@ -242,11 +242,9 @@
       </a>
     </div>
     <div id="Product-Slider" data-w-id="cbbff648-c24f-4fbc-d769-21e2c17c11e4" class="cards">
-      {%- if settings.collection_products_template != blank -%}
-        {%- render 'markup_for_collection_products_template' -%}
-      {%- else -%}
-        {%- render 'products_max_5' -%}
-      {%- endif -%}
+      {%- for product in collections.all.products limit: 5 -%}
+        {%- render 'product-card', card_product: product -%}
+      {%- endfor -%}
     </div>
   </div>
 </div>
