@@ -12,7 +12,7 @@
                   <a href="{{ item.url | within: collection }}" class="link-block-5 w-inline-block">
                     <h2 class="product-name-slider">{{ item.title }}</h2>
                   </a>
-                  <div class="text-wrapper justify-start">
+<!--                   <div class="text-wrapper justify-start">
                     <div class="text-wrapper">
                       <div class="product-price hide">₹</div>
                       <div data-commerce-type="variation-price" class="product-price">{{ item.price | money }}</div>
@@ -21,7 +21,7 @@
                       <div class="product-original-price hide">₹</div>
                       <div class="product-original-price" data-commerce-type="variation-compare_at_price">{{ item.selected_or_first_available_variant.compare_at_price | money }}</div>
                     </div>
-                  </div>
+                  </div> -->
                    <div class="add-to-cart">
         {%- form 'product',
           item,
