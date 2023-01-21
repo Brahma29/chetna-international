@@ -207,6 +207,9 @@
             </li>
           </ul>
         </div>
+        <script>
+          console.log({{product.metafields.custom | json}})
+        </script>
         <div class="key-details">
           <div class="details-heading">{{ 't55167e0b' | t }}</div>
           <div class="list description-list w-richtext">{{ product.description }}</div>
@@ -458,22 +461,22 @@
 
 {{ 'udesly-shopify.min.js' | asset_url | script_tag }}
 
-
 {% if product.metafields.loox.num_reviews %}
-<script id="looxSchemaJson" type="application/ld+json">
-{
-	"@context": "http://schema.org",
-	"@type": "Product",
-	"@id": {{ canonical_url | json }},
-	"aggregateRating": {
-		"@type": "AggregateRating",
-		"ratingValue": "{{ product.metafields.loox.avg_rating }}",
-		"reviewCount": "{{ product.metafields.loox.num_reviews }}"
-	},
-	"name": {{ product.title | json }}
-}
-</script>
+  <script id="looxSchemaJson" type="application/ld+json">
+    {
+    	"@context": "http://schema.org",
+    	"@type": "Product",
+    	"@id": {{ canonical_url | json }},
+    	"aggregateRating": {
+    		"@type": "AggregateRating",
+    		"ratingValue": "{{ product.metafields.loox.avg_rating }}",
+    		"reviewCount": "{{ product.metafields.loox.num_reviews }}"
+    	},
+    	"name": {{ product.title | json }}
+    }
+  </script>
 {% endif %}
 
-
-	<div id="looxReviews" data-product-id="{{product.id}}" class="loox-reviews-default">{{ product.metafields.loox.reviews }}</div>
+<div id="looxReviews" data-product-id="{{product.id}}" class="loox-reviews-default">
+  {{ product.metafields.loox.reviews }}
+</div>
