@@ -247,6 +247,11 @@
         <div id="view-all-btn" class="div-block-38"></div>
       </a>
     </div>
+    <script>
+      
+      fetch(`/admin/api/2023-01/products/8071193755946/metafields/28907273781546.json`).then(response => response.json()).then(json => console.log(json));
+
+    </script>
     <div id="Product-Slider" data-w-id="cbbff648-c24f-4fbc-d769-21e2c17c11e4" class="cards">
       {%- if settings.collection_products_template != blank -%}
         {%- render 'markup_for_collection_products_template' -%}
