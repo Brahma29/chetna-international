@@ -252,6 +252,7 @@
       
       
       
+      
 
 
 
@@ -281,7 +282,7 @@
 
     // Displaying results to console
     .then(json => console.log(json)).catch(err => console.log(err))
-}
+
       
       
       
@@ -289,6 +290,7 @@
       
       
       fetch(`/admin/api/2023-01/products/8071193755946/metafields/28907273781546.json`).then((response) => response.json()).then((data) => console.log(JSON.parse(data.metafield.value)));
+
 
 
 
