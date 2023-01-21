@@ -6,13 +6,17 @@
 </div>
 <section class="section bg-transparent" style="padding-top : 3rem !important;">
   <div
-    data-node-type="commerce-cart-container"
-    class=""
-    style="z-index : 0;"
+    data-node-type="commerce-cart-container-wrapper"
+    style="display:block"
+    class="w-commerce-commercecartcontainerwrapper w-commerce-commercecartcontainerwrapper--cartType-modal cart-wrapper"
   >
-    <div class="w-commerce-commercecartheader cart-header">
-      <h4 class="w-commerce-commercecartheading heading text-left">{{ 't1fef40' | t }}</h4>
-      <!--
+    <div
+      role="dialog"
+      data-node-type="commerce-cart-container"
+      class="w-commerce-commercecartcontainer cart-container"
+    >
+      <div class="w-commerce-commercecartheader cart-header">
+        <h4 class="w-commerce-commercecartheading heading-9">{{ 't1fef40' | t }}</h4>
         <a
           href="#"
           data-node-type="commerce-cart-close-link"
@@ -21,89 +25,89 @@
           class="w-commerce-commercecartcloselink close-button w-inline-block"
           ><img src="{{ 'path-327.svg' | asset_url }}" loading="lazy" alt=""
         ></a>
-      -->
-    </div>
-    <div class="w-commerce-commercecartformwrapper">
-      <form data-node-type="commerce-cart-form" style="display:none" class="w-commerce-commercecartform">
-        <div class="w-commerce-commercecartfooter cart-footer">
-          <div aria-atomic="true" aria-live="polite" class="w-commerce-commercecartlineitem cart-line-item">
-            <div class="div-block-6">
-              <div class="text-block-13">{{ 'tn77079b6c' | t }}</div>
-            </div>
-            <div class="div-block-5">
-              <div class="col cart">
-                <div class="div-block-7">
-                  <div class="text-block-14">{{ 'tn76f396dc' | t }}</div>
-                  <div class="w-commerce-commercecartordervalue text-block-15">
-                    {{ cart.items_subtotal_price | money }}
-                  </div>
-                </div>
-                <div class="div-block-8">
-                  <div class="text-block-16">{{ 't4d3eb24' | t }}</div>
-                  <div class="w-commerce-commercecartordervalue text-block-17">
-                    {{ cart.items_subtotal_price | money }}
-                  </div>
-                </div>
-              </div>
-              <div class="col cart">
-                <div>
-                  <a
-                    href="/checkout"
-                    value="Place Order"
-                    data-node-type="cart-checkout-button"
-                    class="w-commerce-commercecartcheckoutbutton btn btn-bg-coco cart"
-                    data-loading-text="Hang Tight..."
-                  >
-                    {{- 'ta750ab5' | t -}}
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="div-block-9">
-          <div class="div-block-6">
-            <div class="text-block-13">{{ 'tn685f8ab2' | t }}</div>
-          </div>
-          <script type="text/x-wf-template" id="wf-template-5b596057-aeee-c8b3-29d3-9001975d39d3">
-                  <div data-node-type="cart-item" class="cart-item w-commerce-commercecartitem" template-part-bind="5b596057-aeee-c8b3-29d3-9001975d39d4"><img data-node-type="cart-item-image" class="image-19 w-commerce-commercecartitemimage" template-part-bind="5b596057-aeee-c8b3-29d3-9001975d39d5" src="<%= it.image %>">
-                  <div>
-                  <a data-node-type="link" class="link-block-10" template-part-bind="1691a2ae-6dd9-ed36-b7ad-3753fe3431fa" href="<%= it.url%>"><div data-node-type="cart-item-info" class="div-block-13 w-commerce-commercecartiteminfo" template-part-bind="5b596057-aeee-c8b3-29d3-9001975d39d6"><div data-node-type="cart-product-name" class="text-block-20 w-commerce-commercecartproductname" template-part-bind="5b596057-aeee-c8b3-29d3-9001975d39d7"><%= it.title %></div><ul class="option-list-3 w-commerce-commercecartoptionlist" template-part-bind="5b596057-aeee-c8b3-29d3-9001975d39d9"><% Object.entries(it.properties).forEach( data =>  { %><li data-node-type="cart-option-list-item"><span data-node-type="cart-option-list-item-label" template-part-bind="5b596057-aeee-c8b3-29d3-9001975d39db"><%= data[0] %></span><span>: </span><span data-node-type="cart-option-list-item-value" template-part-bind="5b596057-aeee-c8b3-29d3-9001975d39de"><%= data[1] %></span></li><% }) %></ul></div></a>
-                  <input class="w-commerce-commercecartquantity quantity cart" name="<%= it.id %>" type="number" min="0" min="1" value="<%= it.quantity %>" data-node-type="cart-quantity">
-                </div>
-                <div>
-                  <div class="div-block-12"><div class="text-block-19" template-part-bind="5b596057-aeee-c8b3-29d3-9001975d39d8"><%= it.price %></div>
-                <a data-node-type="cart-remove-link" class="remove-button" href="#" role="button" aria-label="Remove item from cart" template-part-bind="5b596057-aeee-c8b3-29d3-9001975d39df" data-product-id="<%= it.id %>"><div class="text-block-21">Remove</div></a>
-              </div>
-                <div class="div-block-14"><div class="div-block-11"><ul data-node-type="list" class="list-2"><li data-node-type="list-item"><div class="text-block-18" >Delivery in 2 days , Sun | Free</div></li></ul></div></div>
-            </div>
-            </div>
-          </script>
-          <div
-            class="w-commerce-commercecartlist cart-list"
-            data-wf-collection="database.commerceOrder.userItems"
-            data-wf-template-id="wf-template-5b596057-aeee-c8b3-29d3-9001975d39d3"
-          ></div>
-        </div>
-      </form>
-      <div class="w-commerce-commercecartemptystate">
-        <div aria-live="polite" aria-label="This cart is empty">{{ 't3d503d2b' | t }}</div>
       </div>
-      <div
-        aria-live="assertive"
-        style="display:none"
-        data-node-type="commerce-cart-error"
-        class="w-commerce-commercecarterrorstate"
-      >
+      <div class="w-commerce-commercecartformwrapper">
+        <form data-node-type="commerce-cart-form" style="display:none" class="w-commerce-commercecartform">
+          <div class="w-commerce-commercecartfooter cart-footer">
+            <div aria-atomic="true" aria-live="polite" class="w-commerce-commercecartlineitem cart-line-item">
+              <div class="div-block-6">
+                <div class="text-block-13">{{ 'tn77079b6c' | t }}</div>
+              </div>
+              <div class="div-block-5">
+                <div class="col cart">
+                  <div class="div-block-7">
+                    <div class="text-block-14">{{ 'tn76f396dc' | t }}</div>
+                    <div class="w-commerce-commercecartordervalue text-block-15">
+                      {{ cart.items_subtotal_price | money }}
+                    </div>
+                  </div>
+                  <div class="div-block-8">
+                    <div class="text-block-16">{{ 't4d3eb24' | t }}</div>
+                    <div class="w-commerce-commercecartordervalue text-block-17">
+                      {{ cart.items_subtotal_price | money }}
+                    </div>
+                  </div>
+                </div>
+                <div class="col cart">
+                  <div>
+                    <a
+                      href="/checkout"
+                      value="Place Order"
+                      data-node-type="cart-checkout-button"
+                      class="w-commerce-commercecartcheckoutbutton btn btn-bg-coco cart"
+                      data-loading-text="Hang Tight..."
+                    >
+                      {{- 'ta750ab5' | t -}}
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="div-block-9">
+            <div class="div-block-6">
+              <div class="text-block-13">{{ 'tn685f8ab2' | t }}</div>
+            </div>
+            <script type="text/x-wf-template" id="wf-template-5b596057-aeee-c8b3-29d3-9001975d39d3">
+                    <div data-node-type="cart-item" class="cart-item w-commerce-commercecartitem" template-part-bind="5b596057-aeee-c8b3-29d3-9001975d39d4"><img data-node-type="cart-item-image" class="image-19 w-commerce-commercecartitemimage" template-part-bind="5b596057-aeee-c8b3-29d3-9001975d39d5" src="<%= it.image %>">
+                    <div>
+                    <a data-node-type="link" class="link-block-10" template-part-bind="1691a2ae-6dd9-ed36-b7ad-3753fe3431fa" href="<%= it.url%>"><div data-node-type="cart-item-info" class="div-block-13 w-commerce-commercecartiteminfo" template-part-bind="5b596057-aeee-c8b3-29d3-9001975d39d6"><div data-node-type="cart-product-name" class="text-block-20 w-commerce-commercecartproductname" template-part-bind="5b596057-aeee-c8b3-29d3-9001975d39d7"><%= it.title %></div><ul class="option-list-3 w-commerce-commercecartoptionlist" template-part-bind="5b596057-aeee-c8b3-29d3-9001975d39d9"><% Object.entries(it.properties).forEach( data =>  { %><li data-node-type="cart-option-list-item"><span data-node-type="cart-option-list-item-label" template-part-bind="5b596057-aeee-c8b3-29d3-9001975d39db"><%= data[0] %></span><span>: </span><span data-node-type="cart-option-list-item-value" template-part-bind="5b596057-aeee-c8b3-29d3-9001975d39de"><%= data[1] %></span></li><% }) %></ul></div></a>
+                    <input class="w-commerce-commercecartquantity quantity cart" name="<%= it.id %>" type="number" min="0" min="1" value="<%= it.quantity %>" data-node-type="cart-quantity">
+                  </div>
+                  <div>
+                    <div class="div-block-12"  style="display : flex; flex-direction: column;gap:3px;"><div class="text-block-19" template-part-bind="5b596057-aeee-c8b3-29d3-9001975d39d8"><%= it.price %></div>
+                  <a data-node-type="cart-remove-link" class="remove-button" href="#" role="button" aria-label="Remove item from cart" template-part-bind="5b596057-aeee-c8b3-29d3-9001975d39df" data-product-id="<%= it.id %>"><div class="text-block-21">Remove</div></a>
+                </div>
+
+              </div>
+              </div>
+            </script>
+            <div
+              class="w-commerce-commercecartlist cart-list"
+              data-wf-collection="database.commerceOrder.userItems"
+              data-wf-template-id="wf-template-5b596057-aeee-c8b3-29d3-9001975d39d3"
+            ></div>
+          </div>
+        </form>
+        <div class="w-commerce-commercecartemptystate">
+          <div aria-live="polite" aria-label="This cart is empty">{{ 't3d503d2b' | t }}</div>
+        </div>
         <div
-          class="w-cart-error-msg"
-          data-w-cart-quantity-error="Product is not available in this quantity."
-          data-w-cart-general-error="Something went wrong when adding this item to the cart."
-          data-w-cart-checkout-error="Checkout is disabled on this site."
-          data-w-cart-cart_order_min-error="The order minimum was not met. Add more items to your cart to continue."
-          data-w-cart-subscription_error-error="Before you purchase, please use your email invite to verify your address so we can send order updates."
+          aria-live="assertive"
+          style="display:none"
+          data-node-type="commerce-cart-error"
+          class="w-commerce-commercecarterrorstate"
         >
-          {{ 'tn1c765d0d' | t }}
+          <div
+            class="w-cart-error-msg"
+            data-w-cart-quantity-error="Product is not available in this quantity."
+            data-w-cart-general-error="Something went wrong when adding this item to the cart."
+            data-w-cart-checkout-error="Checkout is disabled on this site."
+            data-w-cart-cart_order_min-error="The order minimum was not met. Add more items to your cart to continue."
+            data-w-cart-subscription_error-error="Before you purchase, please use your email invite to verify your address so we can send order updates."
+          >
+            {{ 'tn1c765d0d' | t }}
+          </div>
         </div>
       </div>
     </div>
