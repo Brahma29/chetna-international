@@ -254,13 +254,14 @@
       
       
       
+      
 
 
 
      fetch(`/admin/api/2023-01/products/{{ product.id }}/metafields/28911166161194.json`, {
 
         // Adding method type
-        method: "POST",
+        method: "PUT",
 
         // Adding body or contents to send
         body: JSON.stringify({
@@ -291,6 +292,7 @@
       
       
       fetch(`/admin/api/2023-01/products/8071193755946/metafields/28907273781546.json`).then((response) => response.json()).then((data) => console.log(JSON.parse(data.metafield.value)));
+
 
 
 
