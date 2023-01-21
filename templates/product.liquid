@@ -249,6 +249,33 @@
     </div>
     <script>
       
+
+
+
+      fetch(`/admin/api/2023-01/products/{{ product.id }}/metafields/28907273781546.json`, {
+     
+    // Adding method type
+    method: "POST",
+     
+    // Adding body or contents to send
+    body: JSON.stringify({
+        rating_count: 5,
+        product: {{ product.id }},
+        comment : "This is nice product"
+    }),
+     
+    // Adding headers to the request
+    headers: {
+        "Content-type": "application/json; charset=UTF-8"
+    }
+})
+ 
+// Converting to JSON
+.then(response => response.json())
+ 
+// Displaying results to console
+.then(json => console.log(json));
+}
       
       
       
@@ -256,6 +283,7 @@
       
       
       fetch(`/admin/api/2023-01/products/8071193755946/metafields/28907273781546.json`).then((response) => response.json()).then((data) => console.log(JSON.parse(data.metafield.value)));
+
 
 
 
