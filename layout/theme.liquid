@@ -1,26 +1,31 @@
-<!DOCTYPE html>
-<html data-wf-page="{{ wfPage }}" data-wf-site="63b460d12385d15a227dd601" lang="{{ request.locale.iso_code }}" data-money-format="{{ shop.money_format | escape }}"><head>{%- liquid
-    if headerSnippetPath
+<!doctype html>
+<html
+  data-wf-page="{{ wfPage }}"
+  data-wf-site="63b460d12385d15a227dd601"
+  lang="{{ request.locale.iso_code }}"
+  data-money-format="{{ shop.money_format | escape }}"
+>
+  <head>
+    {%- liquid
+      if headerSnippetPath
         include headerSnippetPath
-    else
-        render "__default-head"
-    endif
--%}
-{{content_for_header}}
-{% if template contains 'customers' %}
-    {{ "shopify_common.js" | shopify_asset_url | script_tag }}
-{% endif %}
-  {% render 'judgeme_core' %}
-{% capture boostersnippet %}{% include "booster-apps-common" %}{% endcapture %}{% unless boostersnippet contains "Liquid error" %}{{ boostersnippet }}{% endunless %}
-
-	{{ shop.metafields.loox["global_html_head"] }}
-</head>
-<body class="{{ bodyClasses }} {{ "template-" | append: request.page_type | handle }}">
-{% if headerSnippetPath %}
-    {{ content_for_layout }}
-{% else %}
-    {% include "backup-layout" %}
-{% endif %}
-
-	{{ shop.metafields.loox["global_html_body"] }}
-</body></html>
+      else
+        render '__default-head'
+      endif
+    -%}
+    {{ content_for_header }}
+    {% if template contains 'customers' %}
+      {{ 'shopify_common.js' | shopify_asset_url | script_tag }}
+    {% endif %}
+    {% render 'judgeme_core' %}
+    {% capture boostersnippet %}{% include "booster-apps-common" %}{% endcapture %}
+    {% unless boostersnippet contains 'Liquid error' %}{{ boostersnippet }}{% endunless %}
+  </head>
+  <body class="{{ bodyClasses }} {{ "template-" | append: request.page_type | handle }}">
+    {% if headerSnippetPath %}
+      {{ content_for_layout }}
+    {% else %}
+      {% include 'backup-layout' %}
+    {% endif %}
+  </body>
+</html>
